@@ -2,5 +2,7 @@
   "custom_use_parent_settings": "0",
   "custom_design": "7",
   "page_layout": "1column",
-  "custom_apply_to_products": "0"
+  "custom_apply_to_products": "0",
+  "is_anchor": "0",
+  "display_mode": "PRODUCTS"
 }
