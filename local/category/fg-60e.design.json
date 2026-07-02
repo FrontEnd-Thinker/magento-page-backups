@@ -1,4 +1,7 @@
 {
   "custom_use_parent_settings": "0",
-  "custom_apply_to_products": "0"
+  "page_layout": "1column",
+  "custom_apply_to_products": "0",
+  "is_anchor": "1",
+  "display_mode": "PRODUCTS"
 }
