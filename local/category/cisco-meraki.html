@@ -1,0 +1,194 @@
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Firewalls.com — SINGLE-BRAND CATEGORY PAGE TEMPLATE (clone me)
+  ============================================================
+  Styling is 100% from the theme (Magento_Theme/web/css/source/_fw_layout.less).
+  Do NOT add a <style> block or font <link> — the theme provides both globally.
+
+  HOW TO USE
+    1. Clone this block into the brand's category "description" / CMS block.
+    2. Replace every {{TOKEN}} below with that brand's content.
+    3. Set the brand accent on the .fw-brands wrapper (see ACCENT line).
+       Leave it off entirely to use the default red (#9C0000) — e.g. SonicWall.
+    4. The dark breadcrumb, hidden page title, and full-bleed bands apply
+       automatically to any category page that renders .fw-brands.
+
+  ACCENT EXAMPLES (set --fw-accent + --fw-accent-hover on .fw-brands):
+    Sophos    : #00224F / #001638      (navy)        + --fw-tagline:#FFFFFF if needed
+    Fortinet  : #DA291C / #b21f15       (red)
+    WatchGuard: #D31245 / #a50e36       (red/magenta)
+    Palo Alto : #FA582D / #d8431c       (orange)
+    Meraki    : #0079B6 / #00608f       (blue)
+    Barracuda : #0088CE / #006ca3       (blue)
+  --fw-accent drives the hero glow, primary button, eyebrow, hover borders.
+  --fw-tagline recolors the yellow second headline line (optional).
+-->
+
+    <!-- Default red: <div class="fw-brands"> | Branded: add the style attribute -->
+    <div class="fw-brands" style="--fw-accent:{{ACCENT_HEX}}; --fw-accent-hover:{{ACCENT_HOVER_HEX}}">
+
+        <!-- ============ 1. HERO ============ -->
+        <section class="fw-hero">
+            <div class="fw-container fw-hero-grid">
+                <div>
+                    <div class="fw-hero-badge"><span class="fw-dot"></span> {{BADGE_TEXT_UPPERCASE}}</div>
+                    <h1>{{BRAND_NAME}}. <span class="accent">{{TAGLINE}}</span></h1>
+                    <p>{{HERO_PARAGRAPH — what the brand offers and why buy from us. 2–4 lines.}}</p>
+                    <div class="fw-hero-ctas">
+                        <a href="#categories" class="fw-btn-cta">Shop {{BRAND_NAME}} Products</a>
+                        <a href="/contact-us" class="fw-btn-secondary">Request a Quote</a>
+                    </div>
+                </div>
+                <div class="fw-hero-award">
+                    <!-- Square-ish feature asset: award, product hero shot, cert badge, or promo. -->
+                    <img src="{{FEATURE_CARD_IMAGE_URL}}" alt="{{FEATURE_CARD_ALT}}">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. TRUST BAND (global — keep identical across all brands) ============ -->
+        <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+            <div class="fw-container">
+                <div class="fw-trust-card">
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="9" cy="8" r="4" />
+                                <path d="M2 21v-1a7 7 0 0 1 13.5-2.5" />
+                                <path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+                            <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Config &amp; Managed Services</span>
+                            <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <path d="M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+                            <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="1" y="6" width="13" height="10" rx="1" />
+                                <path d="M14 9h4l3 3v4h-7z" />
+                                <circle cx="6.5" cy="18.5" r="2" />
+                                <circle cx="17.5" cy="18.5" r="2" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Same-Day Shipping</span>
+                            <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. PRODUCT CATEGORIES ============ -->
+        <!-- Repeat .fw-cat-card for each category (grid auto-fits 4 across). -->
+        <section class="fw-section fw-section-tight" id="categories">
+            <div class="fw-container">
+                <span class="fw-eyebrow">{{BRAND_NAME}} Products</span>
+                <h2 class="fw-band-title">Shop by Category</h2>
+
+                <div class="fw-cat-card-grid">
+                    <a href="{{CATEGORY_URL}}" class="fw-cat-card">
+                        <div class="fw-cat-card-img"
+                            style="background-image: url({{CATEGORY_IMAGE_URL}}); background-color: #fff; background-size: 65%;">
+                        </div>
+                        <div class="fw-cat-card-body">
+                            <div class="fw-cat-card-name">{{CATEGORY_NAME}}</div>
+                            <div class="fw-cat-card-desc">{{CATEGORY_SHORT_DESCRIPTION}}</div>
+                            <span class="fw-cat-card-action">Shop {{CATEGORY_NAME}} &rarr;</span>
+                        </div>
+                    </a>
+                    <!-- {{REPEAT .fw-cat-card per category — typically 3–4}} -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. WHY {{BRAND_NAME}} ============ -->
+        <!-- 2-col grid of value props. Repeat .fw-why-card (usually 4). -->
+        <section class="fw-section fw-section-alt" id="why">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Why {{BRAND_NAME}}</span>
+                <h2 class="fw-band-title">{{WHY_HEADING — e.g. "What Sets {{BRAND_NAME}} Apart"}}</h2>
+
+                <div class="fw-why-grid">
+                    <div class="fw-why-card">
+                        <h3>{{VALUE_PROP_TITLE}}</h3>
+                        <p>{{VALUE_PROP_BODY}}</p>
+                    </div>
+                    <!-- {{REPEAT .fw-why-card — usually 4 total}} -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. FAQ (schema.org FAQPage — good for SEO) ============ -->
+        <!-- Repeat .fw-faq-item per question. JS toggle is at the bottom. -->
+        <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-faq-heading">
+            <div class="fw-container">
+                <h2 class="fw-band-title" id="fw-faq-heading">{{BRAND_NAME}} Frequently Asked Questions</h2>
+                <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">{{QUESTION}}</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">{{ANSWER}}</p>
+                        </div>
+                    </div>
+                    <!-- {{REPEAT .fw-faq-item per question}} -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. BOTTOM CTA ============ -->
+        <section class="fw-section fw-section-alt" style="text-align:center">
+            <div class="fw-container">
+                <div class="fw-bottom-cta">
+                    <h3>{{CTA_HEADING — e.g. "Need help sizing a {{BRAND_NAME}}?"}}</h3>
+                    <p>{{CTA_BODY}}</p>
+                    <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function fwToggleFaq(btn) {
+    var item = btn.closest('.fw-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fw-faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.fw-faq-question').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  }
+    </script>
+</div>
