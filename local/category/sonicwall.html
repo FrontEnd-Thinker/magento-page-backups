@@ -1,345 +1,233 @@
-<div data-content-type="html" data-appearance="default" data-element="main"><!--
-  Firewalls.com — Single-brand category hub TEMPLATE
-  All styling comes from the theme (Magento_Theme/web/css/source/_fw_layout.less).
-  Do NOT paste a <style> block or font <link> here — the theme provides both.
-
-  To build another brand from this template:
-    1. Swap the hero copy, badge text, award image, category cards, "Why" cards, and FAQ.
-    2. Update the category-card image URLs and links for that brand.
-    3. If the brand is not red, set its accent on the wrapper, e.g.
-         <div class="fw-brands" style="--fw-accent:#1565C0; --fw-accent-hover:#0d4a8f">
-       (--fw-accent drives the hero glow, primary button, eyebrow, and hover borders;
-        --fw-tagline recolors the yellow headline line if needed.)
-    The Magento integration (dark breadcrumb, hidden page title, full-bleed bands)
-    applies automatically to any category/CMS page that renders .fw-brands.
--->
-
-  <div class="fw-brands">
-
-    <!-- ============ 1. HERO ============ -->
-    <section class="fw-hero">
-      <div class="fw-container fw-hero-grid">
-        <div>
-          <div class="fw-hero-badge"><span class="fw-dot"></span> SONICWALL &middot; PLATINUM PARTNER</div>
-          <h1>SonicWall. <span class="accent">Security Built For Real Networks.</span></h1>
-          <p>Firewalls, access points, switches, and security services from SonicWall. We are a SonicWall Platinum
-            Partner and Managed Security Partner of the Year, so every order ships with expert sizing, configuration
-            help, and same day fulfillment.</p>
-          <div class="fw-hero-ctas">
-            <a href="#categories" class="fw-btn-cta">Shop SonicWall Products</a>
-            <a href="/contact-us" class="fw-btn-secondary">Request a Quote</a>
-          </div>
-        </div>
-        <div class="fw-hero-award">
-          <img src="/media/wysiwyg/sonicwall_poty.jpg" alt="Firewalls.com — SonicWall Managed Security Partner of the Year 2026">
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 2. TRUST BAND ============ -->
-    <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
-      <div class="fw-container">
-        <div class="fw-trust-card">
-          <div class="fw-trust-item">
-            <div class="fw-trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="9" cy="8" r="4" />
-                <path d="M2 21v-1a7 7 0 0 1 13.5-2.5" />
-                <path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z" />
-              </svg>
-            </div>
-            <div class="fw-trust-text">
-              <span class="fw-trust-title">Expert Pre-Sales Advice</span>
-              <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
-            </div>
-          </div>
-          <div class="fw-trust-item">
-            <div class="fw-trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
-                stroke-linejoin="round">
-                <circle cx="12" cy="12" r="3" />
-                <path
-                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-              </svg>
-            </div>
-            <div class="fw-trust-text">
-              <span class="fw-trust-title">Config &amp; Managed Services</span>
-              <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
-            </div>
-          </div>
-          <div class="fw-trust-item">
-            <div class="fw-trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
-                stroke-linejoin="round">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
-                <polyline points="14 2 14 8 20 8" />
-                <path d="M16 13H8M16 17H8M10 9H8" />
-              </svg>
-            </div>
-            <div class="fw-trust-text">
-              <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
-              <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
-            </div>
-          </div>
-          <div class="fw-trust-item">
-            <div class="fw-trust-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
-                stroke-linejoin="round">
-                <rect x="1" y="6" width="13" height="10" rx="1" />
-                <path d="M14 9h4l3 3v4h-7z" />
-                <circle cx="6.5" cy="18.5" r="2" />
-                <circle cx="17.5" cy="18.5" r="2" />
-              </svg>
-            </div>
-            <div class="fw-trust-text">
-              <span class="fw-trust-title">Same-Day Shipping</span>
-              <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ 3. PRODUCT CATEGORIES ============ -->
-    <section class="fw-section fw-section-tight" id="categories">
-      <div class="fw-container">
-        <span class="fw-eyebrow">SonicWall Products</span>
-        <h2 class="fw-band-title">Shop by Category</h2>
-
-        <div class="fw-cat-card-grid">
-          <a href="/brands/sonicwall/firewalls.html" class="fw-cat-card">
-            <div class="fw-cat-card-img"
-              style="background-image: url(/media/wysiwyg/sonicwall_trim.png); background-color: #fff; background-size: 65%;">
-            </div>
-            <div class="fw-cat-card-body">
-              <div class="fw-cat-card-name">Firewalls</div>
-              <div class="fw-cat-card-desc">TZ, NSa, NSsp, and NSv series. Desktop through data center.</div>
-              <span class="fw-cat-card-action">Shop Firewalls &rarr;</span>
-            </div>
-          </a>
-          <a href="/brands/sonicwall/access-points.html" class="fw-cat-card">
-            <div class="fw-cat-card-img"
-              style="background-image: url(/media/wysiwyg/sonicwall_sonicwave_681.png); background-color: #fff; background-size: 55%;">
-            </div>
-            <div class="fw-cat-card-body">
-              <div class="fw-cat-card-name">Access Points</div>
-              <div class="fw-cat-card-desc">SonicWave indoor and outdoor APs managed from your firewall.</div>
-              <span class="fw-cat-card-action">Shop Access Points &rarr;</span>
-            </div>
-          </a>
-          <a href="/brands/sonicwall/network-switches.html" class="fw-cat-card">
-            <div class="fw-cat-card-img"
-              style="background-image: url(/media/wysiwyg/sonicwall_sws_series.png); background-color: #fff;">
-            </div>
-            <div class="fw-cat-card-body">
-              <div class="fw-cat-card-name">Network Switches</div>
-              <div class="fw-cat-card-desc">SonicWall switches integrated with firewall policy and PoE.</div>
-              <span class="fw-cat-card-action">Shop Switches &rarr;</span>
-            </div>
-          </a>
-          <a href="/brands/sonicwall/licenses-renewals.html" class="fw-cat-card">
-            <div class="fw-cat-card-img"
-              style="background-image: url(/media/wysiwyg/sonicwall_license.png); background-color: #fff;">
-            </div>
-            <div class="fw-cat-card-body">
-              <div class="fw-cat-card-name">Licenses &amp; Renewals</div>
-              <div class="fw-cat-card-desc">Renew security services or upgrade to a higher tier bundle.</div>
-              <span class="fw-cat-card-action">Shop Licenses &rarr;</span>
-            </div>
-          </a>
-        </div>
+<div data-content-type="html" data-appearance="default" data-element="main">&lt;!--
+  Firewalls.com — SonicWall brand hub (/brands/sonicwall.html)
+  Design system: identical tokens to cms/brands.html
+  Spec reference: docs/firewalls-page-design-spec.md § 7.3 (Single brand hub)
+  Redesigned 2026-05-04: matched brands page card grid pattern
+--&gt;
+&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;amp;display=swap" rel="stylesheet"&gt;
 
 
-      </div>
-    </section>
+&lt;div class="fw-brands"&gt;
 
-    <!-- ============ 5. WHY SONICWALL ============ -->
-    <section class="fw-section fw-section-alt" id="why">
-      <div class="fw-container">
-        <span class="fw-eyebrow">Why SonicWall</span>
-        <h2 class="fw-band-title">What Sets SonicWall Apart</h2>
+  &lt;!-- ============ 1. HERO ============ --&gt;
+  &lt;section class="fw-hero"&gt;
+    &lt;div class="fw-container fw-hero-grid"&gt;
+      &lt;div&gt;
+        &lt;div class="fw-hero-badge"&gt;&lt;span class="fw-dot"&gt;&lt;/span&gt; SONICWALL &amp;middot; PLATINUM PARTNER&lt;/div&gt;
+        &lt;h1&gt;SonicWall. &lt;em &gt;Security Built For Real Networks.&lt;/em&gt;&lt;/h1&gt;
+        &lt;p&gt;Firewalls, access points, switches, and security services from SonicWall. We are a SonicWall Platinum Partner and Managed Security Partner of the Year, so every order ships with expert sizing, configuration help, and same day fulfillment.&lt;/p&gt;
+        &lt;div class="fw-hero-ctas"&gt;
+          &lt;a href="#categories" class="fw-btn-cta"&gt;Shop SonicWall Products&lt;/a&gt;
+          &lt;a href="/contact-us" class="fw-btn-secondary"&gt;Request a Quote&lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div class="fw-hero-award"&gt;
+        &lt;img src="/media/wysiwyg/sonicwall_dmr_poty_2026.png" alt="SonicWall DMR Partner of the Year 2026"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-        <div class="fw-why-grid">
-          <div class="fw-why-card">
-            <h3>Deep Packet Inspection</h3>
-            <p>Every SonicWall firewall inspects every byte of every packet without proxying or reassembly. That
-              includes encrypted TLS 1.3 traffic on Gen 8 models. No other vendor at this price point offers the same
-              depth of inspection across the entire product line.</p>
-          </div>
-          <div class="fw-why-card">
-            <h3>Capture ATP Sandboxing</h3>
-            <p>SonicWall's cloud sandbox uses Real Time Deep Memory Inspection (RTDMI) to catch zero day malware before
-              it enters your network. Files are analyzed in memory before they execute, delivering verdicts in under two
-              seconds without impacting throughput.</p>
-          </div>
-          <div class="fw-why-card">
-            <h3>Network Security Manager</h3>
-            <p>Manage one firewall or a thousand from a single cloud dashboard. NSM 3.0 gives you centralized policy,
-              firmware, and reporting across all sites. Deploy config changes to every device at once or stage rollouts
-              by location.</p>
-          </div>
-          <div class="fw-why-card">
-            <h3>Platinum Partner Support</h3>
-            <p>We are a SonicWall Platinum partner and DMR Partner of the Year. Our certified engineers deploy,
-              configure, and manage SonicWall firewalls for businesses daily. When you buy from us, you get an
-              engineering team that knows these devices inside and out.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  &lt;!-- ============ 2. TRUST BAND ============ --&gt;
+  &lt;section class="fw-trust-bar" aria-label="Why choose Firewalls.com"&gt;
+    &lt;div class="fw-container"&gt;
+      &lt;div class="fw-trust-card"&gt;
+        &lt;a href="/contact-us" class="fw-trust-item"&gt;
+          &lt;div class="fw-trust-icon"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="9" cy="8" r="4"/&gt;&lt;path d="M2 21v-1a7 7 0 0 1 13.5-2.5"/&gt;&lt;path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"/&gt;&lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-trust-text"&gt;
+            &lt;span class="fw-trust-title"&gt;Expert Pre-Sales Advice&lt;/span&gt;
+            &lt;span class="fw-trust-sub"&gt;Certified reps reply in 1 hour.&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/professional-services.html" class="fw-trust-item"&gt;
+          &lt;div class="fw-trust-icon"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="3"/&gt;&lt;path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/&gt;&lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-trust-text"&gt;
+            &lt;span class="fw-trust-title"&gt;Config &amp;amp; Managed Services&lt;/span&gt;
+            &lt;span class="fw-trust-sub"&gt;Skip the setup. We'll do it.&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/professional-services.html" class="fw-trust-item"&gt;
+          &lt;div class="fw-trust-icon"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/&gt;&lt;polyline points="14 2 14 8 20 8"/&gt;&lt;path d="M16 13H8M16 17H8M10 9H8"/&gt;&lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-trust-text"&gt;
+            &lt;span class="fw-trust-title"&gt;POs &amp;middot; Tax-Exempt &amp;middot; Net 30&lt;/span&gt;
+            &lt;span class="fw-trust-sub"&gt;Welcomed for Corp, Edu, &amp;amp; Gov.&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/professional-services.html" class="fw-trust-item"&gt;
+          &lt;div class="fw-trust-icon"&gt;
+            &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"&gt;&lt;rect x="1" y="6" width="13" height="10" rx="1"/&gt;&lt;path d="M14 9h4l3 3v4h-7z"/&gt;&lt;circle cx="6.5" cy="18.5" r="2"/&gt;&lt;circle cx="17.5" cy="18.5" r="2"/&gt;&lt;/svg&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-trust-text"&gt;
+            &lt;span class="fw-trust-title"&gt;Same-Day Shipping&lt;/span&gt;
+            &lt;span class="fw-trust-sub"&gt;Order by 3pm EST, ships today.&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-    <!-- ============ 6. FAQ ============ -->
-    <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-sw-faq-heading">
-      <div class="fw-container">
-        <h2 class="fw-band-title" id="fw-sw-faq-heading">SonicWall Frequently Asked Questions</h2>
-        <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+  &lt;!-- ============ 3. PRODUCT CATEGORIES ============ --&gt;
+  &lt;section class="fw-section fw-section-tight" id="categories"&gt;
+    &lt;div class="fw-container"&gt;
+      &lt;span class="fw-eyebrow"&gt;SonicWall Products&lt;/span&gt;
+      &lt;h2 class="fw-band-title"&gt;Shop by Category&lt;/h2&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">How do I know which SonicWall firewall is right for my network?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Start with your user count, internet bandwidth, and whether you need features like deep
-                packet inspection on encrypted traffic. The TZ series handles home offices and branches up to about 250
-                users. The NSa series covers mid-market networks from 250 to 5,000+ users with rackmount form factors
-                and redundant power. The NSsp series is built for enterprise and service provider environments above
-                10,000 users. If you need a virtual appliance, the NSv series runs the same SonicOS on ESXi, Hyper-V,
-                KVM, AWS, and Azure. Contact our sales team with your user count and bandwidth and we will recommend a
-                specific model and quote it within one business hour.</p>
-            </div>
-          </div>
+      &lt;div class="fw-cat-card-grid"&gt;
+        &lt;a href="/brands/sonicwall/firewalls.html" class="fw-cat-card"&gt;
+          &lt;div class="fw-cat-card-img" style="background-image: url(/media/wysiwyg/sonicwall_trim.png); background-color: #fff; background-size: 65%;"&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-cat-card-body"&gt;
+            &lt;div class="fw-cat-card-name"&gt;Firewalls&lt;/div&gt;
+            &lt;div class="fw-cat-card-desc"&gt;TZ, NSa, NSsp, and NSv series. Desktop through data center.&lt;/div&gt;
+            &lt;span class="fw-cat-card-action"&gt;Shop Firewalls &amp;rarr;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/brands/sonicwall/access-points.html" class="fw-cat-card"&gt;
+          &lt;div class="fw-cat-card-img" style="background-image: url(/media/wysiwyg/sonicwall_sonicwave_681.png); background-color: #fff; background-size: 55%;"&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-cat-card-body"&gt;
+            &lt;div class="fw-cat-card-name"&gt;Access Points&lt;/div&gt;
+            &lt;div class="fw-cat-card-desc"&gt;SonicWave indoor and outdoor APs managed from your firewall.&lt;/div&gt;
+            &lt;span class="fw-cat-card-action"&gt;Shop Access Points &amp;rarr;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/brands/sonicwall/network-switches.html" class="fw-cat-card"&gt;
+          &lt;div class="fw-cat-card-img" style="background-image: url(/media/wysiwyg/sonicwall_sws_series.png); background-color: #fff;"&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-cat-card-body"&gt;
+            &lt;div class="fw-cat-card-name"&gt;Network Switches&lt;/div&gt;
+            &lt;div class="fw-cat-card-desc"&gt;SonicWall switches integrated with firewall policy and PoE.&lt;/div&gt;
+            &lt;span class="fw-cat-card-action"&gt;Shop Switches &amp;rarr;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+        &lt;a href="/brands/sonicwall/licenses-renewals.html" class="fw-cat-card"&gt;
+          &lt;div class="fw-cat-card-img" style="background-image: url(/media/wysiwyg/sonicwall_license.png); background-color: #fff;"&gt;
+          &lt;/div&gt;
+          &lt;div class="fw-cat-card-body"&gt;
+            &lt;div class="fw-cat-card-name"&gt;Licenses &amp;amp; Renewals&lt;/div&gt;
+            &lt;div class="fw-cat-card-desc"&gt;Renew security services or upgrade to a higher tier bundle.&lt;/div&gt;
+            &lt;span class="fw-cat-card-action"&gt;Shop Licenses &amp;rarr;&lt;/span&gt;
+          &lt;/div&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">What is the Secure Upgrade Plus trade-in program?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Secure Upgrade Plus (SUP) lets any registered SonicWall customer trade in an older
-                model for a discounted Gen 8 appliance bundled with a multi-year security suite. It covers every
-                previous generation including Gen 5, Gen 6, Gen 7, and SOHO units. In many cases the total cost lands
-                within $50 to $150 of a straight license renewal, so you get new hardware for roughly the same price as
-                renewing your existing unit. Our sales team can quote both the trade-in and a standalone renewal side by
-                side so you can compare total cost of ownership before deciding.</p>
-            </div>
-          </div>
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">What is the difference between the Essential and Advanced Protection Service Suites?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">The Essential Protection Service Suite (EPSS) includes Capture ATP sandboxing with
-                RTDMI, Gateway Anti-Virus, Anti-Spyware, IPS, Application Control, Content Filtering, Anti-Spam, and
-                24x7 support. The Advanced Protection Service Suite (APSS) includes everything in EPSS plus DNS
-                Filtering, Cloud App Security, and NSM Essential cloud management. APSS also includes an embedded
-                Cysurance cyber warranty on registered units. Both tiers are available in 1, 2, 3, and 5 year terms. You
-                can buy them bundled with hardware as TotalSecure SKUs or as standalone renewals for an existing
-                appliance.</p>
-            </div>
-          </div>
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">How do I renew my SonicWall security services?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Find your SonicWall serial number on the bottom of the appliance or in the SonicOS
-                management interface under System > Status. Send it to our sales team and we will quote renewal options
-                within one business hour. You can renew at the same service tier or upgrade to a higher bundle. If your
-                services have already expired, we can also quote a reinstatement license to bring the unit back into
-                active coverage. Activation instructions are emailed once the order processes, and most renewals
-                activate within a few hours of purchase.</p>
-            </div>
-          </div>
+  &lt;!-- ============ 5. WHY SONICWALL ============ --&gt;
+  &lt;section class="fw-section fw-section-alt" id="why"&gt;
+    &lt;div class="fw-container"&gt;
+      &lt;span class="fw-eyebrow"&gt;Why SonicWall&lt;/span&gt;
+      &lt;h2 class="fw-band-title"&gt;What Sets SonicWall Apart&lt;/h2&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Does SonicWall support VPN and SSL VPN for remote access?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Every SonicWall firewall supports site to site VPN, IPSec remote access VPN, and SSL
-                VPN out of the box. The number of concurrent SSL VPN sessions depends on the model. TZ series appliances
-                include a base SSL VPN license, and you can add user packs in 1, 5, 10, 25, 50, and 100 seat increments.
-                NSa and NSsp models ship with higher base session counts. SSL VPN licenses are perpetual and do not
-                expire with your security services. SonicWall also offers Global VPN Client for managed IPSec
-                connections and Cloud Secure Edge for zero trust network access without a traditional VPN tunnel.</p>
-            </div>
-          </div>
+      &lt;div class="fw-why-grid"&gt;
+        &lt;div class="fw-why-card"&gt;
+          &lt;h3&gt;Deep Packet Inspection&lt;/h3&gt;
+          &lt;p&gt;Every SonicWall firewall inspects every byte of every packet without proxying or reassembly. That includes encrypted TLS 1.3 traffic on Gen 8 models. No other vendor at this price point offers the same depth of inspection across the entire product line.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="fw-why-card"&gt;
+          &lt;h3&gt;Capture ATP Sandboxing&lt;/h3&gt;
+          &lt;p&gt;SonicWall's cloud sandbox uses Real Time Deep Memory Inspection (RTDMI) to catch zero day malware before it enters your network. Files are analyzed in memory before they execute, delivering verdicts in under two seconds without impacting throughput.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="fw-why-card"&gt;
+          &lt;h3&gt;Network Security Manager&lt;/h3&gt;
+          &lt;p&gt;Manage one firewall or a thousand from a single cloud dashboard. NSM 3.0 gives you centralized policy, firmware, and reporting across all sites. Deploy config changes to every device at once or stage rollouts by location.&lt;/p&gt;
+        &lt;/div&gt;
+        &lt;div class="fw-why-card"&gt;
+          &lt;h3&gt;Platinum Partner Support&lt;/h3&gt;
+          &lt;p&gt;We are a SonicWall Platinum partner and DMR Partner of the Year. Our certified engineers deploy, configure, and manage SonicWall firewalls for businesses daily. When you buy from us, you get an engineering team that knows these devices inside and out.&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Can I get a quote or volume pricing on SonicWall products?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Yes. Contact our sales team with the model number, SKU, or a description of what you
-                need and we will respond within one business hour. We welcome purchase orders, offer Net 30 terms for
-                qualified organizations, and process tax-exempt orders for government, education, and nonprofit buyers.
-                Volume pricing is available on multi-unit hardware orders and multi-site license purchases. You can
-                request a quote through our contact page, by phone, or through the live chat on any product page.</p>
-            </div>
-          </div>
+  &lt;!-- ============ 6. FAQ ============ --&gt;
+  &lt;section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-sw-faq-heading"&gt;
+    &lt;div class="fw-container"&gt;
+      &lt;h2 class="fw-band-title" id="fw-sw-faq-heading"&gt;SonicWall Frequently Asked Questions&lt;/h2&gt;
+      &lt;div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage"&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Do you offer SonicWall configuration and setup services?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Yes. Our certified engineers can configure your SonicWall before it ships so it arrives
-                ready to plug in with your security policies, VPN tunnels, and network settings already in place. We
-                also offer remote deployment assistance after delivery, policy reviews, and ongoing managed security
-                services for organizations that want hands-off firewall management. Visit our Professional Services page
-                for pricing and details, or ask your sales rep to include configuration when you request a quote.</p>
-            </div>
-          </div>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;How do I know which SonicWall firewall is right for my network?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Start with your user count, internet bandwidth, and whether you need features like deep packet inspection on encrypted traffic. The TZ series handles home offices and branches up to about 250 users. The NSa series covers mid-market networks from 250 to 5,000+ users with rackmount form factors and redundant power. The NSsp series is built for enterprise and service provider environments above 10,000 users. If you need a virtual appliance, the NSv series runs the same SonicOS on ESXi, Hyper-V, KVM, AWS, and Azure. Contact our sales team with your user count and bandwidth and we will recommend a specific model and quote it within one business hour.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Do SonicWall firewalls support high availability and multi-WAN failover?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">All current generation SonicWall firewalls support stateful high availability in
-                active/standby mode. HA requires a second identical appliance and may require a separate HA license
-                depending on the model. Every SonicWall firewall also supports multi-WAN failover and load balancing
-                across multiple ISP connections, which is built into SonicOS at no additional cost. SD-WAN is included
-                on Gen 7 and Gen 8 models as well, allowing policy based routing across WAN links without a separate
-                license or appliance.</p>
-            </div>
-          </div>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;What is the Secure Upgrade Plus trade-in program?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Secure Upgrade Plus (SUP) lets any registered SonicWall customer trade in an older model for a discounted Gen 8 appliance bundled with a multi-year security suite. It covers every previous generation including Gen 5, Gen 6, Gen 7, and SOHO units. In many cases the total cost lands within $50 to $150 of a straight license renewal, so you get new hardware for roughly the same price as renewing your existing unit. Our sales team can quote both the trade-in and a standalone renewal side by side so you can compare total cost of ownership before deciding.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">My SonicWall model is end of life. What are my options?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">When a SonicWall model reaches end of life, SonicWall stops releasing firmware updates
-                and security signature updates for that platform. You can continue using the appliance, but it will not
-                receive new threat definitions or patches. The recommended path is to upgrade through the Secure Upgrade
-                Plus program, which bundles a discounted current generation replacement with a multi-year security
-                suite. Our sales team can identify the direct replacement model for your unit and quote the upgrade
-                alongside a standalone renewal if your model is still within its support window, so you can compare both
-                options.</p>
-            </div>
-          </div>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;What is the difference between the Essential and Advanced Protection Service Suites?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;The Essential Protection Service Suite (EPSS) includes Capture ATP sandboxing with RTDMI, Gateway Anti-Virus, Anti-Spyware, IPS, Application Control, Content Filtering, Anti-Spam, and 24x7 support. The Advanced Protection Service Suite (APSS) includes everything in EPSS plus DNS Filtering, Cloud App Security, and NSM Essential cloud management. APSS also includes an embedded Cysurance cyber warranty on registered units. Both tiers are available in 1, 2, 3, and 5 year terms. You can buy them bundled with hardware as TotalSecure SKUs or as standalone renewals for an existing appliance.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Does SonicWall integrate with access points and switches?</span></button>
-            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Yes. SonicWave access points are managed directly from the SonicWall firewall or
-                through Network Security Manager in the cloud. Security policies, content filtering, and threat
-                prevention extend to the wireless network without a separate controller. SonicWall also offers the SWS
-                series of managed switches, which integrate with the firewall for unified policy enforcement and PoE
-                power delivery to connected devices. Both product lines can be monitored and managed alongside your
-                firewalls from a single NSM dashboard.</p>
-            </div>
-          </div>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;How do I renew my SonicWall security services?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Find your SonicWall serial number on the bottom of the appliance or in the SonicOS management interface under System &gt; Status. Send it to our sales team and we will quote renewal options within one business hour. You can renew at the same service tier or upgrade to a higher bundle. If your services have already expired, we can also quote a reinstatement license to bring the unit back into active coverage. Activation instructions are emailed once the order processes, and most renewals activate within a few hours of purchase.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-        </div>
-      </div>
-    </section>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;Does SonicWall support VPN and SSL VPN for remote access?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Every SonicWall firewall supports site to site VPN, IPSec remote access VPN, and SSL VPN out of the box. The number of concurrent SSL VPN sessions depends on the model. TZ series appliances include a base SSL VPN license, and you can add user packs in 1, 5, 10, 25, 50, and 100 seat increments. NSa and NSsp models ship with higher base session counts. SSL VPN licenses are perpetual and do not expire with your security services. SonicWall also offers Global VPN Client for managed IPSec connections and Cloud Secure Edge for zero trust network access without a traditional VPN tunnel.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-    <!-- ============ 7. BOTTOM CTA ============ -->
-    <section class="fw-section fw-section-alt" style="text-align:center">
-      <div class="fw-container">
-        <div class="fw-bottom-cta">
-          <h3>Need help sizing a SonicWall?</h3>
-          <p>Tell us your user count, throughput needs, and deployment type. Our certified sales reps respond within one
-            business hour with a recommended model and quote.</p>
-          <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
-        </div>
-      </div>
-    </section>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;Can I get a quote or volume pricing on SonicWall products?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Yes. Contact our sales team with the model number, SKU, or a description of what you need and we will respond within one business hour. We welcome purchase orders, offer Net 30 terms for qualified organizations, and process tax-exempt orders for government, education, and nonprofit buyers. Volume pricing is available on multi-unit hardware orders and multi-site license purchases. You can request a quote through our contact page, by phone, or through the live chat on any product page.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-  </div>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;Do you offer SonicWall configuration and setup services?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Yes. Our certified engineers can configure your SonicWall before it ships so it arrives ready to plug in with your security policies, VPN tunnels, and network settings already in place. We also offer remote deployment assistance after delivery, policy reviews, and ongoing managed security services for organizations that want hands-off firewall management. Visit our Professional Services page for pricing and details, or ask your sales rep to include configuration when you request a quote.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
 
-  <script>
-    function fwToggleFaq(btn) {
-    var item = btn.closest('.fw-faq-item');
-    var isOpen = item.classList.contains('open');
-    document.querySelectorAll('.fw-faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.fw-faq-question').setAttribute('aria-expanded','false'); });
-    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
-  }
-  </script>
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;Do SonicWall firewalls support high availability and multi-WAN failover?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;All current generation SonicWall firewalls support stateful high availability in active/standby mode. HA requires a second identical appliance and may require a separate HA license depending on the model. Every SonicWall firewall also supports multi-WAN failover and load balancing across multiple ISP connections, which is built into SonicOS at no additional cost. SD-WAN is included on Gen 7 and Gen 8 models as well, allowing policy based routing across WAN links without a separate license or appliance.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;My SonicWall model is end of life. What are my options?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;When a SonicWall model reaches end of life, SonicWall stops releasing firmware updates and security signature updates for that platform. You can continue using the appliance, but it will not receive new threat definitions or patches. The recommended path is to upgrade through the Secure Upgrade Plus program, which bundles a discounted current generation replacement with a multi-year security suite. Our sales team can identify the direct replacement model for your unit and quote the upgrade alongside a standalone renewal if your model is still within its support window, so you can compare both options.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question"&gt;
+          &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"&gt;&lt;span itemprop="name"&gt;Does SonicWall integrate with access points and switches?&lt;/span&gt;&lt;/button&gt;
+          &lt;div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"&gt;&lt;p itemprop="text"&gt;Yes. SonicWave access points are managed directly from the SonicWall firewall or through Network Security Manager in the cloud. Security policies, content filtering, and threat prevention extend to the wireless network without a separate controller. SonicWall also offers the SWS series of managed switches, which integrate with the firewall for unified policy enforcement and PoE power delivery to connected devices. Both product lines can be monitored and managed alongside your firewalls from a single NSM dashboard.&lt;/p&gt;&lt;/div&gt;
+        &lt;/div&gt;
+
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 7. BOTTOM CTA ============ --&gt;
+  &lt;section class="fw-section fw-section-alt" style="text-align:center"&gt;
+    &lt;div class="fw-container"&gt;
+      &lt;div class="fw-bottom-cta"&gt;
+        &lt;h3&gt;Need help sizing a SonicWall?&lt;/h3&gt;
+        &lt;p&gt;Tell us your user count, throughput needs, and deployment type. Our certified sales reps respond within one business hour with a recommended model and quote.&lt;/p&gt;
+        &lt;a href="/contact-us" class="fw-btn-cta"&gt;Request a Quote&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+&lt;/div&gt;
+
+&lt;script&gt;
+function fwToggleFaq(btn) {
+  var item = btn.closest('.fw-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fw-faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.fw-faq-question').setAttribute('aria-expanded','false'); });
+  if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+}
+&lt;/script&gt;
 </div>
