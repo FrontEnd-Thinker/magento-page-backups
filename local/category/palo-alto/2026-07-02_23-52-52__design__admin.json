@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-02T23:52:52.650Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 5494,
+    "identifier": "palo-alto",
+    "title": "Palo Alto",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "1",
+    "page_layout": "1column",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
