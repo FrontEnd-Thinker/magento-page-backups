@@ -1,0 +1,20 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-02T23:52:54.909Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 3129,
+    "identifier": "rackmount-it",
+    "title": "Rackmount.IT",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "1column",
+    "custom_layout_update_file": "removeSideNavAndTitle",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
