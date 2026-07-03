@@ -1,0 +1,20 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-03T00:44:13.053Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 13074,
+    "identifier": "fg-30g",
+    "title": "FG 30G",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_design": "7",
+    "page_layout": "1column",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
