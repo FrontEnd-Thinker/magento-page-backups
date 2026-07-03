@@ -1,0 +1,17 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-03T00:44:28.952Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 12995,
+    "identifier": "fortigaterugged-35d",
+    "title": "FortiGateRugged-35D",
+    "user": "admin"
+  },
+  "data": {
+    "page_layout": "1column",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
