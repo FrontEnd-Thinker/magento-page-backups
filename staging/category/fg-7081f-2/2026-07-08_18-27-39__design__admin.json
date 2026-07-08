@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-08T18:27:39.242Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 12614,
+    "identifier": "fg-7081f-2",
+    "title": "FG 7081F-2",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
