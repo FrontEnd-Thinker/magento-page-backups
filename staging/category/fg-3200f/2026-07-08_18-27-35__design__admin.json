@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-08T18:27:35.872Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 12611,
+    "identifier": "fg-3200f",
+    "title": "FG 3200F",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
