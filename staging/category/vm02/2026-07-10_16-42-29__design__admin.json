@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-10T16:42:29.668Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 497,
+    "identifier": "vm02",
+    "title": "VM02",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
