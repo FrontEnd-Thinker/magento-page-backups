@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-10T17:49:43.993Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 13076,
+    "identifier": "810g",
+    "title": "810G",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
