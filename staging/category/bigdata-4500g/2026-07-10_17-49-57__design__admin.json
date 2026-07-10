@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-10T17:49:57.381Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 13080,
+    "identifier": "bigdata-4500g",
+    "title": "BigData-4500G",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
