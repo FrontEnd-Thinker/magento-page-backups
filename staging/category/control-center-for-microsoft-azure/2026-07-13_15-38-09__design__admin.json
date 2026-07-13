@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-13T15:38:09.160Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7703,
+    "identifier": "control-center-for-microsoft-azure",
+    "title": "Control Center for Microsoft Azure",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
