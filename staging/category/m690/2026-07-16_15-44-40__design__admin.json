@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-16T15:44:40.407Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7358,
+    "identifier": "m690",
+    "title": "M690",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "2columns-left",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
