@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-16T15:28:57.125Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 13067,
+    "identifier": "t25w-wireless",
+    "title": "T25 Wireless",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
