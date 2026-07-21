@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:51.137Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7498,
+    "identifier": "standard-wi-fi-management",
+    "title": "Standard Wi-Fi Management",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
