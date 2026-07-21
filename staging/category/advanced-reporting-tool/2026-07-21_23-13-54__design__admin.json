@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:54.909Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7506,
+    "identifier": "advanced-reporting-tool",
+    "title": "Advanced Reporting Tool",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
