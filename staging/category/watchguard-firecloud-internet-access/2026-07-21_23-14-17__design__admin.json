@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:14:17.799Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 14949,
+    "identifier": "watchguard-firecloud-internet-access",
+    "title": "FireCloud Internet Access",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
