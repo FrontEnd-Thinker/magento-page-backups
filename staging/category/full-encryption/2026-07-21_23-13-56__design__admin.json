@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:56.229Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7509,
+    "identifier": "full-encryption",
+    "title": "Full Encryption",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
