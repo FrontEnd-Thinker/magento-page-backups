@@ -1,0 +1,16 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:52.277Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7500,
+    "identifier": "usp-wi-fi-management",
+    "title": "USP Wi-Fi Management",
+    "user": "admin"
+  },
+  "data": {
+    "custom_apply_to_products": "0",
+    "is_anchor": "1"
+  }
+}
