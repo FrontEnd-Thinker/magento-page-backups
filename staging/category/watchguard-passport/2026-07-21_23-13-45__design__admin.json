@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:45.114Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 5893,
+    "identifier": "watchguard-passport",
+    "title": "Passport",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
