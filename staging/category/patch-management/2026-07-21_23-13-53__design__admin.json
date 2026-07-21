@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:13:53.615Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7503,
+    "identifier": "patch-management",
+    "title": "Patch Management",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
