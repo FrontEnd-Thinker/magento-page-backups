@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-21T23:16:08.538Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 12903,
+    "identifier": "ap6-840e",
+    "title": "AP6 840E",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
