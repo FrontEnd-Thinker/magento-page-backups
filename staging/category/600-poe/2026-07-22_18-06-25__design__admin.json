@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-22T18:06:25.144Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 238,
+    "identifier": "600-poe",
+    "title": "TZ600 PoE",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
