@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-22T13:48:57.665Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 15652,
+    "identifier": "cs1010-8fp",
+    "title": "CS1010-8FP",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
