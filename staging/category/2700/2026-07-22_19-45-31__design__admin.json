@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-22T19:45:31.809Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 5012,
+    "identifier": "2700",
+    "title": "NSa 2700",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "2columns-left",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
