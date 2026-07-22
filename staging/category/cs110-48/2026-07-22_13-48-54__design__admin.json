@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-22T13:48:54.884Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 7675,
+    "identifier": "cs110-48",
+    "title": "CS110-48",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
