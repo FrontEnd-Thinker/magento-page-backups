@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-22T16:08:57.812Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 12874,
+    "identifier": "3-free-promo",
+    "title": "3 & Free Promotion",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_design": "7",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
