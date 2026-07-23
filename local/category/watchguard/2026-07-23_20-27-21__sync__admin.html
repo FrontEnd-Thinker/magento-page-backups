@@ -1,0 +1,298 @@
+<!-- BACKUP
+timestamp:   2026-07-23T20:27:21.903Z
+environment: local
+operation:   sync (staging → local)
+item:        #19 watchguard "WatchGuard"
+user:        admin
+-->
+<style>
+  .fw-brands-watchguard {
+    --fw-accent: #D31245;
+    --fw-accent-hover: #a50e36;
+  }
+  .fw-section-center {
+    text-align: center;
+  }
+  .fw-cat-card-img-1 {
+    background-image: url('https://www.firewalls.com/static/frontend/FWC/Fireball/en_US/images/general/wg-firewalls.jpg') !important;
+    background-color: #fff;
+    background-size: 65%;
+  }
+  .fw-cat-card-img-2 {
+    background-image: url('{{media url="https://www.firewalls.com/media/wysiwyg/PandaBoxS2.jpg"}}') !important;
+    background-color: #fff;
+    background-size: 65%;
+  }
+  .fw-cat-card-img-3 {
+    background-image: url('{{media url="https://www.firewalls.com/media/wysiwyg/wg-epp.jpg"}}') !important;
+    background-color: #fff;
+    background-size: 65%;
+  }
+  .fw-cat-card-img-4 {
+    background-image: url('{{media url="https://www.firewalls.com/static/frontend/FWC/Fireball/en_US/images/general/wg-ap.jpg"}}') !important;
+    background-color: #fff;
+    background-size: 65%;
+  }
+</style>
+
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Firewalls.com — SINGLE-BRAND CATEGORY PAGE TEMPLATE (clone me)
+  ============================================================
+  Styling is 100% from the theme (Magento_Theme/web/css/source/_fw_layout.less).
+  Do NOT add a <style> block or font <link> — the theme provides both globally.
+
+  HOW TO USE
+    1. Clone this block into the brand's category "description" / CMS block.
+    2. Replace every {{TOKEN}} below with that brand's content.
+    3. Set the brand accent on the .fw-brands wrapper (see ACCENT line).
+       Leave it off entirely to use the default red (#9C0000) — e.g. SonicWall.
+    4. The dark breadcrumb, hidden page title, and full-bleed bands apply
+       automatically to any category page that renders .fw-brands.
+
+  ACCENT EXAMPLES (set --fw-accent + --fw-accent-hover on .fw-brands):
+    Sophos    : #00224F / #001638      (navy)        + --fw-tagline:#FFFFFF if needed
+    Fortinet  : #DA291C / #b21f15       (red)
+    WatchGuard: #D31245 / #a50e36       (red/magenta)
+    Palo Alto : #FA582D / #d8431c       (orange)
+    Meraki    : #0079B6 / #00608f       (blue)
+    Barracuda : #0088CE / #006ca3       (blue)
+  --fw-accent drives the hero glow, primary button, eyebrow, hover borders.
+  --fw-tagline recolors the yellow second headline line (optional).
+-->
+
+    <!-- Default red: <div class="fw-brands"> | Branded: add the style attribute -->
+    <div class="fw-brands fw-brands-watchguard">
+
+        <!-- ============ 1. HERO ============ -->
+        <section class="fw-hero">
+            <div class="fw-container fw-hero-grid">
+                <div>
+                    <div class="fw-hero-badge"><span class="fw-dot"></span> Authorized WatchGuard Partner</div>
+                    <h1>WatchGuard. <em class="accent">Security That Never Sleeps.</em></h1>
+                    <p>WatchGuard Technologies delivers enterprise-grade network security, multi-factor authentication, and endpoint protection in platforms built for the real world — from small businesses to distributed enterprises. As an authorized WatchGuard partner, Firewalls.com offers expert guidance, competitive pricing, same-day shipping, and post-sale support so your team stays protected from day one.</p>
+                    <div class="fw-hero-ctas">
+                        <a href="#categories" class="fw-btn-cta">Shop WatchGuard Products</a>
+                        <a href="/contact-us" class="fw-btn-secondary">Request a Quote</a>
+                    </div>
+                </div>
+                <div class="fw-hero-award">
+                    <!-- Square-ish feature asset: award, product hero shot, cert badge, or promo. -->
+                    <img src="{{media url="wysiwyg/brands/watchguard/watchguard-partner-badge.png"}}" alt="WatchGuard Authorized Partner — Firewalls.com">
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. TRUST BAND (global — keep identical across all brands) ============ -->
+        <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+            <div class="fw-container">
+                <div class="fw-trust-card">
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="9" cy="8" r="4" />
+                                <path d="M2 21v-1a7 7 0 0 1 13.5-2.5" />
+                                <path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+                            <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="3" />
+                                <path
+                                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Config &amp; Managed Services</span>
+                            <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <path d="M16 13H8M16 17H8M10 9H8" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+                            <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+                        </div>
+                    </div>
+                    <div class="fw-trust-item">
+                        <div class="fw-trust-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <rect x="1" y="6" width="13" height="10" rx="1" />
+                                <path d="M14 9h4l3 3v4h-7z" />
+                                <circle cx="6.5" cy="18.5" r="2" />
+                                <circle cx="17.5" cy="18.5" r="2" />
+                            </svg>
+                        </div>
+                        <div class="fw-trust-text">
+                            <span class="fw-trust-title">Same-Day Shipping</span>
+                            <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. PRODUCT CATEGORIES ============ -->
+        <!-- Repeat .fw-cat-card for each category (grid auto-fits 4 across). -->
+        <section class="fw-section fw-section-tight" id="categories">
+            <div class="fw-container">
+                <span class="fw-eyebrow">WatchGuard Products</span>
+                <h2 class="fw-band-title">Shop by Category</h2>
+
+                <div class="fw-cat-card-grid">
+                    <a href="/brands/watchguard/firewalls.html" class="fw-cat-card">
+                        <div class="fw-cat-card-img fw-cat-card-img-1">
+                        </div>
+                        <div class="fw-cat-card-body">
+                            <div class="fw-cat-card-name">Firebox Firewalls</div>
+                            <div class="fw-cat-card-desc">Unified threat management appliances for offices of every size — from the compact Firebox T20 to the high-throughput Firebox M series.</div>
+                            <span class="fw-cat-card-action">Shop Firebox Firewalls &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/brands/watchguard/panda-endpoint.html" class="fw-cat-card">
+                        <div class="fw-cat-card-img fw-cat-card-img-2">
+                        </div>
+                        <div class="fw-cat-card-body">
+                            <div class="fw-cat-card-name">Panda EndPoint</div>
+                            <div class="fw-cat-card-desc">Total Security Suite, Basic Security Suite, and à-la-carte services including IPS, Gateway AV, WebBlocker, and DNSWatch.</div>
+                            <span class="fw-cat-card-action">Shop Panda EndPoint &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/brands/watchguard/cloud-security.html" class="fw-cat-card">
+                        <div class="fw-cat-card-img fw-cat-card-img-3">
+                        </div>
+                        <div class="fw-cat-card-body">
+                            <div class="fw-cat-card-name">Cloud Security</div>
+                            <div class="fw-cat-card-desc">Cloud-based multi-factor authentication that protects networks, VPNs, and cloud apps with mobile DNA and one-tap push approval.</div>
+                            <span class="fw-cat-card-action">Shop Cloud Security &rarr;</span>
+                        </div>
+                    </a>
+                    <a href="/brands/watchguard/ap.html" class="fw-cat-card">
+                        <div class="fw-cat-card-img fw-cat-card-img-4">
+                        </div>
+                        <div class="fw-cat-card-body">
+                            <div class="fw-cat-card-name">Access Points</div>
+                            <div class="fw-cat-card-desc">WatchGuard EPDR and EDR combine AI-driven prevention with continuous monitoring to stop ransomware, exploits, and zero-day threats.</div>
+                            <span class="fw-cat-card-action">Shop Access Points &rarr;</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. WHY WATCHGUARD ============ -->
+        <!-- 2-col grid of value props. Repeat .fw-why-card (usually 4). -->
+        <section class="fw-section fw-section-alt" id="why">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Why WatchGuard</span>
+                <h2 class="fw-band-title">What Sets WatchGuard Apart</h2>
+
+                <div class="fw-why-grid">
+                    <div class="fw-why-card">
+                        <h3>Unified Security Platform</h3>
+                        <p>WatchGuard's Unified Security Platform brings network security, secure Wi-Fi, multi-factor authentication, and endpoint protection under a single pane of glass — WatchGuard Cloud — so you manage everything in one place without juggling multiple vendor consoles.</p>
+                    </div>
+                    <div class="fw-why-card">
+                        <h3>Purpose-Built for MSPs &amp; SMBs</h3>
+                        <p>WatchGuard was designed from the ground up for managed service providers and small-to-midsize businesses. Role-based access, multi-tenant management, and transparent pricing make it easy to deploy, bill, and scale security services profitably.</p>
+                    </div>
+                    <div class="fw-why-card">
+                        <h3>Total Security Suite — No Trade-Offs</h3>
+                        <p>Instead of paying à-la-carte for every inspection engine, WatchGuard's Total Security Suite bundles IPS, Gateway AV, Application Control, WebBlocker, Threat Detection &amp; Response, DNSWatch, and IntelligentAV into a single annual subscription.</p>
+                    </div>
+                    <div class="fw-why-card">
+                        <h3>Proven Zero-Trust Endpoint Defense</h3>
+                        <p>WatchGuard EPDR applies a Zero-Trust Application Service that classifies every running process — trusted, malware, or unknown — before execution, blocking threats that evade traditional signature-based antivirus tools and providing continuous post-execution monitoring.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. FAQ (schema.org FAQPage — good for SEO) ============ -->
+        <!-- Repeat .fw-faq-item per question. JS toggle is at the bottom. -->
+        <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-faq-heading">
+            <div class="fw-container">
+                <h2 class="fw-band-title" id="fw-faq-heading">WatchGuard Frequently Asked Questions</h2>
+                <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Which WatchGuard Firebox model is right for my business?</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">WatchGuard Firebox appliances are sized by throughput and user count. The T-series (T20, T40, T80) targets branch offices and remote workers, while the M-series (M290, M390, M590, M690, M4800, M5800) scales from mid-market to enterprise data centres. WatchGuard publishes UTM throughput figures alongside firewall throughput — always size by UTM throughput with all security services enabled, not raw firewall speed. Not sure which model fits? Contact our certified WatchGuard reps for a free sizing consultation.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">What is the difference between Basic Security Suite and Total Security Suite?</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Basic Security Suite includes core threat services: IPS, Gateway AntiVirus, Application Control, WebBlocker, SpamBlocker, Network Discovery, and 24×7 support. Total Security Suite adds AI-powered IntelligentAV, Threat Detection &amp; Response (TDR), DNSWatch, Access Portal, and APT Blocker — giving you a complete, layered defence against advanced persistent threats and ransomware. For most businesses, Total Security Suite offers the best value and the strongest protection posture.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">How does WatchGuard AuthPoint MFA work?</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">AuthPoint is a cloud-managed multi-factor authentication service delivered through the AuthPoint mobile app. When a user logs in, they receive a push notification on their enrolled smartphone. AuthPoint's unique Mobile DNA feature fingerprints the device — so even if credentials are stolen and cloned to another phone, authentication is denied. AuthPoint integrates with VPNs, Windows and macOS logon, SAML-based cloud apps, and RADIUS-enabled services with no on-premises infrastructure required.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Can I manage multiple WatchGuard firewalls from one dashboard?</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Yes. WatchGuard Cloud provides centralised visibility and management for all Firebox appliances, AuthPoint users, and endpoint agents in your account. MSPs benefit from multi-tenant architecture that keeps each customer's data siloed while enabling bulk policy deployment, automated reporting, and licence management — all from a single browser-based console with no VPN required.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Does Firewalls.com offer WatchGuard configuration and professional services?</span></button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Absolutely. Firewalls.com offers professional configuration, pre-staging, and managed services for WatchGuard products. Our certified engineers can pre-configure your Firebox before it ships so it is ready to plug in and power on, or provide ongoing managed firewall services including policy reviews, firmware updates, and 24×7 monitoring. Contact us to discuss a custom service package.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. BOTTOM CTA ============ -->
+        <section class="fw-section fw-section-alt fw-section-center">
+            <div class="fw-container">
+                <div class="fw-bottom-cta">
+                    <h3>Need help sizing a WatchGuard solution?</h3>
+                    <p>Our certified WatchGuard specialists are ready to match your environment with the right Firebox, subscription, and security services — at the best price. Get a personalised quote today with no obligation.</p>
+                    <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        function fwToggleFaq(btn) {
+    var item = btn.closest('.fw-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fw-faq-item').forEach(function(i) { i.classList.remove('open'); i.querySelector('.fw-faq-question').setAttribute('aria-expanded','false'); });
+    if (!isOpen) { item.classList.add('open'); btn.setAttribute('aria-expanded','true'); }
+  }
+    </script>
+</div>
