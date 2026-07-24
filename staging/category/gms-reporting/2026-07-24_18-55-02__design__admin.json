@@ -1,0 +1,20 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-24T18:55:02.336Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 46,
+    "identifier": "gms-reporting",
+    "title": "GMS & Reporting",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "centered",
+    "custom_layout_update_file": "removeSideNav",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PAGE"
+  }
+}
