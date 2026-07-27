@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-27T16:48:21.038Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 4456,
+    "identifier": "multifactor-authentication",
+    "title": "MultiFactor Authentication",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
