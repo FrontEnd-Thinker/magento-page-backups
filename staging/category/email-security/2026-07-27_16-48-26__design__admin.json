@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-07-27T16:48:26.751Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 18,
+    "identifier": "email-security",
+    "title": "Email Security",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "1column",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
