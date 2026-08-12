@@ -1,0 +1,647 @@
+<!-- BACKUP
+timestamp:   2026-08-12T15:46:43.937Z
+environment: staging
+operation:   sync (dev → staging)
+item:        #15348 fortiwifi-70g-71g "FireGuard Complete Service"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main">&lt;!--
+  Firewalls.com — FireGuard Complete Service category page (/professional-services/fireguard-complete-service.html)
+  Design system: identical tokens to cms/sonicwall.html (canonical brand-hub pattern)
+  Spec reference: docs/firewalls-page-design-spec.md (service-page adaptation of §7.3 brand hub)
+  Redesigned 2026-05-28: rebuilt to match homepage / SonicWall hub design system
+  --&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&amp;amp;display=swap"
+  rel="stylesheet"&gt;
+
+  &lt;style&gt;
+  /* ========== BASE DESIGN SYSTEM (shared tokens) ========== */
+  .fw-brands *, .fw-brands *::before, .fw-brands *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  .fw-brands {
+  --fw-brand-red: #9C0000;
+  --fw-brand-red-hover: #D70000;
+  --fw-brand-red-deep: #6B0000;
+  --fw-brand-black: #000000;
+  --fw-brand-yellow: #FFE200;
+  --fw-white: #FFFFFF;
+  --fw-charcoal: #1A1A1A;
+  --fw-gray: #4A4A4A;
+  --fw-gray-light: #F2F2F2;
+  --fw-gray-warm: #E8E6E3;
+  --fw-gray-border: #CCCCCC;
+  --fw-accent-light: #FDF0F0;
+  --fw-success: #1A8754;
+  --fw-radius: 4px;
+  --fw-shadow-sm: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+  --fw-shadow-md: 0 4px 16px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04);
+  --fw-shadow-lg: 0 12px 40px rgba(0,0,0,0.1), 0 4px 12px rgba(0,0,0,0.05);
+  --fw-font: 'Open Sans', sans-serif;
+  --fw-max-width: 1280px;
+  --fw-section-pad: clamp(48px, 6vw, 96px);
+  font-family: var(--fw-font);
+  color: var(--fw-charcoal);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background: #fff;
+  }
+  .fw-brands img { max-width: 100%; height: auto; display: block; }
+  .fw-brands a { color: var(--fw-charcoal); text-decoration: none; }
+  .fw-brands button { cursor: pointer; font-family: inherit; }
+  .fw-brands h1, .fw-brands h2, .fw-brands h3, .fw-brands h4 { font-weight: 700; line-height: 1.2; }
+
+  .fw-container { max-width: var(--fw-max-width); margin: 0 auto; padding: 0 clamp(16px, 3vw, 32px); }
+  .fw-section { padding: var(--fw-section-pad) 0; }
+  .fw-section-alt { background: var(--fw-gray-light); }
+  .fw-section-tight { padding-top: 56px !important; padding-bottom: 56px !important; }
+  .fw-eyebrow { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform:
+  uppercase; color: var(--fw-brand-red); margin-bottom: 12px; }
+  .fw-band-title { font-size: clamp(22px, 2.4vw, 30px); font-weight: 800; line-height: 1.2; letter-spacing: -0.01em;
+  margin-bottom: 24px; }
+  .fw-band-title-center { text-align: center; }
+  .fw-section-sub { font-size: 17px; color: var(--fw-gray); max-width: 720px; margin-bottom: 40px; }
+  .fw-section-sub-center { text-align: center; margin-left: auto; margin-right: auto; }
+
+  /* ========== BUTTONS ========== */
+  a.fw-btn-cta, .fw-brands .fw-btn-cta { background: var(--fw-brand-red); color: var(--fw-white); border: none; padding:
+  14px 32px; font-size: 16px; font-weight: 600; border-radius: var(--fw-radius); transition: background 200ms; display:
+  inline-block; min-height: 44px; line-height: 1.4; text-decoration: none; cursor: pointer; }
+  a.fw-btn-cta:hover, .fw-brands .fw-btn-cta:hover { background: var(--fw-brand-red-hover); color: var(--fw-white); }
+  .fw-btn-outline { background: transparent; color: var(--fw-brand-red); border: 2px solid var(--fw-brand-red); padding:
+  12px 24px; font-size: 14px; font-weight: 700; border-radius: var(--fw-radius); display: inline-block; min-height:
+  44px; line-height: 1.4; transition: all 200ms; }
+  .fw-btn-outline:hover { background: var(--fw-brand-red); color: var(--fw-white); }
+  .fw-btn-link { color: var(--fw-brand-red); font-weight: 600; font-size: 14px; text-decoration: none; }
+  .fw-btn-link:hover { color: var(--fw-brand-red-hover); text-decoration: underline; }
+  .fw-btn-link::after { content: " \2192"; }
+
+  /* ========== 1. HERO ========== */
+  .fw-hero { padding: var(--fw-section-pad) 0; background: var(--fw-charcoal); color: var(--fw-white); position:
+  relative; overflow: hidden; }
+  .fw-hero::before { content: ""; position: absolute; inset: 0; background: radial-gradient(ellipse 700px 500px at 85%
+  20%, rgba(156,0,0,0.25), transparent), radial-gradient(ellipse 500px 400px at 15% 80%, rgba(0,0,0,0.4), transparent);
+  pointer-events: none; }
+  .fw-hero .fw-container { position: relative; z-index: 1; }
+  .fw-hero-grid { display: grid; grid-template-columns: 1.1fr 1fr; gap: 48px; align-items: center; }
+  .fw-hero-badge { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.08); border: 1px
+  solid rgba(255,255,255,0.12); border-radius: 100px; padding: 6px 16px; font-size: 13px; font-weight: 500;
+  margin-bottom: 24px; color: var(--fw-white); }
+  .fw-hero-badge .fw-dot { width: 6px; height: 6px; background: #4ADE80; border-radius: 50%; animation: fwPulse 2s
+  infinite; }
+  @keyframes fwPulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+  .fw-hero h1 { color: var(--fw-white); font-size: clamp(1.9rem, 3.8vw, 2.6rem); line-height: 1.2; font-weight: 800;
+  letter-spacing: -0.02em; margin-bottom: 16px; text-align: left !important; }
+  .fw-hero h1 em { color: var(--fw-brand-yellow); font-style: normal; display: block; }
+  .fw-hero p { color: var(--fw-white); opacity: 0.85; font-size: 16px; line-height: 1.55; margin-bottom: 28px;
+  max-width: 540px; }
+  .fw-hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 24px; }
+  .fw-hero .fw-btn-cta { padding: 14px 32px; font-size: 16px; }
+  .fw-hero a.fw-btn-outline-light, .fw-hero .fw-btn-outline-light {
+  background: transparent !important; color: var(--fw-white) !important;
+  border: 2px solid rgba(255,255,255,0.3) !important; padding: 12px 24px !important;
+  font-size: 16px !important; font-weight: 600 !important; border-radius: var(--fw-radius) !important;
+  text-decoration: none !important; display: inline-block !important;
+  min-height: 44px !important; line-height: 1.4 !important;
+  transition: background 200ms, color 200ms, border-color 200ms !important;
+  }
+  .fw-hero a.fw-btn-outline-light:hover, .fw-hero .fw-btn-outline-light:hover {
+  background: var(--fw-white) !important; color: var(--fw-charcoal) !important; border-color: var(--fw-white)
+  !important;
+  }
+  .fw-hero-price { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background:
+  rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.12); border-radius: var(--fw-radius); font-size: 13px;
+  color: rgba(255,255,255,0.78); }
+  .fw-hero-price strong { color: var(--fw-white); font-weight: 700; }
+
+  /* Hero right card */
+  .fw-hero-card { background: var(--fw-white); border-radius: 8px; padding: 32px; box-shadow: var(--fw-shadow-lg);
+  color: var(--fw-charcoal); }
+  .fw-hero-card h2 { font-size: 1.25rem; font-weight: 700; color: var(--fw-charcoal); margin-bottom: 6px; }
+  .fw-hero-card-sub { font-size: 14px; color: var(--fw-gray); margin-bottom: 20px; }
+  .fw-checklist { list-style: none; padding: 0; margin: 0 0 24px; }
+  .fw-checklist li { display: flex; align-items: flex-start; gap: 10px; padding: 10px 0; font-size: 14px; color:
+  var(--fw-charcoal); border-bottom: 1px solid var(--fw-gray-warm); line-height: 1.45; }
+  .fw-checklist li:last-child { border-bottom: none; }
+  .fw-check-icon { width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
+  .fw-hero-card .fw-btn-cta { width: 100%; text-align: center; font-size: 16px; padding: 14px 24px; display: block; }
+
+  /* ========== 2. TRUST BAND ========== */
+  .fw-trust-bar { padding: 24px 0 !important; background: #F2F2F2; }
+  .fw-trust-bar .fw-container { max-width: 1280px; margin: 0 auto; padding: 0 20px; }
+  .fw-trust-card { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .fw-trust-item { display: flex; align-items: center; gap: 10px; padding: 14px 16px; background: #fff; border: 1px
+  solid #E5E5E5; border-radius: var(--fw-radius); text-decoration: none; color: inherit; transition: box-shadow 200ms,
+  transform 200ms, border-color 200ms; }
+  .fw-trust-item:hover { border-color: var(--fw-brand-red); box-shadow: var(--fw-shadow-md); transform:
+  translateY(-2px); }
+  .fw-trust-icon { width: 40px; height: 40px; flex-shrink: 0; display: flex; align-items: center; justify-content:
+  center; color: var(--fw-gray); background: #F2F2F2; border-radius: var(--fw-radius); transition: color 200ms; }
+  .fw-trust-item:hover .fw-trust-icon { color: var(--fw-brand-red); }
+  .fw-trust-icon svg { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; }
+  .fw-trust-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+  .fw-trust-title { font-size: 0.95rem; font-weight: 700; color: var(--fw-charcoal); line-height: 1.2; white-space:
+  nowrap; }
+  .fw-trust-sub { font-size: 0.875rem; color: var(--fw-gray); line-height: 1.3; }
+
+  /* ========== 3. WHY PILLARS (3-card grid) ========== */
+  .fw-pillar-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fw-pillar-card {
+  background: var(--fw-white); border: 1px solid var(--fw-gray-warm); border-radius: var(--fw-radius);
+  padding: 32px 28px; transition: all 200ms; display: flex; flex-direction: column;
+  }
+  .fw-pillar-card:hover { border-color: var(--fw-brand-red); box-shadow: var(--fw-shadow-md); transform:
+  translateY(-2px); }
+  .fw-pillar-icon { width: 48px; height: 48px; border-radius: var(--fw-radius); background: var(--fw-accent-light);
+  display: flex; align-items: center; justify-content: center; margin-bottom: 16px; }
+  .fw-pillar-icon svg { width: 24px; height: 24px; stroke: var(--fw-brand-red); fill: none; stroke-width: 2; }
+  .fw-pillar-card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 8px; color: var(--fw-charcoal); }
+  .fw-pillar-card p { font-size: 14px; color: var(--fw-gray); line-height: 1.6; margin-bottom: 16px; flex: 1; }
+  .fw-pillar-card .fw-btn-link { font-size: 14px; margin-top: auto; cursor: pointer; }
+
+  /* ========== 4. INCLUDED FEATURES (6-card grid) ========== */
+  .fw-feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .fw-feature-card { display: flex; gap: 14px; align-items: flex-start; padding: 20px 22px; background: var(--fw-white);
+  border: 1px solid var(--fw-gray-warm); border-radius: var(--fw-radius); transition: all 200ms; }
+  .fw-feature-card:hover { border-color: var(--fw-brand-red); box-shadow: var(--fw-shadow-md); transform:
+  translateY(-2px); }
+  .fw-feature-check { width: 28px; height: 28px; flex-shrink: 0; margin-top: 2px; }
+  .fw-feature-card h4 { font-size: 15px; font-weight: 700; color: var(--fw-charcoal); margin-bottom: 4px; line-height:
+  1.3; }
+  .fw-feature-card p { font-size: 14px; color: var(--fw-gray); line-height: 1.5; }
+
+  /* ========== 5. COMPARISON TABLE ========== */
+  .fw-compare-wrap { background: var(--fw-white); border: 1px solid var(--fw-gray-warm); border-radius:
+  var(--fw-radius); overflow: hidden; box-shadow: var(--fw-shadow-sm); }
+  .fw-compare-table { width: 100%; border-collapse: collapse; font-size: 15px; }
+  .fw-compare-table thead th { padding: 16px 20px; text-align: left; font-size: 13px; font-weight: 700; text-transform:
+  uppercase; letter-spacing: 0.5px; color: var(--fw-white); }
+  .fw-compare-table thead th:first-child { background: var(--fw-charcoal); }
+  .fw-compare-table thead th:nth-child(2) { background: #555; text-align: center; }
+  .fw-compare-table thead th:nth-child(3) { background: var(--fw-brand-red); text-align: center; }
+  .fw-compare-table tbody td { padding: 14px 20px; border-bottom: 1px solid var(--fw-gray-warm); font-size: 14px; }
+  .fw-compare-table tbody tr:last-child td { border-bottom: none; }
+  .fw-compare-table tbody td:first-child { font-weight: 700; color: var(--fw-charcoal); }
+  .fw-compare-table tbody td:nth-child(2), .fw-compare-table tbody td:nth-child(3) { text-align: center; }
+  .fw-compare-table tbody td:nth-child(3) { background: #FFF7F7; color: var(--fw-brand-red); font-weight: 600; }
+  .fw-compare-table .t-check { color: var(--fw-success); font-weight: 700; }
+  .fw-compare-table .t-cross { color: #BBB; }
+
+  /* ========== 6. FAQ (canonical pattern) ========== */
+  .fw-faq-band { background: var(--fw-white); text-align: center; }
+  .fw-faq-band .fw-band-title { margin-bottom: 32px; text-align: center; }
+  .fw-faq-list { max-width: 780px; margin: 0 auto; text-align: left; }
+  .fw-faq-item { border-bottom: 1px solid var(--fw-gray-warm); }
+  .fw-faq-question {
+  width: 100%; background: transparent !important; border: none; text-align: left; padding: 20px 0;
+  font-size: 16px; font-weight: 600; color: var(--fw-charcoal);
+  display: flex; justify-content: space-between; align-items: center; gap: 16px;
+  cursor: pointer; font-family: var(--fw-font);
+  }
+  .fw-faq-question:focus, .fw-faq-question:active, .fw-faq-question:hover { background: transparent !important; outline:
+  none; box-shadow: none; color: var(--fw-charcoal); }
+  .fw-faq-question::after { content: '+'; font-size: 20px; font-weight: 300; color: var(--fw-gray); transition:
+  transform 300ms; flex-shrink: 0; }
+  .fw-faq-item.open .fw-faq-question::after { transform: rotate(45deg); color: var(--fw-brand-red); }
+  .fw-faq-answer { max-height: 0; overflow: hidden; transition: max-height 300ms; }
+  .fw-faq-answer p { font-size: 15px; color: var(--fw-gray); line-height: 1.6; }
+  .fw-faq-item.open .fw-faq-answer { max-height: 500px; padding-bottom: 20px; }
+
+  /* ========== 7. BOTTOM CTA ========== */
+  .fw-bottom-cta { background: var(--fw-charcoal); color: var(--fw-white); padding: clamp(48px, 6vw, 80px) 32px;
+  border-radius: var(--fw-radius); text-align: center; }
+  .fw-bottom-cta h3 { color: var(--fw-white); font-size: clamp(22px, 2.4vw, 28px); font-weight: 800; margin-bottom:
+  12px; letter-spacing: -0.01em; }
+  .fw-bottom-cta p { color: rgba(255,255,255,0.8); font-size: 16px; max-width: 560px; margin: 0 auto 16px; }
+  .fw-bottom-cta .fw-bottom-price { font-size: 14px; color: rgba(255,255,255,0.6); margin-bottom: 28px; }
+  .fw-bottom-cta .fw-bottom-price strong { color: var(--fw-white); font-size: 20px; font-weight: 700; }
+  .fw-bottom-cta-ctas { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+  .fw-bottom-cta .fw-btn-cta { background: var(--fw-white); color: var(--fw-brand-red); padding: 14px 32px; font-size:
+  16px; font-weight: 700; border-radius: var(--fw-radius); }
+  .fw-bottom-cta .fw-btn-cta:hover { background: var(--fw-gray-light); color: var(--fw-brand-red-hover); }
+  .fw-bottom-cta a.fw-btn-outline-light, .fw-bottom-cta .fw-btn-outline-light {
+  background: transparent !important; color: var(--fw-white) !important;
+  border: 2px solid rgba(255,255,255,0.3) !important; padding: 12px 24px !important;
+  font-size: 16px !important; font-weight: 600 !important; border-radius: var(--fw-radius) !important;
+  text-decoration: none !important; display: inline-block !important;
+  min-height: 44px !important; line-height: 1.4 !important;
+  transition: background 200ms, color 200ms, border-color 200ms !important;
+  }
+  .fw-bottom-cta a.fw-btn-outline-light:hover, .fw-bottom-cta .fw-btn-outline-light:hover {
+  background: var(--fw-white) !important; color: var(--fw-charcoal) !important; border-color: var(--fw-white)
+  !important;
+  }
+
+  /* ========== MAGENTO INTEGRATION (category-fireguard-complete-service) ========== */
+  .category-fireguard-complete-service .breadcrumbs {
+  background: #1A1A1A !important; max-width: none !important; padding: 18px 0 !important; margin: 0 !important;
+  }
+  .category-fireguard-complete-service .breadcrumbs .items {
+  max-width: 1280px; margin: 0 auto !important; padding: 0 20px !important; text-align: left !important;
+  }
+  .category-fireguard-complete-service .breadcrumbs a,
+  .category-fireguard-complete-service .breadcrumbs strong,
+  .category-fireguard-complete-service .breadcrumbs .item,
+  .category-fireguard-complete-service .breadcrumbs .item:not(:last-child)::after {
+  color: rgba(255,255,255,0.85) !important;
+  }
+  .category-fireguard-complete-service .breadcrumbs { display: block !important; }
+  .category-fireguard-complete-service .page-title-wrapper { display: none !important; }
+  .category-fireguard-complete-service .page-main,
+  .category-fireguard-complete-service .columns,
+  .category-fireguard-complete-service .column.main { padding-top: 0 !important; margin-top: 0 !important; }
+  .category-fireguard-complete-service .fw-brands &gt; .fw-hero { margin-top: 0 !important; }
+  .category-fireguard-complete-service .column.main { overflow: visible !important; }
+  .category-fireguard-complete-service .columns { overflow: visible !important; }
+  .category-fireguard-complete-service .page-main { overflow: visible !important; }
+  .category-fireguard-complete-service #maincontent {
+  max-width: none !important; padding: 0 !important; margin: 0 !important;
+  }
+  .category-fireguard-complete-service .columns,
+  .category-fireguard-complete-service .column.main,
+  .category-fireguard-complete-service .category-description,
+  .category-fireguard-complete-service .category-description &gt; div,
+  .category-fireguard-complete-service .category-description &gt; div &gt; div {
+  padding: 0 !important; margin: 0 !important;
+  }
+  .category-fireguard-complete-service .fw-brands,
+  .category-fireguard-complete-service .fw-brands &gt; section:first-child {
+  padding-top: 0 !important; margin-top: 0 !important;
+  }
+  .category-fireguard-complete-service #contentarea { display: none !important; }
+  .category-fireguard-complete-service .page.messages:empty { display: none !important; }
+  .category-fireguard-complete-service .page-main { font-size: 0 !important; line-height: 0 !important; }
+  .category-fireguard-complete-service .page-main &gt; .columns { font-size: 14px; line-height: 1.4; }
+  .category-fireguard-complete-service .page-main &gt; .columns { margin-top: -15px !important; }
+
+  /* Full-bleed sections */
+  .category-fireguard-complete-service .fw-brands &gt; .fw-trust-bar,
+  .category-fireguard-complete-service .fw-brands &gt; .fw-section-alt {
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  }
+  .category-fireguard-complete-service .fw-brands &gt; .fw-section-alt &gt; .fw-container {
+  max-width: 1280px; margin: 0 auto;
+  padding-left: clamp(16px, 3vw, 32px) !important;
+  padding-right: clamp(16px, 3vw, 32px) !important;
+  }
+
+  /* Footer gap fix */
+  .category-fireguard-complete-service .page-footer .footer.content { margin-top: 0 !important; }
+  .category-fireguard-complete-service .category-description { margin-bottom: 0 !important; }
+  .category-fireguard-complete-service .column.main { padding-bottom: 0 !important; }
+  .category-fireguard-complete-service .ambanners { margin-bottom: 0 !important; }
+  .fw-brands &gt; section:last-child { padding-bottom: 32px !important; }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 960px) {
+  .fw-hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  .fw-trust-card { grid-template-columns: repeat(2, 1fr); }
+  .fw-trust-title { white-space: normal; }
+  .fw-pillar-grid { grid-template-columns: 1fr; }
+  .fw-feature-grid { grid-template-columns: 1fr; }
+  .fw-compare-table { font-size: 13px; }
+  .fw-compare-table thead th, .fw-compare-table tbody td { padding: 12px 14px; }
+  }
+  @media (max-width: 560px) {
+  .fw-trust-card { grid-template-columns: 1fr; }
+  }
+  &lt;/style&gt;
+
+  &lt;div class="fw-brands"&gt;
+
+  &lt;!-- ============ 1. HERO ============ --&gt;
+  &lt;section class="fw-hero"&gt;
+  &lt;div class="fw-container fw-hero-grid"&gt;
+  &lt;div&gt;
+  &lt;div class="fw-hero-badge"&gt;&lt;span class="fw-dot"&gt;&lt;/span&gt; MANAGED FIREWALL SERVICE&lt;/div&gt;
+  &lt;h1&gt;Stop managing firewalls. &lt;em&gt;Focus on your business.&lt;/em&gt;&lt;/h1&gt;
+  &lt;p&gt;FireGuard Complete bundles enterprise grade hardware, full security licensing, and 24/7 management by U.S.
+  based certified engineers into one predictable monthly subscription. No capital expense. No renewal
+  scramble.&lt;/p&gt;
+  &lt;div class="fw-hero-ctas"&gt;
+  &lt;a class="fw-btn-cta" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Get a Quote&lt;/a&gt;
+  &lt;a class="fw-btn-outline-light" target="_blank"
+  href="https://www.firewalls.com/blog/wp-content/uploads/2026/02/FireGuard-Complete-Flyer.pdf"&gt;Download
+  Overview&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-hero-price"&gt;&lt;strong&gt;Starting at $179/mo&lt;/strong&gt; &amp;middot; hardware, licensing
+  &amp;amp; management included&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+  &lt;div class="fw-hero-card"&gt;
+  &lt;h2&gt;What's Included&lt;/h2&gt;
+  &lt;p class="fw-hero-card-sub"&gt;Everything you need, one monthly payment.&lt;/p&gt;
+  &lt;ul class="fw-checklist"&gt;
+  &lt;li&gt;&lt;svg class="fw-check-icon" viewBox="0 0 20 20" fill="none"&gt;&lt;circle cx="10" cy="10" r="9"
+  stroke="#1A8754" stroke-width="1.5"/&gt;&lt;path d="M6 10.5l2.5 2.5L14 8" stroke="#1A8754" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round"/&gt;&lt;/svg&gt;&lt;span&gt;Enterprise grade firewall hardware, sized
+  to your traffic&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;svg class="fw-check-icon" viewBox="0 0 20 20" fill="none"&gt;&lt;circle cx="10" cy="10" r="9"
+  stroke="#1A8754" stroke-width="1.5"/&gt;&lt;path d="M6 10.5l2.5 2.5L14 8" stroke="#1A8754" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round"/&gt;&lt;/svg&gt;&lt;span&gt;Full security licensing: AV, IPS, content
+  filtering&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;svg class="fw-check-icon" viewBox="0 0 20 20" fill="none"&gt;&lt;circle cx="10" cy="10" r="9"
+  stroke="#1A8754" stroke-width="1.5"/&gt;&lt;path d="M6 10.5l2.5 2.5L14 8" stroke="#1A8754" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round"/&gt;&lt;/svg&gt;&lt;span&gt;24/7 monitoring &amp;amp; management by
+  certified engineers&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;svg class="fw-check-icon" viewBox="0 0 20 20" fill="none"&gt;&lt;circle cx="10" cy="10" r="9"
+  stroke="#1A8754" stroke-width="1.5"/&gt;&lt;path d="M6 10.5l2.5 2.5L14 8" stroke="#1A8754" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round"/&gt;&lt;/svg&gt;&lt;span&gt;Firmware updates, patches &amp;amp;
+  hardware upgrades&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;svg class="fw-check-icon" viewBox="0 0 20 20" fill="none"&gt;&lt;circle cx="10" cy="10" r="9"
+  stroke="#1A8754" stroke-width="1.5"/&gt;&lt;path d="M6 10.5l2.5 2.5L14 8" stroke="#1A8754" stroke-width="2"
+  stroke-linecap="round" stroke-linejoin="round"/&gt;&lt;/svg&gt;&lt;span&gt;Weekly security &amp;amp; usage
+  reports&lt;/span&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;a class="fw-btn-cta" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Get Started&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 2. TRUST BAND ============ --&gt;
+  &lt;section class="fw-trust-bar" aria-label="Why choose Firewalls.com"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;div class="fw-trust-card"&gt;
+  &lt;div class="fw-trust-item"&gt;
+  &lt;div class="fw-trust-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;circle cx="9" cy="8" r="4"/&gt;&lt;path d="M2 21v-1a7 7 0 0 1 13.5-2.5"/&gt;&lt;path
+  d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-text"&gt;
+  &lt;span class="fw-trust-title"&gt;Expert Pre-Sales Advice&lt;/span&gt;
+  &lt;span class="fw-trust-sub"&gt;Certified reps reply in 1 hour.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-item"&gt;
+  &lt;div class="fw-trust-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;circle cx="12" cy="12" r="3"/&gt;&lt;path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2
+  2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65
+  1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82
+  1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2
+  2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65
+  1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51
+  1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-text"&gt;
+  &lt;span class="fw-trust-title"&gt;Config &amp;amp; Managed Services&lt;/span&gt;
+  &lt;span class="fw-trust-sub"&gt;Skip the setup. We'll do it.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-item"&gt;
+  &lt;div class="fw-trust-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/&gt;&lt;polyline
+  points="14 2 14 8 20 8"/&gt;&lt;path d="M16 13H8M16 17H8M10 9H8"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-text"&gt;
+  &lt;span class="fw-trust-title"&gt;POs &amp;middot; Tax-Exempt &amp;middot; Net 30&lt;/span&gt;
+  &lt;span class="fw-trust-sub"&gt;Welcomed for Corp, Edu, &amp;amp; Gov.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-item"&gt;
+  &lt;div class="fw-trust-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/&gt;&lt;circle cx="12" cy="10"
+  r="3"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-trust-text"&gt;
+  &lt;span class="fw-trust-title"&gt;U.S.-Based Engineers&lt;/span&gt;
+  &lt;span class="fw-trust-sub"&gt;No offshore call centers.&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 3. WHY PILLARS ============ --&gt;
+  &lt;section class="fw-section fw-section-tight"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;div style="text-align: center;"&gt;
+  &lt;span class="fw-eyebrow"&gt;Why FireGuard Complete&lt;/span&gt;
+  &lt;h2 class="fw-band-title fw-band-title-center"&gt;Three reasons it works.&lt;/h2&gt;
+  &lt;p class="fw-section-sub fw-section-sub-center"&gt;No surprise hardware bills. No license renewal fire drills. A
+  real team watching the device every hour of every day.&lt;/p&gt;
+  &lt;/div&gt;
+
+  &lt;div class="fw-pillar-grid"&gt;
+  &lt;div class="fw-pillar-card"&gt;
+  &lt;div class="fw-pillar-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;Financial Freedom&lt;/h3&gt;
+  &lt;p&gt;Preserve capital for growth. One all inclusive monthly payment eliminates surprise hardware and renewal costs
+  from the budget.&lt;/p&gt;
+  &lt;a class="fw-btn-link" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Get pricing&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-pillar-card"&gt;
+  &lt;div class="fw-pillar-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;Total Peace of Mind&lt;/h3&gt;
+  &lt;p&gt;Focus on the business while certified engineers handle 24/7 protection and management. Your network stays
+  watched, patched, and tuned.&lt;/p&gt;
+  &lt;a class="fw-btn-link" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Talk to an expert&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-pillar-card"&gt;
+  &lt;div class="fw-pillar-icon"&gt;
+  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round"
+  stroke-linejoin="round"&gt;&lt;polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/&gt;&lt;/svg&gt;
+  &lt;/div&gt;
+  &lt;h3&gt;Effortless Scalability&lt;/h3&gt;
+  &lt;p&gt;Hardware that grows with your business and updates automatically. When you outgrow your appliance, we swap it
+  for the next size up at no extra capital cost.&lt;/p&gt;
+  &lt;a class="fw-btn-link" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Learn more&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 4. INCLUDED FEATURES ============ --&gt;
+  &lt;section class="fw-section fw-section-alt"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;span class="fw-eyebrow"&gt;In Your Subscription&lt;/span&gt;
+  &lt;h2 class="fw-band-title"&gt;Six things included every month.&lt;/h2&gt;
+  &lt;p class="fw-section-sub"&gt;No hourly billing for change requests. No separate charge to chase a firmware CVE. It
+  is all in.&lt;/p&gt;
+
+  &lt;div class="fw-feature-grid"&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Custom Configuration&lt;/h4&gt;&lt;p&gt;Our engineers handle setup and rule mapping so the
+  firewall does its job from day one.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Next Gen Hardware&lt;/h4&gt;&lt;p&gt;Performance matched firewall hardware tailored to your
+  office traffic and user count.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Total Security Shield&lt;/h4&gt;&lt;p&gt;Full spectrum protection. Antivirus, intrusion
+  prevention, content filtering, and application control.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Proactive 24/7 Management&lt;/h4&gt;&lt;p&gt;Constant vigilance from our U.S. based security
+  operations center. A human triages every alert.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Seamless Maintenance&lt;/h4&gt;&lt;p&gt;Automated firmware updates, patch management, and
+  priority vendor case handling.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-feature-card"&gt;
+  &lt;svg class="fw-feature-check" viewBox="0 0 28 28" fill="none"&gt;&lt;circle cx="14" cy="14" r="12"
+  fill="#9C0000"/&gt;&lt;path d="M9 14l3.5 3.5L19 11" stroke="#fff" stroke-width="2.5" stroke-linecap="round"
+  stroke-linejoin="round"/&gt;&lt;/svg&gt;
+  &lt;div&gt;&lt;h4&gt;Actionable Insights&lt;/h4&gt;&lt;p&gt;Weekly reports that translate complex security data into
+  clear usage and threat summaries.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 5. COMPARISON TABLE ============ --&gt;
+  &lt;section class="fw-section fw-section-tight"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;div style="text-align: center;"&gt;
+  &lt;span class="fw-eyebrow"&gt;DIY vs. FireGuard&lt;/span&gt;
+  &lt;h2 class="fw-band-title fw-band-title-center"&gt;What you save by not doing it yourself.&lt;/h2&gt;
+  &lt;/div&gt;
+
+  &lt;div class="fw-compare-wrap"&gt;
+  &lt;table class="fw-compare-table"&gt;
+  &lt;thead&gt;
+  &lt;tr&gt;&lt;th&gt;&amp;nbsp;&lt;/th&gt;&lt;th&gt;DIY / In House&lt;/th&gt;&lt;th&gt;FireGuard
+  Complete&lt;/th&gt;&lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+  &lt;tr&gt;&lt;td&gt;Upfront hardware cost&lt;/td&gt;&lt;td&gt;$3K to $15K
+  plus&lt;/td&gt;&lt;td&gt;&lt;strong&gt;$0&lt;/strong&gt;&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Annual license renewals&lt;/td&gt;&lt;td&gt;&lt;span class="t-cross"&gt;&amp;#10005;&lt;/span&gt;
+  You manage&lt;/td&gt;&lt;td&gt;&lt;span class="t-check"&gt;&amp;#10003;&lt;/span&gt; Included&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;24/7 expert monitoring&lt;/td&gt;&lt;td&gt;&lt;span class="t-cross"&gt;&amp;#10005;&lt;/span&gt;
+  Not included&lt;/td&gt;&lt;td&gt;&lt;span class="t-check"&gt;&amp;#10003;&lt;/span&gt; Always on&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Firmware &amp;amp; patch updates&lt;/td&gt;&lt;td&gt;&lt;span
+  class="t-cross"&gt;&amp;#10005;&lt;/span&gt; You manage&lt;/td&gt;&lt;td&gt;&lt;span
+  class="t-check"&gt;&amp;#10003;&lt;/span&gt; Automatic&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Hardware upgrades&lt;/td&gt;&lt;td&gt;&lt;span class="t-cross"&gt;&amp;#10005;&lt;/span&gt; Buy
+  new&lt;/td&gt;&lt;td&gt;&lt;span class="t-check"&gt;&amp;#10003;&lt;/span&gt; Included&lt;/td&gt;&lt;/tr&gt;
+  &lt;tr&gt;&lt;td&gt;Predictable monthly cost&lt;/td&gt;&lt;td&gt;&lt;span class="t-cross"&gt;&amp;#10005;&lt;/span&gt;
+  Lumpy&lt;/td&gt;&lt;td&gt;&lt;span class="t-check"&gt;&amp;#10003;&lt;/span&gt; Fixed&lt;/td&gt;&lt;/tr&gt;
+  &lt;/tbody&gt;
+  &lt;/table&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 6. FAQ ============ --&gt;
+  &lt;section class="fw-section fw-faq-band"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;span class="fw-eyebrow" style="display: block; text-align: center;"&gt;Frequently Asked&lt;/span&gt;
+  &lt;h2 class="fw-band-title fw-band-title-center"&gt;Before you ask for pricing.&lt;/h2&gt;
+
+  &lt;div class="fw-faq-list"&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;What does FireGuard
+  Complete include?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;FireGuard Complete includes enterprise grade firewall hardware, full
+  security licensing (antivirus, IPS, content filtering), custom configuration, 24/7 monitoring and management by U.S.
+  based certified engineers, automatic firmware updates, hardware upgrades, and weekly security reports. One fixed
+  monthly fee covers all of it.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;How is pricing
+  determined?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;Monthly pricing depends on the hardware and throughput your environment
+  requires. We size your network and provide a customized quote. Service starts at $179 per month with no upfront
+  hardware cost.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;What happens when
+  my hardware needs to be upgraded?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;Hardware upgrades are included in the subscription. As the business grows
+  and traffic needs change, we swap in the right sized appliance at no additional capital cost.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;Who actually
+  manages my firewall?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;Your firewall is managed by our U.S. based security operations center,
+  staffed with manufacturer certified engineers. Not a script driven call center. The same team that configures your
+  device monitors and maintains it.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;Can I cancel
+  anytime?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;Yes. Month to month with 30 days notice. No multi year lock in. If we are
+  not adding value, you should not be paying us.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="fw-faq-item"&gt;
+  &lt;button class="fw-faq-question" aria-expanded="false" onclick="fwFgToggle(this)"&gt;&lt;span&gt;Which firewall
+  brands do you support?&lt;/span&gt;&lt;/button&gt;
+  &lt;div class="fw-faq-answer"&gt;&lt;p&gt;FireGuard Complete ships with SonicWall hardware by default. Our engineers
+  also hold current certifications on Sophos XGS, WatchGuard Firebox, and Fortinet FortiGate. If you have a platform
+  preference, tell us during the quote.&lt;/p&gt;&lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- ============ 7. BOTTOM CTA ============ --&gt;
+  &lt;section class="fw-section"&gt;
+  &lt;div class="fw-container"&gt;
+  &lt;div class="fw-bottom-cta"&gt;
+  &lt;h3&gt;Ready to simplify your network security?&lt;/h3&gt;
+  &lt;p&gt;We size your environment and deliver a customized pricing proposal. No pressure, no obligation.&lt;/p&gt;
+  &lt;div class="fw-bottom-price"&gt;Starting at &lt;strong&gt;$179/month&lt;/strong&gt;&lt;/div&gt;
+  &lt;div class="fw-bottom-cta-ctas"&gt;
+  &lt;a class="fw-btn-cta" style="cursor:pointer" onclick="openQuoteForm('managed-fire-guard','Interested in getting
+  started with FireGuard Complete Services','ManagedFireGuard')"&gt;Get a Quote&lt;/a&gt;
+  &lt;a class="fw-btn-outline-light" target="_blank"
+  href="https://www.firewalls.com/blog/wp-content/uploads/2026/02/FireGuard-Complete-Flyer.pdf"&gt;Download
+  Overview&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;/div&gt;&lt;!-- /.fw-brands --&gt;
+
+  &lt;script&gt;
+  function fwFgToggle(btn) {
+  var item = btn.closest('.fw-faq-item');
+  var isOpen = item.classList.contains('open');
+  document.querySelectorAll('.fw-faq-item').forEach(function(i) {
+  i.classList.remove('open');
+  var q = i.querySelector('.fw-faq-question');
+  if (q) q.setAttribute('aria-expanded','false');
+  });
+  if (!isOpen) {
+  item.classList.add('open');
+  btn.setAttribute('aria-expanded','true');
+  }
+  }
+  &lt;/script&gt;
+</div>
