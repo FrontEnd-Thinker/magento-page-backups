@@ -1,0 +1,427 @@
+<!-- BACKUP
+timestamp:   2026-08-14T20:00:10.271Z
+environment: local
+operation:   sync (staging → local)
+item:        #2707 mr53e "MR53E"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Firewalls.com — PRODUCT LISTING PAGE TEMPLATE (clone me)
+  ============================================================================
+  Use for any brand × series × model product listing page, e.g.:
+      /brands/sonicwall/firewalls/tz/280.html
+      /brands/sonicwall/firewalls/nsa/2700.html
+      /brands/sophos/firewalls/xgs/107.html
+      /brands/fortinet/firewalls/fortigate/60f.html
+      /brands/sonicwall/wireless-access-points/sonicwave/621.html
+ 
+  HOW THE PAGE RENDERS (top to bottom)
+  ----------------------------------------------------------------------------
+    1. HERO (.fw-brands.fw-plp)            headline + intro + key-specs panel
+    2. TRUST BAR (same .fw-brands block)   4 site-wide value props
+    --- Magento renders .products.wrapper + .toolbar.toolbar-products here ---
+    3. SPECS (.fw-brands.fw-plp, hidden #fw-plp-below)
+    4. COMPARE CTA
+    5. FAQ (schema.org microdata + JSON-LD)
+    6. BOTTOM CTA
+ 
+  The inline script at the bottom of this file does THREE things on
+  DOMContentLoaded:
+    - Moves #fw-plp-below from where you authored it (right after the trust
+      bar) to right after the last product toolbar. That way the specs/FAQ/CTA
+      render BELOW the product grid even though they appear above it in source.
+    - Injects an .fw-plp-products-header ("MR53E Configurations / Choose
+      Your MR53E") above the first product toolbar.
+    - Defines fwToggleFaq once for the FAQ accordion.
+ 
+  WHERE THE STYLING LIVES
+  ----------------------------------------------------------------------------
+  ALL CSS comes from the theme:
+    - _fw_layout.less          hero / trust / sections / FAQ / bottom CTA,
+                               PLP overrides under .fw-brands.fw-plp,
+                               .fw-plp-products-header.
+    - _brands_page_extend.less .fw-quick-match, .fw-qm-row, .fw-qm-env,
+                               .fw-spec-val, .fw-why-grid, .fw-why-card,
+                               .fw-compare-cta.
+  No inline <style> block belongs on this page.
+ 
+  TOKENS
+  ----------------------------------------------------------------------------
+  Brand:
+    Cisco Meraki                display name, e.g. "SonicWall"
+    cisco-meraki           url slug, e.g. "sonicwall"
+    #078AC1         accent base hex (see cheat sheet below)
+    #056694   accent hover hex — REQUIRED for non-default brands
+  Product / model:
+    wireless-access-points         e.g. "firewalls" or "wireless-access-points"
+    MR               e.g. "TZ" or "SonicWave"
+    mr          e.g. "tz" or "sonicwave"
+    MR53E                model / SKU name, e.g. "TZ280", "XGS 107"
+    Same Wi-Fi 5 muscle, tunable coverage for spaces that need it shaped just right.         second-line yellow tagline under the H1
+    The MR53E carries the MR53's 4x4:4 radio chain into an external-antenna form factor, with six RP-TNC connectors for dipole, panel, or patch antennas &mdash; ideal for stadiums, arenas, and warehouses that need directional RF coverage.          descriptive paragraph (2-4 lines)
+  Key specs (hero right column — 4 rows, label / value):
+    {{SPEC_N_LABEL}} / {{SPEC_N_VALUE}}
+  Spec groups (below-products grid — 4 cards, title + body HTML):
+    {{SPEC_GROUP_N_TITLE}}   short noun, e.g. "Performance"
+    {{SPEC_GROUP_N_HTML}}    body (inline HTML allowed: <strong>, <br>)
+  Compare CTA:
+    Not sure the MR53E is the right fit?, Compare it against other access points in the Meraki MR series to find the best match for your environment., Compare MR Access Points
+  FAQ (5 starter items — duplicate blocks as needed, AND keep the JSON-LD
+  block in sync with the visible FAQ):
+    {{FAQ_N_QUESTION}}, {{FAQ_N_ANSWER}}
+  Bottom CTA:
+    Ready to deploy the MR53E?, Our Meraki-certified engineers can help you size, configure, and deploy your wireless network. Get pricing and expert advice today.
+ 
+  PER-BRAND ACCENT CHEAT SHEET (set --fw-accent + --fw-accent-hover on .fw-brands)
+    SonicWall    #9C0000 / #D70000   (default)
+    Sophos       #00224F / #001638   (navy)
+    Fortinet     #DA291C / #b21f15
+    WatchGuard   #D31245 / #a50e36   (red / magenta)
+    Palo Alto    #FA582D / #d8431c   (orange)
+    Meraki       #0079B6 / #00608f   (blue)
+    Barracuda    #0088CE / #006ca3   (blue)
+-->
+
+  <!-- ============ ABOVE PRODUCTS: HERO + TRUST ============ -->
+  <div class="fw-brands fw-plp" style="--fw-accent: #078AC1; --fw-accent-hover: #056694;">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="fw-hero">
+      <div class="fw-container fw-hero-grid">
+        <div>
+          <h1>
+            Cisco Meraki MR53E.
+            <em class="accent">Same Wi-Fi 5 muscle, tunable coverage for spaces that need it shaped just right.</em>
+          </h1>
+          <p>The MR53E carries the MR53's 4x4:4 radio chain into an external-antenna form factor, with six RP-TNC
+            connectors for dipole, panel, or patch antennas &mdash; ideal for stadiums, arenas, and warehouses that need
+            directional RF coverage.</p>
+          <div class="fw-hero-ctas">
+            <a href="#fw-plp-products" class="fw-btn-cta" style="--fw-accent:#9C0000; --fw-accent-hover:#D70000">Shop
+              MR53E Bundles</a>
+            <a href="/contact-us" class="fw-btn-secondary">Request a Quote</a>
+          </div>
+        </div>
+
+        <div class="fw-quick-match">
+          <div class="fw-qm-title">MR53E Key Specs</div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Wi-Fi Standard</strong></div>
+            <div class="fw-spec-val">802.11ac Wave 2 (Wi-Fi 5)</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Max Data Rate</strong></div>
+            <div class="fw-spec-val">2.5 Gbps aggregate</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Radio Config</strong></div>
+            <div class="fw-spec-val">4x4:4 MU-MIMO, 6 external antenna ports</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Form Factor</strong></div>
+            <div class="fw-spec-val">Indoor mount, external RP-TNC antennas</div>
+          </div>
+        </div>
+
+        <!-- ============ ALTERNATIVE: HERO MEDIA SLOT ============
+             This page keeps the .fw-quick-match key-specs panel above as the
+             default right-column content. If a model page should instead show
+             media, DELETE the .fw-quick-match block above and drop in the
+             flexible media slot below. It is the same slot used by the Brand
+             templates and supports four types: image, video, text, chart.
+ 
+             Set data-hero-media to the type you want, then keep only that
+             type's inner block. Styling is theme-side in _fw_layout.less,
+             keyed off .fw-hero-media[data-hero-media="…"]; no inline styles.
+ 
+             ┌─ IMAGE (default) ─────────────────────────────────────────────
+             │ <div class="fw-hero-award fw-hero-media" data-hero-media="image">
+             │   <img class="fw-hero-media-img" src="{{HERO_MEDIA_IMAGE_URL}}" alt="{{HERO_MEDIA_ALT}}">
+             │ </div>
+             │
+             ├─ VIDEO ─ data-hero-media="video" ─────────────────────────────
+             │ self-hosted:
+             │   <video class="fw-hero-media-video" controls playsinline preload="metadata" poster="{{HERO_MEDIA_VIDEO_POSTER}}">
+             │     <source src="{{HERO_MEDIA_VIDEO_URL}}" type="video/mp4">
+             │   </video>
+             │ or embed:
+             │   <div class="fw-hero-media-embed"><iframe src="{{HERO_MEDIA_EMBED_URL}}" title="{{HERO_MEDIA_ALT}}" loading="lazy" allowfullscreen></iframe></div>
+             │
+             ├─ TEXT ─ data-hero-media="text" ───────────────────────────────
+             │ <div class="fw-hero-media-text">
+             │   <span class="fw-hero-media-eyebrow">{{HERO_MEDIA_TEXT_EYEBROW}}</span>
+             │   <p class="fw-hero-media-quote">{{HERO_MEDIA_TEXT_BODY}}</p>
+             │   <span class="fw-hero-media-cite">{{HERO_MEDIA_TEXT_CITE}}</span>
+             │ </div>
+             │
+             └─ CHART ─ data-hero-media="chart" · pure-markup bar chart, no JS ─
+               <div class="fw-hero-media-chart">
+                 <div class="fw-hero-chart-title">{{HERO_MEDIA_CHART_TITLE}}</div>
+                 <ul class="fw-hero-chart" role="img" aria-label="{{HERO_MEDIA_CHART_ALT}}">
+                   <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_1_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:92%"></span></span><span class="fw-bar-value">{{METRIC_1_VALUE}}</span></li>
+                   <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_2_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:74%"></span></span><span class="fw-bar-value">{{METRIC_2_VALUE}}</span></li>
+                 </ul>
+               </div>
+             ============ end ALTERNATIVE ============ -->
+      </div>
+    </section>
+
+    <!-- ============ 2. TRUST BAND (site-wide; identical to other templates) ============ -->
+    <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+      <div class="fw-container">
+        <div class="fw-trust-card">
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="9" cy="8" r="4" />
+                <path d="M2 21v-1a7 7 0 0 1 13.5-2.5" />
+                <path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+              <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Config &amp; Managed Services</span>
+              <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <path d="M16 13H8M16 17H8M10 9H8" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+              <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <rect x="1" y="6" width="13" height="10" rx="1" />
+                <path d="M14 9h4l3 3v4h-7z" />
+                <circle cx="6.5" cy="18.5" r="2" />
+                <circle cx="17.5" cy="18.5" r="2" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Same-Day Shipping</span>
+              <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ BELOW PRODUCTS (moved by script to after the product grid) ============ -->
+  <div id="fw-plp-below" style="display:none">
+    <div class="fw-brands fw-plp" style="--fw-accent: #078AC1; --fw-accent-hover: #056694;">
+
+      <!-- ============ 3. SPECS ============ -->
+      <section class="fw-section">
+        <div class="fw-container">
+          <span class="fw-eyebrow">Specifications</span>
+          <h2 class="fw-band-title">MR53E at a Glance</h2>
+
+          <div class="fw-why-grid">
+            <div class="fw-why-card">
+              <h3>Radios &amp; Antennas</h3>
+              <p>Same 4-radio architecture as the MR53 (4x4:4 on both bands, dedicated WIDS/WIPS/analytics radio, BLE
+                radio), with six external RP-TNC connectors supporting dipole omni, panel, panel downtilt, and patch
+                antennas.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Performance &amp; Capacity</h3>
+              <p>2.5 Gbps aggregate throughput, matching the MR53, with coverage shaped by the antennas chosen for the
+                venue.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Design &amp; Deployment</h3>
+              <p>Indoor mount built for large open spaces. 802.3at PoE required for full power &mdash; 802.3af disables
+                the Air Marshal radio and reduces 2.4GHz streams.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Management &amp; Security</h3>
+              <p>Managed from the Meraki cloud dashboard with built-in Air Marshal WIDS/WIPS and BLE location analytics.
+              </p>
+            </div>
+          </div>
+
+          <!-- ============ 4. COMPARE CTA ============ -->
+          <div class="fw-compare-cta">
+            <h3>Not sure the MR53E is the right fit?</h3>
+            <p>Compare it against other access points in the Meraki MR series to find the best match for your
+              environment.</p>
+            <a href="/brands/cisco-meraki/wireless-access-points/mr.html#models" class="fw-btn-cta">Compare MR Access
+              Points</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. FAQ ============ -->
+      <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-plp-faq-heading">
+        <div class="fw-container">
+          <h2 class="fw-band-title" id="fw-plp-faq-heading">MR53E FAQ</h2>
+          <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">What Wi-Fi standard does the MR53E support?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The MR53E supports 802.11ac Wave 2 (Wi-Fi 5), with a 4x4:4 mu-mimo, 6 external
+                  antenna ports radio configuration delivering up to 2.5 gbps aggregate.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">How many devices can the MR53E handle at once?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Capacity depends on RF environment and channel width, but the MR53E&rsquo;s radio
+                  design is built to match its target deployment &mdash; from light per-room use to high-density venues.
+                  Our engineers can help size your specific site.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">What mounting options does the MR53E support?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The MR53E is designed for indoor mount, external rp-tnc antennas installation. See
+                  the datasheet or installation guide for exact bracket and clearance requirements.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">Does the MR53E require PoE+?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Most MR53E deployments run best on 802.3at (PoE+); some radios or streams may be
+                  reduced on standard 802.3af power. Check the datasheet for the exact power budget.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">How is the MR53E managed?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Like every Meraki access point, the MR53E is provisioned, monitored, and updated
+                  entirely from the cloud-based Meraki dashboard &mdash; no on-site controller required.</p>
+              </div>
+            </div>
+
+            <!-- Add more .fw-faq-item blocks here. Don't forget to add matching
+                 { "@type": "Question", ... } entries to the JSON-LD below. -->
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ JSON-LD (must mirror the visible FAQ above) ============ -->
+      <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What Wi-Fi standard does the MR53E support?", "acceptedAnswer": { "@type": "Answer", "text": "The MR53E supports 802.11ac Wave 2 (Wi-Fi 5), with a 4x4:4 mu-mimo, 6 external antenna ports radio configuration delivering up to 2.5 gbps aggregate." } },
+          { "@type": "Question", "name": "How many devices can the MR53E handle at once?", "acceptedAnswer": { "@type": "Answer", "text": "Capacity depends on RF environment and channel width, but the MR53E&rsquo;s radio design is built to match its target deployment &mdash; from light per-room use to high-density venues. Our engineers can help size your specific site." } },
+          { "@type": "Question", "name": "What mounting options does the MR53E support?", "acceptedAnswer": { "@type": "Answer", "text": "The MR53E is designed for indoor mount, external rp-tnc antennas installation. See the datasheet or installation guide for exact bracket and clearance requirements." } },
+          { "@type": "Question", "name": "Does the MR53E require PoE+?", "acceptedAnswer": { "@type": "Answer", "text": "Most MR53E deployments run best on 802.3at (PoE+); some radios or streams may be reduced on standard 802.3af power. Check the datasheet for the exact power budget." } },
+          { "@type": "Question", "name": "How is the MR53E managed?", "acceptedAnswer": { "@type": "Answer", "text": "Like every Meraki access point, the MR53E is provisioned, monitored, and updated entirely from the cloud-based Meraki dashboard &mdash; no on-site controller required." } }
+        ]
+      }
+      </script>
+
+      <!-- ============ 6. BOTTOM CTA ============ -->
+      <section class="fw-section fw-section-alt">
+        <div class="fw-container">
+          <div class="fw-bottom-cta">
+            <h3>Ready to deploy the MR53E?</h3>
+            <p>Our Meraki-certified engineers can help you size, configure, and deploy your wireless network. Get
+              pricing and expert advice today.</p>
+            <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============ PLP LIFECYCLE SCRIPT ============
+       1. Move #fw-plp-below to right after the product listing.
+       2. Inject the .fw-plp-products-header above the first product toolbar
+          and forward the brand accent so the injected eyebrow tracks --fw-accent.
+       3. Define fwToggleFaq once for the FAQ accordion. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var below = document.getElementById('fw-plp-below');
+      var brandsDiv = document.querySelector('.fw-brands.fw-plp');
+      var accent = brandsDiv ? getComputedStyle(brandsDiv).getPropertyValue('--fw-accent').trim() : '';
+      var toolbars = document.querySelectorAll('.toolbar.toolbar-products');
+      var lastToolbar = toolbars.length > 1 ? toolbars[toolbars.length - 1] : null;
+      var productWrapper = document.querySelector('.products.wrapper');
+      var insertAfter = lastToolbar || productWrapper;
+ 
+      if (below && insertAfter) {
+        insertAfter.parentNode.insertBefore(below, insertAfter.nextSibling);
+        below.style.display = '';
+      }
+ 
+      var firstToolbar = toolbars.length > 0 ? toolbars[0] : productWrapper;
+      if (firstToolbar) {
+        var header = document.createElement('div');
+        header.className = 'fw-plp-products-header';
+        header.id = 'fw-plp-products';
+        if (accent) header.style.setProperty('--fw-accent', accent);
+        header.innerHTML =
+          '<span class="fw-eyebrow">MR53E Configurations</span>' +
+          '<h2>Choose Your MR53E</h2>';
+        firstToolbar.parentNode.insertBefore(header, firstToolbar);
+      }
+    });
+ 
+    function fwToggleFaq(btn) {
+      var item = btn.closest('.fw-faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.fw-faq-item').forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.fw-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+
+</div>
