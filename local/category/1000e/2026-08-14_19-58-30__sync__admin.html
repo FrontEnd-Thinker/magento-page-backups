@@ -1,0 +1,429 @@
+<!-- BACKUP
+timestamp:   2026-08-14T19:58:30.796Z
+environment: local
+operation:   sync (staging → local)
+item:        #492 1000e "1000E"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Firewalls.com — PRODUCT LISTING PAGE TEMPLATE (clone me)
+  ============================================================================
+  Use for any brand × series × model product listing page, e.g.:
+      /brands/sonicwall/firewalls/tz/280.html
+      /brands/sonicwall/firewalls/nsa/2700.html
+      /brands/sophos/firewalls/xgs/107.html
+      /brands/fortinet/firewalls/fortigate/60f.html
+      /brands/sonicwall/wireless-access-points/sonicwave/621.html
+ 
+  HOW THE PAGE RENDERS (top to bottom)
+  ----------------------------------------------------------------------------
+    1. HERO (.fw-brands.fw-plp)            headline + intro + key-specs panel
+    2. TRUST BAR (same .fw-brands block)   4 site-wide value props
+    --- Magento renders .products.wrapper + .toolbar.toolbar-products here ---
+    3. SPECS (.fw-brands.fw-plp, hidden #fw-plp-below)
+    4. COMPARE CTA
+    5. FAQ (schema.org microdata + JSON-LD)
+    6. BOTTOM CTA
+ 
+  The inline script at the bottom of this file does THREE things on
+  DOMContentLoaded:
+    - Moves #fw-plp-below from where you authored it (right after the trust
+      bar) to right after the last product toolbar. That way the specs/FAQ/CTA
+      render BELOW the product grid even though they appear above it in source.
+    - Injects an .fw-plp-products-header ("FortiWeb 1000E Configurations / Choose
+      Your FortiWeb 1000E") above the first product toolbar.
+    - Defines fwToggleFaq once for the FAQ accordion.
+ 
+  WHERE THE STYLING LIVES
+  ----------------------------------------------------------------------------
+  ALL CSS comes from the theme:
+    - _fw_layout.less          hero / trust / sections / FAQ / bottom CTA,
+                               PLP overrides under .fw-brands.fw-plp,
+                               .fw-plp-products-header.
+    - _brands_page_extend.less .fw-quick-match, .fw-qm-row, .fw-qm-env,
+                               .fw-spec-val, .fw-why-grid, .fw-why-card,
+                               .fw-compare-cta.
+  No inline <style> block belongs on this page.
+ 
+  TOKENS
+  ----------------------------------------------------------------------------
+  Brand:
+    Fortinet                display name, e.g. "SonicWall"
+    fortinet           url slug, e.g. "sonicwall"
+    #DA291C         accent base hex (see cheat sheet below)
+    #b21f15   accent hover hex — REQUIRED for non-default brands
+  Product / model:
+    web-application-firewalls         e.g. "firewalls" or "wireless-access-points"
+    FortiWeb               e.g. "TZ" or "SonicWave"
+    fortiweb          e.g. "tz" or "sonicwave"
+    FortiWeb 1000E                model / SKU name, e.g. "TZ280", "XGS 107"
+    Departmental data-center WAF with hardware SSL offload.         second-line yellow tagline under the H1
+    The FortiWeb 1000E moves into a 2U, dual-power-supply chassis built for mid-size enterprise and departmental data-center deployments. Hardware-accelerated SSL, a mix of bypass and non-bypass ports, and dual 1 TB storage give it the headroom to front several production applications at once.          descriptive paragraph (2-4 lines)
+  Key specs (hero right column — 4 rows, label / value):
+    {{SPEC_N_LABEL}} / {{SPEC_N_VALUE}}
+  Spec groups (below-products grid — 4 cards, title + body HTML):
+    {{SPEC_GROUP_N_TITLE}}   short noun, e.g. "Performance"
+    {{SPEC_GROUP_N_HTML}}    body (inline HTML allowed: <strong>, <br>)
+  Compare CTA:
+    Not sure FortiWeb 1000E is the right fit?, Compare every FortiWeb hardware and virtual model side-by-side on throughput, ports, and pricing before you buy., Compare FortiWeb Models
+  FAQ (5 starter items — duplicate blocks as needed, AND keep the JSON-LD
+  block in sync with the visible FAQ):
+    {{FAQ_N_QUESTION}}, {{FAQ_N_ANSWER}}
+  Bottom CTA:
+    Ready to deploy the FortiWeb 1000E?, Our certified Fortinet engineers can help you size, configure, and deploy the right FortiWeb appliance for your applications.
+ 
+  PER-BRAND ACCENT CHEAT SHEET (set --fw-accent + --fw-accent-hover on .fw-brands)
+    SonicWall    #9C0000 / #D70000   (default)
+    Sophos       #00224F / #001638   (navy)
+    Fortinet     #DA291C / #b21f15
+    WatchGuard   #D31245 / #a50e36   (red / magenta)
+    Palo Alto    #FA582D / #d8431c   (orange)
+    Meraki       #0079B6 / #00608f   (blue)
+    Barracuda    #0088CE / #006ca3   (blue)
+-->
+
+  <!-- ============ ABOVE PRODUCTS: HERO + TRUST ============ -->
+  <div class="fw-brands fw-plp" style="--fw-accent: #DA291C; --fw-accent-hover: #b21f15;">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="fw-hero">
+      <div class="fw-container fw-hero-grid">
+        <div>
+          <h1>
+            Fortinet FortiWeb 1000E.
+            <em class="accent">Departmental data-center WAF with hardware SSL offload.</em>
+          </h1>
+          <p>The FortiWeb 1000E moves into a 2U, dual-power-supply chassis built for mid-size enterprise and
+            departmental data-center deployments. Hardware-accelerated SSL, a mix of bypass and non-bypass ports, and
+            dual 1 TB storage give it the headroom to front several production applications at once.</p>
+          <div class="fw-hero-ctas">
+            <a href="#fw-plp-products" class="fw-btn-cta" style="--fw-accent:#DA291C; --fw-accent-hover:#b21f15">Shop
+              FortiWeb 1000E Bundles</a>
+            <a href="/contact-us" class="fw-btn-secondary">Request a Quote</a>
+          </div>
+        </div>
+
+        <div class="fw-quick-match">
+          <div class="fw-qm-title">FortiWeb 1000E Key Specs</div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Throughput</strong></div>
+            <div class="fw-spec-val">1.3 Gbps</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>SSL Processing</strong></div>
+            <div class="fw-spec-val">Hardware-accelerated</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Interfaces</strong></div>
+            <div class="fw-spec-val">6x GE RJ45 + 2x 10GE SFP+ + 4x GE SFP</div>
+          </div>
+          <div class="fw-qm-row">
+            <div class="fw-qm-env"><strong>Storage</strong></div>
+            <div class="fw-spec-val">2x 1 TB</div>
+          </div>
+        </div>
+
+        <!-- ============ ALTERNATIVE: HERO MEDIA SLOT ============
+             This page keeps the .fw-quick-match key-specs panel above as the
+             default right-column content. If a model page should instead show
+             media, DELETE the .fw-quick-match block above and drop in the
+             flexible media slot below. It is the same slot used by the Brand
+             templates and supports four types: image, video, text, chart.
+ 
+             Set data-hero-media to the type you want, then keep only that
+             type's inner block. Styling is theme-side in _fw_layout.less,
+             keyed off .fw-hero-media[data-hero-media="…"]; no inline styles.
+ 
+             ┌─ IMAGE (default) ─────────────────────────────────────────────
+             │ <div class="fw-hero-award fw-hero-media" data-hero-media="image">
+             │   <img class="fw-hero-media-img" src="{{HERO_MEDIA_IMAGE_URL}}" alt="{{HERO_MEDIA_ALT}}">
+             │ </div>
+             │
+             ├─ VIDEO ─ data-hero-media="video" ─────────────────────────────
+             │ self-hosted:
+             │   <video class="fw-hero-media-video" controls playsinline preload="metadata" poster="{{HERO_MEDIA_VIDEO_POSTER}}">
+             │     <source src="{{HERO_MEDIA_VIDEO_URL}}" type="video/mp4">
+             │   </video>
+             │ or embed:
+             │   <div class="fw-hero-media-embed"><iframe src="{{HERO_MEDIA_EMBED_URL}}" title="{{HERO_MEDIA_ALT}}" loading="lazy" allowfullscreen></iframe></div>
+             │
+             ├─ TEXT ─ data-hero-media="text" ───────────────────────────────
+             │ <div class="fw-hero-media-text">
+             │   <span class="fw-hero-media-eyebrow">{{HERO_MEDIA_TEXT_EYEBROW}}</span>
+             │   <p class="fw-hero-media-quote">{{HERO_MEDIA_TEXT_BODY}}</p>
+             │   <span class="fw-hero-media-cite">{{HERO_MEDIA_TEXT_CITE}}</span>
+             │ </div>
+             │
+             └─ CHART ─ data-hero-media="chart" · pure-markup bar chart, no JS ─
+               <div class="fw-hero-media-chart">
+                 <div class="fw-hero-chart-title">{{HERO_MEDIA_CHART_TITLE}}</div>
+                 <ul class="fw-hero-chart" role="img" aria-label="{{HERO_MEDIA_CHART_ALT}}">
+                   <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_1_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:92%"></span></span><span class="fw-bar-value">{{METRIC_1_VALUE}}</span></li>
+                   <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_2_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:74%"></span></span><span class="fw-bar-value">{{METRIC_2_VALUE}}</span></li>
+                 </ul>
+               </div>
+             ============ end ALTERNATIVE ============ -->
+      </div>
+    </section>
+
+    <!-- ============ 2. TRUST BAND (site-wide; identical to other templates) ============ -->
+    <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+      <div class="fw-container">
+        <div class="fw-trust-card">
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="9" cy="8" r="4" />
+                <path d="M2 21v-1a7 7 0 0 1 13.5-2.5" />
+                <path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+              <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="3" />
+                <path
+                  d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Config &amp; Managed Services</span>
+              <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                <polyline points="14 2 14 8 20 8" />
+                <path d="M16 13H8M16 17H8M10 9H8" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+              <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+            </div>
+          </div>
+
+          <div class="fw-trust-item">
+            <div class="fw-trust-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true" focusable="false">
+                <rect x="1" y="6" width="13" height="10" rx="1" />
+                <path d="M14 9h4l3 3v4h-7z" />
+                <circle cx="6.5" cy="18.5" r="2" />
+                <circle cx="17.5" cy="18.5" r="2" />
+              </svg>
+            </div>
+            <div class="fw-trust-text">
+              <span class="fw-trust-title">Same-Day Shipping</span>
+              <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- ============ BELOW PRODUCTS (moved by script to after the product grid) ============ -->
+  <div id="fw-plp-below" style="display:none">
+    <div class="fw-brands fw-plp" style="--fw-accent: #DA291C; --fw-accent-hover: #b21f15;">
+
+      <!-- ============ 3. SPECS ============ -->
+      <section class="fw-section">
+        <div class="fw-container">
+          <span class="fw-eyebrow">Specifications</span>
+          <h2 class="fw-band-title">FortiWeb 1000E at a Glance</h2>
+
+          <div class="fw-why-grid">
+            <div class="fw-why-card">
+              <h3>Performance</h3>
+              <p><strong>1.3 Gbps</strong> protected WAF throughput.<br><strong>Hardware-accelerated</strong> SSL/TLS
+                processing.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Interfaces</h3>
+              <p>6x GE RJ45 ports (4 bypass-capable).<br>2x 10GE SFP+ ports.<br>4x GE SFP ports.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Storage & Power</h3>
+              <p>2x 1 TB onboard storage.<br>Dual hot-swappable AC power supplies.<br>2U rack-mount.</p>
+            </div>
+            <div class="fw-why-card">
+              <h3>Security Features</h3>
+              <p>AI/ML dual-layer threat detection.<br>Bot mitigation and API protection.<br>Active/Passive and Active/Active HA clustering.
+              </p>
+            </div>
+          </div>
+
+          <!-- ============ 4. COMPARE CTA ============ -->
+          <div class="fw-compare-cta">
+            <h3>Not sure FortiWeb 1000E is the right fit?</h3>
+            <p>Compare every FortiWeb hardware and virtual model side-by-side on throughput, ports, and pricing before
+              you buy.</p>
+            <a href="/brands/fortinet/web-application-firewalls/fortiweb.html#models" class="fw-btn-cta">Compare
+              FortiWeb Models</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5. FAQ ============ -->
+      <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-plp-faq-heading">
+        <div class="fw-container">
+          <h2 class="fw-band-title" id="fw-plp-faq-heading">FortiWeb 1000E FAQ</h2>
+          <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">What is the FortiWeb 1000E used for?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The Fortinet FortiWeb 1000E is a Web Application Firewall (WAF) that inspects
+                  HTTP/HTTPS traffic to protect web applications and APIs from OWASP Top 10 attacks, bot abuse, and
+                  zero-day exploits. It is typically deployed by mid-size enterprises and departmental data centers
+                  running several production applications.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">What throughput does the FortiWeb 1000E support?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The FortiWeb 1000E is rated for up to 1.3 Gbps of protected WAF throughput. Actual
+                  throughput depends on which inspection features (SSL offload, deep content inspection, bot mitigation)
+                  are enabled.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">Is the FortiWeb 1000E still sold by Fortinet?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The 1000E is a legacy model, superseded by the current FortiWeb F-series (1000F); it
+                  no longer appears on Fortinet's current datasheet. Contact us to confirm current availability or to
+                  spec a 1000F replacement.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">Does the FortiWeb 1000E support high availability?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes. FortiWeb supports Active-Passive and Active-Active HA clustering so you can
+                  eliminate single points of failure in front of production web applications.</p>
+              </div>
+            </div>
+
+            <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+              <button class="fw-faq-question" type="button" aria-expanded="false" onclick="fwToggleFaq(this)">
+                <span itemprop="name">What's the difference between the FortiWeb 1000E and other FortiWeb models?</span>
+              </button>
+              <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">FortiWeb models scale by throughput, port density, and storage rather than feature
+                  set — the full WAF, bot mitigation, and API protection feature set is available across the line.
+                  Choose the FortiWeb 1000E based on your traffic volume and required interface types; see the
+                  comparison table below for the full lineup.</p>
+              </div>
+            </div>
+
+            <!-- Add more .fw-faq-item blocks here. Don't forget to add matching
+                 { "@type": "Question", ... } entries to the JSON-LD below. -->
+
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ FAQ JSON-LD (must mirror the visible FAQ above) ============ -->
+      <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "What is the FortiWeb 1000E used for?", "acceptedAnswer": { "@type": "Answer", "text": "The Fortinet FortiWeb 1000E is a Web Application Firewall (WAF) that inspects HTTP/HTTPS traffic to protect web applications and APIs from OWASP Top 10 attacks, bot abuse, and zero-day exploits. It is typically deployed by mid-size enterprises and departmental data centers running several production applications." } },
+          { "@type": "Question", "name": "What throughput does the FortiWeb 1000E support?", "acceptedAnswer": { "@type": "Answer", "text": "The FortiWeb 1000E is rated for up to 1.3 Gbps of protected WAF throughput. Actual throughput depends on which inspection features (SSL offload, deep content inspection, bot mitigation) are enabled." } },
+          { "@type": "Question", "name": "Is the FortiWeb 1000E still sold by Fortinet?", "acceptedAnswer": { "@type": "Answer", "text": "The 1000E is a legacy model, superseded by the current FortiWeb F-series (1000F); it no longer appears on Fortinet's current datasheet. Contact us to confirm current availability or to spec a 1000F replacement." } },
+          { "@type": "Question", "name": "Does the FortiWeb 1000E support high availability?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. FortiWeb supports Active-Passive and Active-Active HA clustering so you can eliminate single points of failure in front of production web applications." } },
+          { "@type": "Question", "name": "What's the difference between the FortiWeb 1000E and other FortiWeb models?", "acceptedAnswer": { "@type": "Answer", "text": "FortiWeb models scale by throughput, port density, and storage rather than feature set — the full WAF, bot mitigation, and API protection feature set is available across the line. Choose the FortiWeb 1000E based on your traffic volume and required interface types; see the comparison table below for the full lineup." } }
+        ]
+      }
+      </script>
+
+      <!-- ============ 6. BOTTOM CTA ============ -->
+      <section class="fw-section fw-section-alt">
+        <div class="fw-container">
+          <div class="fw-bottom-cta">
+            <h3>Ready to deploy the FortiWeb 1000E?</h3>
+            <p>Our certified Fortinet engineers can help you size, configure, and deploy the right FortiWeb appliance
+              for your applications.</p>
+            <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- ============ PLP LIFECYCLE SCRIPT ============
+       1. Move #fw-plp-below to right after the product listing.
+       2. Inject the .fw-plp-products-header above the first product toolbar
+          and forward the brand accent so the injected eyebrow tracks --fw-accent.
+       3. Define fwToggleFaq once for the FAQ accordion. -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var below = document.getElementById('fw-plp-below');
+      var brandsDiv = document.querySelector('.fw-brands.fw-plp');
+      var accent = brandsDiv ? getComputedStyle(brandsDiv).getPropertyValue('--fw-accent').trim() : '';
+      var toolbars = document.querySelectorAll('.toolbar.toolbar-products');
+      var lastToolbar = toolbars.length > 1 ? toolbars[toolbars.length - 1] : null;
+      var productWrapper = document.querySelector('.products.wrapper');
+      var insertAfter = lastToolbar || productWrapper;
+ 
+      if (below && insertAfter) {
+        insertAfter.parentNode.insertBefore(below, insertAfter.nextSibling);
+        below.style.display = '';
+      }
+ 
+      var firstToolbar = toolbars.length > 0 ? toolbars[0] : productWrapper;
+      if (firstToolbar) {
+        var header = document.createElement('div');
+        header.className = 'fw-plp-products-header';
+        header.id = 'fw-plp-products';
+        if (accent) header.style.setProperty('--fw-accent', accent);
+        header.innerHTML =
+          '<span class="fw-eyebrow">FortiWeb 1000E Configurations</span>' +
+          '<h2>Choose Your FortiWeb 1000E</h2>';
+        firstToolbar.parentNode.insertBefore(header, firstToolbar);
+      }
+    });
+ 
+    function fwToggleFaq(btn) {
+      var item = btn.closest('.fw-faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.fw-faq-item').forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.fw-faq-question').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    }
+  </script>
+
+</div>
