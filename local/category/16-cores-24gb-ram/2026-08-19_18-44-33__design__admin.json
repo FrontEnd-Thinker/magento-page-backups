@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:44:33.752Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 6588,
+    "identifier": "16-cores-24gb-ram",
+    "title": "16 CORES & 24GB RAM",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
