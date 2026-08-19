@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:43:58.487Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 121,
+    "identifier": "135",
+    "title": "XG 135",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
