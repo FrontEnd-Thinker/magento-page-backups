@@ -1,0 +1,555 @@
+<!-- BACKUP
+timestamp:   2026-08-19T15:34:52.869Z
+environment: local
+operation:   sync (staging → local)
+item:        #96 firewalls "Firewalls"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Brand × Product Category Page TEMPLATE
+  ----------------------------------------------------------------
+  Use this template for every brand × product category page:
+      /brands/{slug}/firewalls.html
+      /brands/{slug}/access-points.html
+      /brands/{slug}/switches.html
+      /brands/{slug}/licenses-renewals.html
+      /brands/{slug}/secure-remote-access.html   ...etc.
+
+  All product categories share the SAME layout — hero, trust strip,
+  series cards, comparison table, FAQ, bottom CTA. Only the {{TOKENS}}
+  change per brand and per product.
+
+  ---------------------------------------------------------------
+  REQUIRED TOKENS
+
+  Brand:
+    Sophos                display name, e.g. "SonicWall", "Sophos"
+    sophos           url slug, e.g. "sonicwall", "sophos"
+    #00224F         accent base hex (see cheat sheet below)
+    #001638   accent hover hex — REQUIRED for non-default brands,
+                             otherwise hover falls back to the default red (#D70000)
+                             and buttons look broken on every non-SonicWall page.
+    GOLD PARTNER         e.g. "PLATINUM PARTNER", "GOLD PARTNER"
+
+  Product (varies per page):
+    Firewall        singular noun, e.g. "Firewall", "Access Point",
+                       "Switch", "License", "Remote Access Appliance"
+    Firewalls plural form, e.g. "Firewalls", "Access Points",
+                       "Switches", "Licenses"
+    firewalls   url slug, e.g. "firewalls", "access-points",
+                       "switches", "licenses-renewals"
+
+  Hero:
+    Built around your network, managed from one place.   second-line accent text under the H1
+    The Sophos XGS Series runs the same Sophos Firewall OS across every form factor, from the compact Gen.2 desktop models built for small offices and branch locations to the 2U rackmounts designed for large enterprise networks. Every appliance uses the Xstream architecture to keep traffic flowing while full deep packet inspection and TLS 1.3 analysis run without limiting throughput. Sophos Central ties everything together for centralized management across your whole fleet. Our Sophos-certified team is here to help you pick the right model and get it shipped the same day.     descriptive lead paragraph
+    /media/brands/sophos/sophos-logo.png hero graphic (transparent png ideal)
+    Sophos logo alt text
+
+  Series cards (duplicate / remove blocks to match the actual lineup):
+    {{SERIES_N_URL}}   /brands/{slug}/{product-slug}/{series-slug}.html
+    {{SERIES_N_IMAGE_URL}}, {{SERIES_N_IMAGE_ALT}}
+    {{SERIES_N_BADGE_LABEL}}        tier label, e.g. "SMB & Branch"
+    {{SERIES_N_NAME}}               e.g. "TZ Series"
+    {{SERIES_N_AUDIENCE}}           e.g. "1 to 250 Users · Desktop"
+    {{SERIES_N_DESC}}               short paragraph
+    {{MODEL_URL}}/{{MODEL_NAME}}    per-model chip (duplicate)
+
+  Comparison table (one row per series):
+    {{SERIES_N_BEST_FOR}}, {{SERIES_N_USER_COUNT}},
+    {{SERIES_N_FORM_FACTOR}}, {{SERIES_N_KEY_FEATURE}}
+
+  FAQ (duplicate the block for as many Q&As as you need; aim for 6-10):
+    {{FAQ_N_QUESTION}}, {{FAQ_N_ANSWER}}
+
+  Bottom CTA:
+    Share your user count, WAN connection speed, and whether you need built-in wireless or PoE. Our certified Sophos team will size the right XGS appliance and protection bundle for your network and put together a competitive quote. short paragraph prompting the visitor for the
+                       inputs the sales rep will need to size the order
+
+  ---------------------------------------------------------------
+  PER-BRAND ACCENT CHEAT SHEET (set --fw-accent + --fw-accent-hover on .fw-brands)
+      SonicWall    #9C0000 / #D70000   (default — omit the style attribute)
+      Sophos       #00224F / #001638   (navy)
+      Fortinet     #DA291C / #b21f15
+      WatchGuard   #D31245 / #a50e36   (red / magenta)
+      Palo Alto    #FA582D / #d8431c   (orange)
+      Meraki       #0079B6 / #00608f   (blue)
+      Barracuda    #0088CE / #006ca3   (blue)
+
+  ---------------------------------------------------------------
+  WHERE THE STYLING LIVES
+
+  Hero, trust strip, series grid, comparison table, FAQ, and bottom
+  CTA are all styled site-wide in _fw_layout.less under .fw-brands.
+  Magento integration (dark breadcrumb, hidden duplicate H1,
+  full-bleed dark/alt bands, Page Builder un-contain) is keyed off
+  body:has(.fw-brands), so no per-brand body-class CSS and no
+  inline <style> block belong on this page.
+-->
+
+    <div class="fw-brands" style="--fw-accent: #00224F; --fw-accent-hover: #001638;">
+
+        <!-- ============ 1. HERO ============ -->
+        <section class="fw-hero">
+            <div class="fw-container">
+                <div class="fw-hero-grid">
+                    <div>
+                        <span class="fw-hero-badge"><span class="fw-dot"></span> GOLD PARTNER &middot; SAME-DAY
+                        SHIPPING</span>
+                        <h1>
+                            Sophos Firewall.
+                            <em class="accent">Built around your network, managed from one place.</em>
+                        </h1>
+                        <p>The Sophos XGS Series runs the same Sophos Firewall OS across every form factor, from the
+                            compact Gen.2 desktop models built for small offices and branch locations to the 2U
+                            rackmounts designed for large enterprise networks. Every appliance uses the Xstream
+                            architecture to keep traffic flowing while full deep packet inspection and TLS 1.3 analysis
+                            run without limiting throughput. Sophos Central ties everything together for centralized
+                            management across your whole fleet. Our Sophos-certified team is here to help you pick the
+                            right model and get it shipped the same day.</p>
+                        <div class="fw-hero-ctas">
+                            <a href="#series" class="fw-btn-cta">Shop by Series</a>
+                            <a href="#compare" class="fw-btn-secondary">Compare Sophos Firewalls</a>
+                        </div>
+                    </div>
+
+                    <!-- ============ HERO MEDIA SLOT ============
+             Flexible right-hand slot of the hero's two-column layout. Holds ONE
+             of four media types: image (default), video, text, or chart.
+
+             TO CHOOSE A TYPE:
+               1. Set data-hero-media="image|video|text|chart" on the wrapper.
+               2. Leave that type's block uncommented; comment out the rest.
+
+             STYLING (theme side, _fw_layout.less — keyed off the wrapper attr):
+               .fw-hero-media[data-hero-media="image"] / ["video"] / ["text"] / ["chart"]
+             plus the inner hooks below (.fw-hero-media-img / -video / -embed /
+             -text / -chart). No inline <style> belongs on this page.
+             (is-plain keeps the transparent-PNG framing for the image variant.)
+        -->
+                    <div class="fw-hero-award is-plain fw-hero-media" data-hero-media="image">
+
+                        <!-- ───────── IMAGE (default) · transparent product / brand graphic ───────── -->
+                        <img class="fw-hero-media-img" src="/media/brands/sophos/sophos-logo.png" alt="Sophos logo">
+
+                        <!-- ───────── VIDEO · set data-hero-media="video" ─────────
+          Self-hosted MP4:
+          <video class="fw-hero-media-video" controls playsinline preload="metadata" poster="{{HERO_MEDIA_VIDEO_POSTER}}">
+            <source src="{{HERO_MEDIA_VIDEO_URL}}" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          …or an external embed (YouTube / Vimeo / Wistia):
+          <div class="fw-hero-media-embed">
+            <iframe src="{{HERO_MEDIA_EMBED_URL}}" title="{{HERO_MEDIA_ALT}}" loading="lazy"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          ───────── end VIDEO ───────── -->
+
+                        <!-- ───────── TEXT · set data-hero-media="text" · pull-quote, stat, or message ─────────
+          <div class="fw-hero-media-text">
+            <span class="fw-hero-media-eyebrow">{{HERO_MEDIA_TEXT_EYEBROW}}</span>
+            <p class="fw-hero-media-quote">{{HERO_MEDIA_TEXT_BODY}}</p>
+            <span class="fw-hero-media-cite">{{HERO_MEDIA_TEXT_CITE}}</span>
+          </div>
+          ───────── end TEXT ───────── -->
+
+                        <!-- ───────── CHART · set data-hero-media="chart" · pure-markup bar chart, no JS ─────────
+               Each fill bar's length is its inline width (a 0–100% value).
+               Duplicate or remove <li> rows to match your metrics.
+          <div class="fw-hero-media-chart">
+            <div class="fw-hero-chart-title">{{HERO_MEDIA_CHART_TITLE}}</div>
+            <ul class="fw-hero-chart" role="img" aria-label="{{HERO_MEDIA_CHART_ALT}}">
+              <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_1_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:92%"></span></span><span class="fw-bar-value">{{METRIC_1_VALUE}}</span></li>
+              <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_2_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:74%"></span></span><span class="fw-bar-value">{{METRIC_2_VALUE}}</span></li>
+              <li class="fw-hero-chart-bar"><span class="fw-bar-label">{{METRIC_3_LABEL}}</span><span class="fw-bar-track"><span class="fw-bar-fill" style="width:58%"></span></span><span class="fw-bar-value">{{METRIC_3_VALUE}}</span></li>
+            </ul>
+          </div>
+          ───────── end CHART ───────── -->
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. TRUST BAND (site-wide; identical across brands & products) ============ -->
+        <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+            <div class="fw-container">
+                <div class="fw-trust-card">
+
+                    <a href="/contact-us" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 13.5-2.5"/><path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+                        <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Config &amp; Managed Services</span>
+                        <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+                        <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="1" y="6" width="13" height="10" rx="1"/><path d="M14 9h4l3 3v4h-7z"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Same-Day Shipping</span>
+                        <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. SERIES CARDS ============ -->
+        <!-- Duplicate or remove cards to match the brand × product's actual lineup.
+       Badge classes available:
+         fw-badge-smb     (SMB / branch)
+         fw-badge-mid     (mid-market)
+         fw-badge-ent     (enterprise)
+         fw-badge-cloud   (virtual / cloud)
+         fw-badge-renewal (subscriptions / licensing)
+       NOTE: the trailing "Licenses & Renewals" cross-link card is intended for
+       HARDWARE pages. REMOVE it on the brand's licensing page itself. -->
+        <section class="fw-section fw-section-tight" id="series">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Sophos Firewall Series</span>
+                <h2 class="fw-band-title">Shop by Series</h2>
+
+                <div class="fw-series-grid">
+
+                    <div class="fw-series-card">
+                        <a href="/brands/sophos/firewalls/xgs-desktop-gen2.html" class="fw-series-card-link"
+                            aria-label="View series"></a>
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/xgs-87_1.jpg" alt="Sophos XGS 88 Gen.2 desktop firewall front view" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <span class="fw-series-badge fw-badge-smb">SMB &amp; Branch</span>
+                            <h3>Gen.2 XGS Desktop</h3>
+                            <div class="fw-series-for">5 to 500 Users &middot; Desktop</div>
+                            <p class="fw-series-desc">Second-generation XGS desktop firewalls deliver double the
+                                performance of Gen.1 while cutting power consumption by up to 50%. All models include
+                                2.5 GE copper interfaces standard, and the fanless XGS 88 and XGS 108 run completely
+                                silently, making them a natural fit for clinics, retail floors, and open office
+                                environments. Wi-Fi 6 is built into every w-model.</p>
+                            <div class="fw-series-models">
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-88.html">XGS 88 / 88w</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-108.html">XGS 108 / 108w</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-118.html">XGS 118 / 118w</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-128.html">XGS 128 / 128w</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-138.html">XGS 138</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-series-card">
+                        <a href="/brands/sophos/firewalls/xgs-1u-rackmount.html" class="fw-series-card-link"
+                            aria-label="View series"></a>
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/XGS-1U.jpg" alt="Sophos XGS 1U rackmount firewall" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <span class="fw-series-badge fw-badge-mid">Distributed Edge</span>
+                            <h3>XGS 1U Rackmount</h3>
+                            <div class="fw-series-for">250 to 3,000 Users &middot; 1U Rackmount</div>
+                            <p class="fw-series-desc">Built for mid-market and distributed enterprise networks that need
+                                more port density and throughput than a desktop can deliver. Every 1U XGS model pairs a
+                                high-speed CPU with a dedicated Xstream Flow Processor for hardware-accelerated traffic
+                                analysis, TLS 1.3 inspection, and SD-WAN routing without a performance hit.</p>
+                            <div class="fw-series-models">
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-2100.html">XGS 2100</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-2300.html">XGS 2300</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-3100.html">XGS 3100</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-3300.html">XGS 3300</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-4300.html">XGS 4300</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-4500.html">XGS 4500</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-series-card">
+                        <a href="/brands/sophos/firewalls/xgs-2u-enterprise.html" class="fw-series-card-link"
+                            aria-label="View series"></a>
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/xgs-5500.jpg" alt="Sophos XGS 2U enterprise rackmount firewall" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <span class="fw-series-badge fw-badge-ent">Enterprise &amp; Campus Edge</span>
+                            <h3>XGS 2U Enterprise</h3>
+                            <div class="fw-series-for">3,000+ Users &middot; 2U Rackmount</div>
+                            <p class="fw-series-desc">Data center and campus edge networks that cannot trade throughput
+                                for protection. The XGS 2U lineup runs from the XGS 5500 up to the XGS 8500, which
+                                supports 100 Gbps QSFP28 interfaces and a port density of up to 70 using optional Flexi
+                                Port modules. Redundant power and high-availability clustering are built in from the
+                                start.</p>
+                            <div class="fw-series-models">
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-5500.html">XGS 5500</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-6500.html">XGS 6500</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-7500.html">XGS 7500</a>
+                                <a href="/brands/sophos/firewalls/xgs-firewalls/xgs-8500.html">XGS 8500</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="fw-series-card">
+                        <a href="/brands/sophos/firewalls/virtual-cloud.html" class="fw-series-card-link"
+                            aria-label="View series"></a>
+                        <div class="fw-series-img">
+                            <img src="/media/brands/sophos/sophos-virtual-cloud.png" alt="Sophos Firewall virtual and cloud deployment options" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <span class="fw-series-badge fw-badge-cloud">Virtual &amp; Cloud</span>
+                            <h3>Virtual &amp; Cloud</h3>
+                            <div class="fw-series-for">AWS &middot; Azure &middot; VMware &middot; KVM &middot; Hyper-V
+                            </div>
+                            <p class="fw-series-desc">Run Sophos Firewall OS on the infrastructure you already have.
+                                Cloud deployments on AWS and Azure support pay-as-you-go or bring-your-own-license
+                                pricing, with the same SFOS protection and Sophos Central management as any hardware
+                                model. Virtual appliances also install on VMware, Microsoft Hyper-V, KVM, and Citrix.
+                            </p>
+                            <div class="fw-series-models">
+                                <a href="/brands/sophos/firewalls/virtual-cloud/aws.html">AWS Marketplace</a>
+                                <a href="/brands/sophos/firewalls/virtual-cloud/azure.html">Azure Marketplace</a>
+                                <a href="/brands/sophos/firewalls/virtual-cloud/vmware.html">VMware</a>
+                                <a href="/brands/sophos/firewalls/virtual-cloud/hyper-v.html">Hyper-V</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- OPTIONAL: Licensing cross-link card. KEEP on hardware pages;
+             REMOVE on the brand's licensing page itself. -->
+                    <div class="fw-series-card">
+                        <a href="/brands/sophos/licenses-renewals.html" class="fw-series-card-link"
+                            aria-label="View series"></a>
+                        <div class="fw-series-img">
+                            <img src="/media/brands/sophos/sophos-licenses.png" alt="Sophos licenses and renewals" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <span class="fw-series-badge fw-badge-renewal">Subscriptions</span>
+                            <h3>Licenses &amp; Renewals</h3>
+                            <div class="fw-series-for">All Models &middot; 1 to 5 Year Terms</div>
+                            <p class="fw-series-desc">Keep your XGS firewall covered with current threat intelligence.
+                                Standard Protection and Xstream Protection bundles are available in 1, 2, and 3-year
+                                terms for every XGS model, including Gen.1 and Gen.2 desktop, 1U, and 2U appliances.</p>
+                            <div class="fw-series-models">
+                                <a href="/brands/sophos/licenses-renewals.html">Shop All Licenses</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. COMPARISON TABLE ============ -->
+        <section class="fw-section fw-section-alt" id="compare">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Compare</span>
+                <h2 class="fw-band-title">Sophos Firewalls at a Glance</h2>
+
+                <div class="fw-compare-wrap">
+                    <table class="fw-compare-table">
+                        <thead>
+                            <tr>
+                                <th>Series</th>
+                                <th>Best For</th>
+                                <th>User Count</th>
+                                <th>Form Factor</th>
+                                <th>Key Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="/brands/sophos/firewalls/xgs-desktop-gen2.html">Gen.2 XGS Desktop</a></td>
+                                <td>SMB, retail, branch offices</td>
+                                <td>5 to 500 users</td>
+                                <td>Desktop, fanless options</td>
+                                <td>2.5 GE interfaces standard, Wi-Fi 6 on w-models, 2x performance vs. Gen.1</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/firewalls/xgs-1u-rackmount.html">XGS 1U Rackmount</a></td>
+                                <td>Distributed enterprise, mid-market</td>
+                                <td>250 to 3,000 users</td>
+                                <td>1U Rackmount</td>
+                                <td>Dedicated Xstream Flow Processor, hardware TLS 1.3 acceleration</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/firewalls/xgs-2u-enterprise.html">XGS 2U Enterprise</a></td>
+                                <td>Large enterprise, campus edge, data center</td>
+                                <td>3,000+ users</td>
+                                <td>2U Rackmount</td>
+                                <td>Up to 100 Gbps on XGS 8500, up to 70 ports, NVMe SSD, HA clustering</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/firewalls/virtual-cloud.html">Virtual &amp; Cloud</a></td>
+                                <td>Cloud or virtualized infrastructure</td>
+                                <td>Any size</td>
+                                <td>Virtual or software</td>
+                                <td>AWS, Azure, VMware, KVM, Citrix, PAYG or BYOL licensing</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5a. FAQ — JSON-LD (mirror the visible FAQ below) ============ -->
+        <!-- Must mirror the visible FAQ below exactly. Google / Bing / AI Overviews
+       parse this JSON for FAQ rich results. Add one Question entry per visible
+       .fw-faq-item below; keep the wording identical. -->
+        <script type="application/ld+json">
+            {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "What is included in the Sophos Xstream Protection bundle?", "acceptedAnswer": { "@type": "Answer", "text": "Xstream Protection bundles together the full Sophos threat protection stack: IPS, advanced threat protection, deep learning malware analysis, real-time cloud sandboxing, TLS 1.3 inspection, DNS protection, and AI-powered threat intelligence from SophosLabs. It also includes Sophos Central management at no extra cost, which lets you manage your entire XGS fleet from one cloud console, push firmware updates across all your appliances, and zero-touch deploy new units shipped directly to a branch office." } },
+      { "@type": "Question", "name": "What is the difference between Sophos Standard Protection and Xstream Protection?", "acceptedAnswer": { "@type": "Answer", "text": "Standard Protection covers the base firewall features plus Xstream SD-WAN, ZTNA, and network visibility. Xstream Protection adds the full threat protection stack on top: IPS, advanced threat protection, deep learning, real-time sandboxing, TLS 1.3 inspection, and DNS protection, along with Sophos Central management. For most networks that handle encrypted traffic and need active threat inspection, Xstream Protection is the recommended bundle." } },
+      { "@type": "Question", "name": "How does Sophos Central management work with XGS firewalls?", "acceptedAnswer": { "@type": "Answer", "text": "Sophos Central is a single cloud console that manages all your Sophos products, including XGS firewalls, switches, and wireless access points. You can configure changes and push them to a group of firewalls at once or manage each appliance individually. Central also handles scheduled firmware updates, cloud backup with up to five stored copies, and zero-touch deployment for new hardware shipped directly to a remote office. Central management is included at no extra cost with any Xstream Protection or Standard Protection bundle." } },
+      { "@type": "Question", "name": "Can I migrate my existing XG or Gen.1 XGS configuration to a new Gen.2 XGS appliance?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Sophos Firewall OS supports any-to-any backup and restore with a port mapping assistant, so you can migrate your full configuration to new hardware without rebuilding policies from scratch. Customers upgrading from XG Series appliances also receive free license overlap during the transition period so you are not paying for two subscriptions at once. Our certified pre-sales team can help you plan the migration and make sure nothing falls through the cracks." } },
+      { "@type": "Question", "name": "Which Sophos XGS model is right for my organization?", "acceptedAnswer": { "@type": "Answer", "text": "The right fit depends on your user count and throughput requirements. The Gen.2 XGS desktop series covers most SMB and branch scenarios from roughly 5 to 500 users, with models ranging from the compact fanless XGS 88 up to the XGS 138 with dual 10 GE SFP+ ports. The 1U rackmount series covers mid-market and distributed enterprise environments from roughly 250 to 3,000 users. The 2U series handles data center and campus edge requirements for larger organizations. Our certified pre-sales team can review your network specs and size the right appliance and protection bundle." } }
+    ]
+  }
+        </script>
+
+        <!-- ============ 5. FAQ ============ -->
+        <!-- Aim for 6-10 brand+product specific questions. Duplicate the .fw-faq-item
+       block as needed. Keep the schema.org microdata attributes intact for SEO. -->
+        <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-brand-faq-heading">
+            <div class="fw-container">
+                <h2 class="fw-band-title" id="fw-brand-faq-heading">Sophos Firewall FAQ</h2>
+                <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">What is included in the Sophos Xstream Protection bundle?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Xstream Protection bundles together the full Sophos threat protection
+                                stack: IPS, advanced threat protection, deep learning malware analysis, real-time cloud
+                                sandboxing, TLS 1.3 inspection, DNS protection, and AI-powered threat intelligence from
+                                SophosLabs. It also includes Sophos Central management at no extra cost, which lets you
+                                manage your entire XGS fleet from one cloud console, push firmware updates across all
+                                your appliances, and zero-touch deploy new units shipped directly to a branch office.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">What is the difference between Sophos Standard Protection and Xstream Protection?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Standard Protection covers the base firewall features plus Xstream
+                                SD-WAN, ZTNA, and network visibility. Xstream Protection adds the full threat protection
+                                stack on top: IPS, advanced threat protection, deep learning, real-time sandboxing, TLS
+                                1.3 inspection, and DNS protection, along with Sophos Central management. For most
+                                networks that handle encrypted traffic and need active threat inspection, Xstream
+                                Protection is the recommended bundle.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">How does Sophos Central management work with XGS firewalls?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Sophos Central is a single cloud console that manages all your Sophos
+                                products, including XGS firewalls, switches, and wireless access points. You can
+                                configure changes and push them to a group of firewalls at once or manage each appliance
+                                individually. Central also handles scheduled firmware updates, cloud backup with up to
+                                five stored copies, and zero-touch deployment for new hardware shipped directly to a
+                                remote office. Central management is included at no extra cost with any Xstream
+                                Protection or Standard Protection bundle.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Can I migrate my existing XG or Gen.1 XGS configuration to a new Gen.2 XGS appliance?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">Yes. Sophos Firewall OS supports any-to-any backup and restore with a
+                                port mapping assistant, so you can migrate your full configuration to new hardware
+                                without rebuilding policies from scratch. Customers upgrading from XG Series appliances
+                                also receive free license overlap during the transition period so you are not paying for
+                                two subscriptions at once. Our certified pre-sales team can help you plan the migration
+                                and make sure nothing falls through the cracks.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Which Sophos XGS model is right for my organization?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">The right fit depends on your user count and throughput requirements. The
+                                Gen.2 XGS desktop series covers most SMB and branch scenarios from roughly 5 to 500
+                                users, with models ranging from the compact fanless XGS 88 up to the XGS 138 with dual
+                                10 GE SFP+ ports. The 1U rackmount series covers mid-market and distributed enterprise
+                                environments from roughly 250 to 3,000 users. The 2U series handles data center and
+                                campus edge requirements for larger organizations. Our certified pre-sales team can
+                                review your network specs and size the right appliance and protection bundle.</p>
+                        </div>
+                    </div>
+
+                    <!-- Add more .fw-faq-item blocks here as needed. -->
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6. BOTTOM CTA ============ -->
+        <section class="fw-section fw-section-alt">
+            <div class="fw-container">
+                <div class="fw-bottom-cta">
+                    <h3>Not sure which Sophos Firewall is right for you?</h3>
+                    <p>Share your user count, WAN connection speed, and whether you need built-in wireless or PoE. Our
+                        certified Sophos team will size the right XGS appliance and protection bundle for your network
+                        and put together a competitive quote.</p>
+                    <a href="/contact-us" class="fw-btn-cta">Get a Sizing Recommendation</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        // Site-wide FAQ accordion. Identical implementation across every brand × product page.
+  function fwToggleFaq(btn) {
+    var item = btn.closest('.fw-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fw-faq-item').forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.fw-faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+    </script>
+</div>
