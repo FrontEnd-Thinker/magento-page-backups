@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:44:37.612Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 7672,
+    "identifier": "network-switches",
+    "title": "Network Switches",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "1",
+    "page_layout": "category-no-sidebar",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
