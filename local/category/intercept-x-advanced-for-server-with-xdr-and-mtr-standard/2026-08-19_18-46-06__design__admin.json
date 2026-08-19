@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:46:06.034Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 7486,
+    "identifier": "intercept-x-advanced-for-server-with-xdr-and-mtr-standard",
+    "title": "Intercept X Advanced for Server with XDR and MTR Standard",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
