@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:46:14.073Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 7495,
+    "identifier": "central-intercept-x-essentials-for-server",
+    "title": "Central Intercept X Essentials for Server",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
