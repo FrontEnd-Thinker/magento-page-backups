@@ -1,0 +1,20 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:43:39.630Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 112,
+    "identifier": "xg",
+    "title": "XG Firewalls",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "1column",
+    "custom_layout_update_file": "removeSideNav",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PAGE"
+  }
+}
