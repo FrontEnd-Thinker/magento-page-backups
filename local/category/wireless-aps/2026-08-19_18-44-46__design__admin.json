@@ -1,0 +1,20 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:44:46.719Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 377,
+    "identifier": "wireless-aps",
+    "title": "Access Points",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "category-no-sidebar",
+    "custom_layout_update_file": "removeSideNav",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
