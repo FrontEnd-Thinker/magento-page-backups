@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T18:43:46.617Z",
+    "environment": "local",
+    "operation": "design",
+    "target": "local",
+    "itemId": 4022,
+    "identifier": "3-and-free",
+    "title": "3&Free",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "2columns-left",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
