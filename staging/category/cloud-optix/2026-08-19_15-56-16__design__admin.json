@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-19T15:56:16.172Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 3169,
+    "identifier": "cloud-optix",
+    "title": "Cloud Optix",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
