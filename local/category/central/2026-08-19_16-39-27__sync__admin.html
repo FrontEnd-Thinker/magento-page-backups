@@ -1,0 +1,453 @@
+<!-- BACKUP
+timestamp:   2026-08-19T16:39:27.385Z
+environment: local
+operation:   sync (staging → local)
+item:        #262 central "Central"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main">
+
+  <!-- ============================================================
+     SOPHOS CENTRAL - Brand × Product Category Page
+     Built from BrandProductCatPage-TEMPLATE.html
+     ------------------------------------------------------------
+     DEV ACTION ITEMS
+     • TYREN: image uploads to /media/brands/sophos/ :
+         1. sophos-logo.png            (hero-right brand logo, TRANSPARENT png)
+         2. sophos-digital-product.jpg (single card image reused on all 7 cards)
+            NOTE: the supplied Digital Product render sits on a WHITE background.
+            It is uniform across every card as-is, but if a transparent version
+            exists, swap it in so the cards match the site's transparent-PNG style.
+     • JON: confirm the 6 product URL keys before go-live
+       (all flagged inline with <!-- JON: ... -->
+  <div class="fw-brands" style="--fw-accent: #9C0000; --fw-accent-hover: #9c0000;">
+
+    <!-- ============ 1. HERO ============ -->
+    <section class="fw-hero">
+      <div class="fw-container">
+        <div class="fw-hero-grid">
+          <div>
+            <span class="fw-hero-badge"><span class="fw-dot"></span> AUTHORIZED SOPHOS PARTNER</span>
+            <h1>
+              Sophos Central.
+              <em class="accent">One console for your whole security stack.</em>
+            </h1>
+            <p>Manage endpoint, email, mobile, encryption, and managed threat response from one cloud console. Pick the
+              protection your organization needs today and add more as you grow, all under a single login.</p>
+            <div class="fw-hero-ctas">
+              <a href="#series" class="fw-btn-cta">Shop by Product</a>
+              <a href="#compare" class="fw-btn-secondary">Compare Sophos Central Products</a>
+            </div>
+          </div>
+
+          <div class="fw-hero-award is-plain fw-hero-media" data-hero-media="image">
+            <!-- JON/TYREN: transparent Sophos brand logo -->
+            <img class="fw-hero-media-img" src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-central-box.png" alt="Sophos logo">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. TRUST BAND (site-wide; plain divs, no links) ============ -->
+    <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+      <div class="fw-container">
+        <div class="fw-trust-card">
+
+          <div class="fw-trust-item">
+            <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 13.5-2.5"/><path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"/></svg>
+          </span>
+            <span class="fw-trust-text">
+            <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+            <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+            </span>
+          </div>
+
+          <div class="fw-trust-item">
+            <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </span>
+            <span class="fw-trust-text">
+            <span class="fw-trust-title">Config &amp; Managed Services</span>
+            <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+            </span>
+          </div>
+
+          <div class="fw-trust-item">
+            <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+          </span>
+            <span class="fw-trust-text">
+            <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+            <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+            </span>
+          </div>
+
+          <div class="fw-trust-item">
+            <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M4 4h16v12H4z"/><path d="M2 20h20"/><path d="M8 8h8M8 12h5"/></svg>
+          </span>
+            <span class="fw-trust-text">
+            <span class="fw-trust-title">Licenses Emailed Fast</span>
+            <span class="fw-trust-sub">Digital delivery after checkout.</span>
+            </span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 3. PRODUCT CARDS ============ -->
+<!-- ============ 3. PRODUCT CARDS ============ -->
+<section class="fw-section fw-section-tight" id="series">
+  <div class="fw-container">
+    <span class="fw-eyebrow">Sophos Central</span>
+    <h2 class="fw-band-title">Shop by Product</h2>
+
+    <div class="fw-series-grid">
+
+      <!-- 1. Intercept X -->
+      <!-- JON: confirm URL key -->
+      <a href="/brands/sophos/central/intercept-x.html" class="fw-series-card" aria-label="View Intercept X">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Intercept X endpoint protection" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Intercept X</h3>
+          <div class="fw-series-for">For Windows, macOS, and Linux endpoints</div>
+          <p class="fw-series-desc">AI-powered endpoint protection that stops ransomware and exploits before they run,
+            with optional EDR and XDR for threat hunting.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Intercept X &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 2. Managed Detection & Response -->
+      <!-- JON: confirm URL key -->
+      <a href="/brands/sophos/central/managed-detection-response.html" class="fw-series-card" aria-label="View Managed Detection &amp; Response">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Managed Detection and Response" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Managed Detection &amp; Response</h3>
+          <div class="fw-series-for">For teams that need 24/7 coverage without a SOC</div>
+          <p class="fw-series-desc">A fully managed service where Sophos experts monitor, hunt, and respond to threats
+            around the clock on your behalf.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Sophos MDR &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 3. Mobile -->
+      <!-- JON: confirm URL key -->
+      <a href="https://staging.firewalls.com/brands/sophos/central/mobile.html" class="fw-series-card" aria-label="View Sophos Mobile">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Mobile unified endpoint management" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Mobile</h3>
+          <div class="fw-series-for">For iOS, Android, Chrome OS, Windows, and macOS fleets</div>
+          <p class="fw-series-desc">Unified endpoint management and mobile threat defense that secures company and
+            personal devices from one console.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Sophos Mobile &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 4. Email Security -->
+      <!-- JON: confirm URL key -->
+      <a href="/brands/sophos/central/email.html" class="fw-series-card" aria-label="View Email Security">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Email Security" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Email Security</h3>
+          <div class="fw-series-for">For Microsoft 365 and Google Workspace inboxes</div>
+          <p class="fw-series-desc">Cloud email security that blocks phishing, malware, and business email compromise
+            before it reaches the inbox.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Email Security &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 5. Device Encryption -->
+      <!-- JON: confirm URL key -->
+      <a href="/brands/sophos/central/device-encryption.html" class="fw-series-card" aria-label="View Device Encryption">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Central Device Encryption" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Device Encryption</h3>
+          <div class="fw-series-for">For Windows and macOS laptops</div>
+          <p class="fw-series-desc">Central management for BitLocker and FileVault full disk encryption, with
+            self-service key recovery for your users.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Device Encryption &rarr;</span>
+        </div>
+      </a>
+
+      <!-- 6. Phish Threat -->
+      <!-- JON: confirm URL key -->
+      <a href="/brands/sophos/central/phish-threat.html" class="fw-series-card" aria-label="View Phish Threat">
+        <div class="fw-series-img">
+          <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-digital-product.png" alt="Sophos Phish Threat security awareness training" loading="lazy" decoding="async">
+        </div>
+        <div class="fw-series-body">
+          <h3>Phish Threat</h3>
+          <div class="fw-series-for">For every employee with an inbox</div>
+          <p class="fw-series-desc">Automated phishing simulations and security awareness training that turn your users
+            into a reporting line of defense.</p>
+          <span class="fw-series-action" style="color:#9C0000">Shop Phish Threat &rarr;</span>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+    <!-- ============ 4. COMPARISON TABLE ============ -->
+    <section class="fw-section fw-section-alt" id="compare">
+      <div class="fw-container">
+        <span class="fw-eyebrow">Compare</span>
+        <h2 class="fw-band-title">Sophos Central Products at a Glance</h2>
+
+        <div class="fw-compare-wrap">
+          <table class="fw-compare-table">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th>Best For</th>
+                <th>Licensed By</th>
+                <th>Runs On</th>
+                <th>Key Capability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><a href="/brands/sophos/central/intercept-x.html">Intercept X</a></td>
+                <td>Stopping attacks on computers</td>
+                <td>Per user or per server</td>
+                <td>Windows, macOS, Linux</td>
+                <td>Anti-ransomware, anti-exploit, EDR/XDR</td>
+              </tr>
+              <tr>
+                <td><a href="/brands/sophos/central/managed-detection-response.html">Managed Detection &amp; Response</a></td>
+                <td>Outsourced 24/7 threat response</td>
+                <td>Per user</td>
+                <td>Your existing security stack</td>
+                <td>Sophos analysts hunt and respond for you</td>
+              </tr>
+              <tr>
+                <td><a href="/brands/sophos/central/mobile.html">Mobile</a></td>
+                <td>Managing and securing devices</td>
+                <td>Per user</td>
+                <td>iOS, Android, Chrome OS, Windows, macOS</td>
+                <td>UEM plus mobile threat defense</td>
+              </tr>
+              <tr>
+                <td><a href="/brands/sophos/central/email.html">Email Security</a></td>
+                <td>Blocking inbox threats</td>
+                <td>Per user or mailbox</td>
+                <td>Microsoft 365, Google Workspace</td>
+                <td>Anti-phishing and business email compromise protection</td>
+              </tr>
+              <tr>
+                <td><a href="/brands/sophos/central/device-encryption.html">Device Encryption</a></td>
+                <td>Protecting data on lost laptops</td>
+                <td>Per user or device</td>
+                <td>Windows, macOS</td>
+                <td>Managed BitLocker and FileVault</td>
+              </tr>
+              <tr>
+                <td><a href="/brands/sophos/central/phish-threat.html">Phish Threat</a></td>
+                <td>Training users to spot phishing</td>
+                <td>Per user</td>
+                <td>Any email platform</td>
+                <td>Simulations plus awareness training</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. WHAT SETS SOPHOS APART (fw-why-grid from BrandPage template) ============ -->
+    <section class="fw-section" id="why">
+      <div class="fw-container">
+        <span class="fw-eyebrow">Why Sophos</span>
+        <h2 class="fw-band-title">What Sets Sophos Apart</h2>
+
+        <div class="fw-why-grid">
+          <div class="fw-why-card">
+            <h3>One console for everything</h3>
+            <p>Sophos Central manages endpoint, server, email, mobile, encryption, and firewall from a single web
+              console. You get one login and one place to set policy instead of stitching together separate tools from
+              different vendors.</p>
+          </div>
+          <div class="fw-why-card">
+            <h3>AI that blocks what signatures miss</h3>
+            <p>Deep learning inspects file attributes from hundreds of millions of samples to catch malware it has never
+              seen before. CryptoGuard anti-ransomware detects malicious encryption and rolls affected files back to a
+              safe state.</p>
+          </div>
+          <div class="fw-why-card">
+            <h3>Synchronized Security</h3>
+            <p>Sophos products share threat intelligence and act as one system. A detection on a mobile device or
+              endpoint can automatically restrict its access to the network until the threat is cleared, without an
+              admin lifting a finger.</p>
+          </div>
+          <div class="fw-why-card">
+            <h3>Expert help on your terms</h3>
+            <p>Keep threat hunting in-house with XDR, or hand it off entirely with Sophos MDR, where a team of analysts
+              monitors and responds around the clock. You choose how much you manage and how much Sophos does for you.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6a. FAQ JSON-LD (mirrors visible FAQ below) ============ -->
+    <script type="application/ld+json">
+      {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      { "@type": "Question", "name": "Is Sophos software licensed per user or per device?", "acceptedAnswer": { "@type": "Answer", "text": "It depends on the product. Endpoint protection like Intercept X and services like Phish Threat and MDR are licensed per user, while server protection is licensed per server. Licenses are sold in user bands such as 1-9, 10-24, and 25-49 users, so you buy one subscription sized to your total user count rather than one copy per person." } },
+      { "@type": "Question", "name": "What is the difference between Intercept X, Intercept X with XDR, and MDR?", "acceptedAnswer": { "@type": "Answer", "text": "Intercept X is the core endpoint protection that prevents attacks. Adding XDR gives your own team the tools to hunt for and investigate threats across endpoints, servers, email, and cloud. MDR goes a step further, with Sophos analysts doing that hunting and response for you 24/7." } },
+      { "@type": "Question", "name": "How is my Sophos license delivered?", "acceptedAnswer": { "@type": "Answer", "text": "Sophos Central products are digital. After your order processes, the license is provisioned electronically and the activation details are emailed to you, so there is nothing physical to ship." } },
+      { "@type": "Question", "name": "My Sophos license expired. Can Firewalls.com renew it?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. We handle Sophos renewals and can quote a new term before your current one lapses. Send us your license or order number and we will confirm your coverage and pricing." } },
+      { "@type": "Question", "name": "How many Phish Threat licenses do I need for a 40-user campaign?", "acceptedAnswer": { "@type": "Answer", "text": "One subscription that covers your user count. Phish Threat is licensed per user in bands, so for 40 mailboxes you buy a single subscription in the band that includes 40 users, not 40 separate copies. That license lets you run unlimited simulations and training for those users all year." } },
+      { "@type": "Question", "name": "Do I need a separate agent for Device Encryption?", "acceptedAnswer": { "@type": "Answer", "text": "Not if you already run Intercept X. Device Encryption uses the same Sophos agent, so you manage BitLocker and FileVault from Sophos Central with no extra software to deploy." } },
+      { "@type": "Question", "name": "How do I protect virtual machines and cloud servers?", "acceptedAnswer": { "@type": "Answer", "text": "Server workloads, including Azure and AWS instances, are covered by Intercept X for Server, which is licensed per server rather than per user. You would license the server edition for those VMs, not the per-user desktop edition." } },
+      { "@type": "Question", "name": "Is a VPN included with Sophos Firewall?", "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every Sophos Firewall includes remote access VPN through the free Sophos Connect client, supporting both IPsec and SSL, so your remote workers can reach the network securely without a separate VPN license." } }
+    ]
+  }
+    </script>
+
+    <!-- ============ 6. FAQ ============ -->
+    <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-brand-faq-heading">
+      <div class="fw-container">
+        <h2 class="fw-band-title" id="fw-brand-faq-heading">Sophos Central FAQ</h2>
+        <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Is Sophos software licensed per user or per device?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">It depends on the product. Endpoint protection like Intercept X and services like Phish
+                Threat and MDR are licensed per user, while server protection is licensed per server. Licenses are sold
+                in user bands such as 1-9, 10-24, and 25-49 users, so you buy one subscription sized to your total user
+                count rather than one copy per person.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">What is the difference between Intercept X, Intercept X with XDR, and MDR?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Intercept X is the core endpoint protection that prevents attacks. Adding XDR gives
+                your own team the tools to hunt for and investigate threats across endpoints, servers, email, and cloud.
+                MDR goes a step further, with Sophos analysts doing that hunting and response for you 24/7.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">How is my Sophos license delivered?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Sophos Central products are digital. After your order processes, the license is
+                provisioned electronically and the activation details are emailed to you, so there is nothing physical
+                to ship.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">My Sophos license expired. Can Firewalls.com renew it?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. We handle Sophos renewals and can quote a new term before your current one lapses.
+                Send us your license or order number and we will confirm your coverage and pricing.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">How many Phish Threat licenses do I need for a 40-user campaign?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">One subscription that covers your user count. Phish Threat is licensed per user in
+                bands, so for 40 mailboxes you buy a single subscription in the band that includes 40 users, not 40
+                separate copies. That license lets you run unlimited simulations and training for those users all year.
+              </p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Do I need a separate agent for Device Encryption?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Not if you already run Intercept X. Device Encryption uses the same Sophos agent, so
+                you manage BitLocker and FileVault from Sophos Central with no extra software to deploy.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">How do I protect virtual machines and cloud servers?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Server workloads, including Azure and AWS instances, are covered by Intercept X for
+                Server, which is licensed per server rather than per user. You would license the server edition for
+                those VMs, not the per-user desktop edition.</p>
+            </div>
+          </div>
+
+          <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Is a VPN included with Sophos Firewall?</span>
+          </button>
+            <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+              <p itemprop="text">Yes. Every Sophos Firewall includes remote access VPN through the free Sophos Connect
+                client, supporting both IPsec and SSL, so your remote workers can reach the network securely without a
+                separate VPN license.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. BOTTOM CTA ============ -->
+    <section class="fw-section fw-section-alt" style="text-align:center">
+      <div class="fw-container">
+        <div class="fw-bottom-cta">
+          <h3>Need help sizing a Sophos deployment?</h3>
+          <p>Our team is ready to help you choose the right model and licensing tier for your network size and budget.
+            Reach out directly and we'll get you a quote fast, then handle license delivery from order to
+            activation.</p>
+          <div class="fw-cta-buttons">
+            <a href="tel:8666452140" class="fw-btn-cta">Call 866-645-2140</a>
+            <a href="mailto:sales@firewalls.com" class="fw-btn-cta">Email sales@firewalls.com</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script>
+    // Site-wide FAQ accordion. Identical across every brand × product page.
+  function fwToggleFaq(btn) {
+    var item = btn.closest('.fw-faq-item');
+    var isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fw-faq-item').forEach(function (i) {
+      i.classList.remove('open');
+      i.querySelector('.fw-faq-question').setAttribute('aria-expanded', 'false');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+  }
+  </script>
+</div>
