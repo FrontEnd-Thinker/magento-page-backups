@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-20T01:51:31.347Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 7488,
+    "identifier": "mtr-advanced-add-on-for-intercept-x-advanced-for-server-with-xdr",
+    "title": "MTR Advanced Add-on for Intercept X Advanced for Server with XDR",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
