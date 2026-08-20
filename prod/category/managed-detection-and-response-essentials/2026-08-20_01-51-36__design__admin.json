@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-08-20T01:51:36.449Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 12954,
+    "identifier": "managed-detection-and-response-essentials",
+    "title": "Managed Detection and Response Essentials",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
