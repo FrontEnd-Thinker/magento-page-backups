@@ -1,0 +1,416 @@
+<!-- BACKUP
+timestamp:   2026-08-20T01:46:03.514Z
+environment: prod
+operation:   sync (staging → prod)
+item:        #7672 network-switches "Network Switches"
+user:        admin
+-->
+<div data-content-type="html" data-appearance="default" data-element="main"><!--
+  Sophos Network Switch Category Page
+  URL: /brands/sophos/switches.html
+  Template: BrandProductCatPage-TEMPLATE.html
+  ---------------------------------------------------------------
+  OPEN ITEMS BEFORE PUBLISHING:
+    [1] PARTNER TIER — confirm "Gold Partner" vs "Platinum Partner" in
+        Sophos Partner Portal. Currently set to GOLD PARTNER.
+    [2] IMAGE PATHS — images are uploaded from the provided files.
+        Confirm filenames match /media/brands/sophos/ paths with dev.
+        cs101-8-front.png    → /media/brands/sophos/cs101-8-front.png
+        cs110-24-front.png   → /media/brands/sophos/cs110-24-front.png
+        cs110-48-front.png   → /media/brands/sophos/cs110-48-front.png
+        cs210-8fp-front.png  → /media/brands/sophos/cs210-8fp-front.png
+        cs1010-8fp.png       → /media/brands/sophos/cs1010-8fp.png
+        sophos-logo-hero.png → /media/brands/sophos/sophos-logo-hero.png
+    [3] SERIES URLS — confirm /brands/sophos/switches/ path structure
+        with Tyren before enabling model-level links.
+    [4] NOTE on uploaded images: cs101-8-front.png and cs110-24/48-front.png
+        have white/light backgrounds. Dev should export transparent PNGs
+        from the Sophos Partner Portal asset pack for visual uniformity.
+        cs1010-8fp.jpg already has a white background; same applies.
+  ---------------------------------------------------------------
+  META DATA (paste into Magento SEO fields — NOT in the description HTML):
+    Meta Title:       Sophos Switches | CS Series Cloud-Managed Switches | Firewalls.com
+    Meta Keywords:    Sophos switches, Sophos CS101-8, Sophos CS110, Sophos CS210,
+                      Sophos CS1010-8FP, Sophos switch PoE, Sophos Central switch,
+                      buy Sophos network switch, managed network switch
+    Meta Description: Shop the full Sophos Switch lineup at Firewalls.com. Gigabit
+                      and multi-gigabit access layer switches with PoE, managed
+                      through Sophos Central. Same-day shipping, expert pre-sales
+                      advice from certified Sophos engineers.
+-->
+
+    <div class="fw-brands" style="--fw-accent: #9c0000; --fw-accent-hover: #9c0000;">
+
+        <!-- ============ 1. HERO ============ -->
+        <section class="fw-hero">
+            <div class="fw-container">
+                <div class="fw-hero-grid">
+                    <div>
+                        <span class="fw-hero-badge"><span class="fw-dot"></span> AUTHORIZED SOPHOS PARTNER</span>
+                        <h1>
+                            Sophos Network Switches.
+                            <em class="accent">Access layer control, managed from one place.</em>
+                        </h1>
+                        <p>The Sophos Switch Series covers 8, 24, and 48-port configurations from compact desktop units
+                            to rackmount models for larger deployments. Every model manages in Sophos Central alongside
+                            your firewalls and access points, with threat response and network segmentation built in.
+                        </p>
+                        <div class="fw-hero-ctas">
+                            <a href="#series" class="fw-btn-cta">Shop by Series</a>
+                            <a href="#compare" class="fw-btn-secondary">Compare Sophos Switches</a>
+                        </div>
+                    </div>
+
+                    <div class="fw-hero-award is-plain fw-hero-media" data-hero-media="image">
+                        <img class="fw-hero-media-img" src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-cs101-8-switch-removebg.png" alt="Sophos authorized Gold Partner logo">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 2. TRUST BAND ============ -->
+        <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+            <div class="fw-container">
+                <div class="fw-trust-card">
+
+                    <a href="/contact-us" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="9" cy="8" r="4"/><path d="M2 21v-1a7 7 0 0 1 13.5-2.5"/><path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Expert Pre-Sales Advice</span>
+                        <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Config &amp; Managed Services</span>
+                        <span class="fw-trust-sub">Skip the setup. We'll do it.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="M16 13H8M16 17H8M10 9H8"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">POs &middot; Tax-Exempt &middot; Net 30</span>
+                        <span class="fw-trust-sub">Welcomed for Corp, Edu, &amp; Gov.</span>
+                        </span>
+                    </a>
+
+                    <a href="/professional-services.html" class="fw-trust-item">
+                        <span class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="1" y="6" width="13" height="10" rx="1"/><path d="M14 9h4l3 3v4h-7z"/><circle cx="6.5" cy="18.5" r="2"/><circle cx="17.5" cy="18.5" r="2"/></svg>
+          </span>
+                        <span class="fw-trust-text">
+            <span class="fw-trust-title">Same-Day Shipping</span>
+                        <span class="fw-trust-sub">Order by 3pm EST, ships today.</span>
+                        </span>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 3. PRODUCT CARDS ============ -->
+        <!-- ============ 3. SERIES CARDS ============ -->
+        <section class="fw-section fw-section-tight" id="series">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Sophos Switch Series</span>
+                <h2 class="fw-band-title">Shop by Model</h2>
+
+                <div class="fw-series-grid">
+
+                    <!-- CS101-8 -->
+                    <!-- Developer: upload transparent PNG to /media/brands/sophos/cs101-8-front.png -->
+                    <a href="/brands/sophos/network-switches/cs101-8.html" class="fw-series-card"
+                        aria-label="View Sophos CS101-8">
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/blog/wp-content/uploads/2026/08/sophos-cs101-8-switch-removebg.png" alt="Sophos CS101-8 8-port gigabit desktop switch" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <h3>Sophos CS101-8</h3>
+                            <div class="fw-series-for">8 ports &middot; 1 GE &middot; Desktop &middot; Wall mount</div>
+                            <p class="fw-series-desc">Compact gigabit desktop switch for small offices and branch
+                                locations
+                                without PoE requirements.</p>
+                            <span class="fw-series-action" style="color:#9C0000">Shop CS101-8 &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CS110-24 -->
+                    <!-- Developer: upload transparent PNG to /media/brands/sophos/cs110-24-front.png -->
+                    <a href="/brands/sophos/network-switches/cs110-24.html" class="fw-series-card"
+                        aria-label="View Sophos CS110-24">
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/cs-101-24.jpg" alt="Sophos CS110-24 24-port gigabit rackmount switch" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <h3>Sophos CS110-24</h3>
+                            <div class="fw-series-for">24 ports &middot; 1 GE &middot; 1U Rackmount</div>
+                            <p class="fw-series-desc">1U gigabit rackmount switch for offices and wiring closets that
+                                need port
+                                density without PoE.</p>
+                            <span class="fw-series-action" style="color:#9C0000">Shop CS110-24 &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CS110-48 -->
+                    <!-- Developer: upload transparent PNG to /media/brands/sophos/cs110-48-front.png -->
+                    <a href="/brands/sophos/network-switches/cs110-48.html" class="fw-series-card"
+                        aria-label="View Sophos CS110-48">
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/cs-101-48.jpg" alt="Sophos CS110-48 48-port gigabit rackmount switch" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <h3>Sophos CS110-48</h3>
+                            <div class="fw-series-for">48 ports &middot; 1 GE &middot; 1U Rackmount</div>
+                            <p class="fw-series-desc">1U gigabit rackmount switch for larger offices and wiring closets
+                                that
+                                need high port density without PoE.</p>
+                            <span class="fw-series-action" style="color:#9C0000">Shop CS110-48 &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CS210-8FP -->
+                    <!-- Developer: upload transparent PNG to /media/brands/sophos/cs210-8fp-front.png -->
+                    <a href="/brands/sophos/network-switches/cs210-8.html" class="fw-series-card"
+                        aria-label="View Sophos CS210-8FP">
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/cs-210-8.jpg" alt="Sophos CS210-8FP 8-port 2.5G multi-gigabit PoE switch" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <h3>Sophos CS210-8FP</h3>
+                            <div class="fw-series-for">8 ports &middot; 2.5 GE &middot; 1U Rackmount &middot; PoE+</div>
+                            <p class="fw-series-desc">Multi-gigabit switching for offices running Sophos AP6 access
+                                points or
+                                workstations that have outgrown standard gigabit.</p>
+                            <span class="fw-series-action" style="color:#9C0000">Shop CS210-8FP &rarr;</span>
+                        </div>
+                    </a>
+
+                    <!-- CS1010-8FP -->
+                    <!-- Developer: upload transparent PNG to /media/brands/sophos/cs1010-8fp.png -->
+                    <a href="/brands/sophos/network-switches/cs1010-8fp.html" class="fw-series-card"
+                        aria-label="View Sophos CS1010-8FP">
+                        <div class="fw-series-img">
+                            <img src="https://www.firewalls.com/media/wysiwyg/sophos/cs-1010-8fp.jpg" alt="Sophos CS1010-8FP 8-port 10G rackmount PoE++ switch" loading="lazy" decoding="async">
+                        </div>
+                        <div class="fw-series-body">
+                            <h3>Sophos CS1010-8FP</h3>
+                            <div class="fw-series-for">8 ports &middot; 10 GE &middot; 1U Rackmount &middot; PoE++</div>
+                            <p class="fw-series-desc">The top of the Sophos Switch lineup, built for high-density
+                                environments
+                                that need full 10G throughput and maximum PoE power at every port.</p>
+                            <span class="fw-series-action" style="color:#9C0000">Shop CS1010-8FP &rarr;</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 4. WHAT SETS SOPHOS SWITCHES APART ============ -->
+        <section class="fw-section fw-section-alt" id="why">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Why Sophos</span>
+                <h2 class="fw-band-title">What Sets Sophos Switches Apart</h2>
+
+                <div class="fw-why-grid">
+
+                    <div class="fw-why-card">
+                        <h3>One Console for the Full Network Stack</h3>
+                        <p>Sophos switches run in the same Sophos Central account as your firewalls, access points, and
+                            endpoint protection. No separate console, no additional login. Port status, VLAN changes,
+                            and virtual stacking all happen from the same dashboard your team already uses, whether
+                            you're managing one site or many.</p>
+                    </div>
+
+                    <div class="fw-why-card">
+                        <h3>Active Threat Response at the Wired Access Layer</h3>
+                        <p>When Sophos MDR, Sophos XDR, or a third-party security tool flags a compromised device,
+                            Active Threat Response automatically isolates that host at the switch port level. The threat
+                            feed updates all Sophos switches and AP6 access points in the account at once, cutting off
+                            wired and wireless devices before they can move laterally, without waiting for manual
+                            intervention.</p>
+                    </div>
+
+                    <div class="fw-why-card">
+                        <h3>Multi-Gigabit Connectivity That Pairs with AP6 Access Points</h3>
+                        <p>Sophos AP6 access points have 2.5G LAN ports, and a standard 1G switch caps the backhaul
+                            before the AP can show what it's capable of. The CS210 Series matches that with 2.5G ports
+                            across the board. The CS1010-8FP goes further with 10G base-T on every port, making it the
+                            right switch for AP6 840E deployments where the full 8,350 Mbps aggregate matters.</p>
+                    </div>
+
+                    <div class="fw-why-card">
+                        <h3>Virtual Switch Stacking Without Proprietary Cables</h3>
+                        <p>Sophos Central switch stacking lets you group multiple switches and manage them as one unit
+                            without proprietary stacking cables. Physical links use standard Ethernet, SFP, or SFP+
+                            ports, and Link Aggregation Groups add bandwidth and redundancy between stacked units. A
+                            valid Support and Services subscription is required to use stacking through Sophos Central.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 5. COMPARISON TABLE ============ -->
+        <section class="fw-section" id="compare">
+            <div class="fw-container">
+                <span class="fw-eyebrow">Compare</span>
+                <h2 class="fw-band-title">Sophos Switches at a Glance</h2>
+
+                <div class="fw-compare-wrap">
+                    <table class="fw-compare-table">
+                        <thead>
+                            <tr>
+                                <th>Series</th>
+                                <th>Best For</th>
+                                <th>Port Speed</th>
+                                <th>Form Factor</th>
+                                <th>Key Feature</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="/brands/sophos/switches/cs101.html">CS101 Series</a></td>
+                                <td>Small offices, retail, branch locations</td>
+                                <td>1 GE &middot; 8 ports</td>
+                                <td>Desktop &middot; Wall mount</td>
+                                <td>CS101-8FP: 110W PoE budget &middot; 2x SFP uplinks</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/switches/cs110.html">CS110 Series</a></td>
+                                <td>Mid-size offices, wiring closets</td>
+                                <td>1 GE &middot; 24 or 48 ports</td>
+                                <td>1U Rackmount</td>
+                                <td>Up to 740W PoE &middot; 4x SFP+ uplinks &middot; 256 VLANs</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/switches/cs210.html">CS210 Series</a></td>
+                                <td>Multi-gig AP deployments, dense offices</td>
+                                <td>2.5 GE &middot; 8, 24, or 48 ports</td>
+                                <td>1U Rackmount</td>
+                                <td>2.5G ports for AP6 backhaul &middot; 4x SFP+ uplinks</td>
+                            </tr>
+                            <tr>
+                                <td><a href="/brands/sophos/switches/cs1010.html">CS1010 Series</a></td>
+                                <td>High-density 10G access layer</td>
+                                <td>10 GE &middot; 8 ports</td>
+                                <td>1U Rackmount</td>
+                                <td>410W PoE++ &middot; 32K MAC table &middot; 4x SFP+ uplinks</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ 6a. FAQ JSON-LD ============ -->
+        <script type="application/ld+json">
+            {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Does a Sophos switch require a subscription to work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No, Sophos switches work without a subscription. Local web management, CLI, and SNMP are included in the hardware purchase price and stay available regardless of whether a Support and Services subscription is active. What requires a subscription is Sophos Central management, firmware updates, 24x7 phone support, and Advanced RMA replacement. Without an active subscription, Sophos Central goes into read-only mode for that switch. The limited lifetime warranty on the hardware is separate from the subscription and is not affected if you let the subscription lapse."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why would I choose a Sophos switch over a cheaper unmanaged switch?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The main reasons are VLAN support, 802.1x port authentication, remote management, and Active Threat Response integration. Inexpensive unmanaged switches connect devices but give you no visibility or control over what is on each port. Sophos switches let you segment traffic with VLANs, authenticate devices before they get network access, monitor port status remotely through Sophos Central, and automatically isolate compromised hosts when a threat is detected. If you are already running a Sophos firewall or access points, the single-console management is an additional practical benefit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which Sophos switch works best with Sophos AP6 access points?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The CS210 Series and CS1010-8FP are the best matches for Sophos AP6 access points. All AP6 models except the AP6 420 include at least one 2.5G LAN port. Connecting a 2.5G access point to a standard 1G switch port caps the backhaul at 1G and wastes the throughput the AP6 hardware can actually deliver. The CS210-8FP provides eight 2.5G PoE ports, which matches the AP6's backhaul capability. The CS1010-8FP goes further with 10G base-T ports and supports the AP6 840E's full PoE++ power requirement of up to 60W per port."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can Sophos switches be stacked and managed as a group?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Sophos Central supports virtual switch stacking, which lets you group multiple switches and manage them as a single logical unit. Physical connections between stacked switches use standard Ethernet, SFP, or SFP+ ports, so no proprietary stacking cables or modules are required. Link Aggregation Groups are supported for added bandwidth and redundancy across stacked units. Stacking requires a valid Support and Services subscription to use through Sophos Central."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What PoE standards do Sophos switches support?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "PoE support varies by model. The CS101-8FP supports 802.3af and 802.3at (PoE+), with a 110W total budget across eight ports. The CS110 PoE models support 802.3af and 802.3at with budgets of 410W (24-port) or 740W (48-port full-PoE model). The CS210 and CS1010 series support 802.3af, 802.3at, and 802.3bt (PoE++), which is required for high-power devices like the Sophos AP6 840E at up to 60W per port. The CS1010-8FP's 410W budget can support up to six 60W devices or eight PoE++ devices at slightly lower draw."
+        }
+      }
+    ]
+  }
+        </script>
+
+        <!-- ============ 6. FAQ ============ -->
+        <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-brand-faq-heading">
+            <div class="fw-container">
+                <h2 class="fw-band-title" id="fw-brand-faq-heading">Sophos Switch FAQ</h2>
+                <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Does a Sophos switch require a subscription to work?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">No, Sophos switches work without a subscription. Local web management,
+                                CLI, and SNMP are included in the hardware purchase price and stay available regardless
+                                of whether a Support and Services subscription is active. What requires a subscription
+                                is Sophos Central management, firmware updates, 24x7 phone support, and Advanced RMA
+                                replacement. Without an active subscription, Sophos Central goes into read-only mode for
+                                that switch. The limited lifetime warranty on the hardware is separate from the
+                                subscription and is not affected if you let the subscription lapse.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Why would I choose a Sophos switch over a cheaper unmanaged switch?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">The main reasons are VLAN support, 802.1x port authentication, remote
+                                management, and Active Threat Response integration. Inexpensive unmanaged switches
+                                connect devices but give you no visibility or control over what is on each port. Sophos
+                                switches let you segment traffic with VLANs, authenticate devices before they get
+                                network access, monitor port status remotely through Sophos Central, and automatically
+                                isolate compromised hosts when a threat is detected. If you are already running a Sophos
+                                firewall or access points, the single-console management is an additional practical
+                                benefit.</p>
+                        </div>
+                    </div>
+
+                    <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)">
+            <span itemprop="name">Which Sophos switch works best with Sophos AP6 access points?</span>
+          </button>
+                        <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text">The CS210 Series and CS1010-8FP are the best matches for Sophos AP6
+                                access points. All AP6 models except the AP6 420 include at least one 2.5G LAN port.
+                                Connecting a 2.5G access point to a standard 1G switch port caps the backhaul at 1G and
+                                wastes the throughput the AP6 hardware can actually deliver. The CS210-8FP provides
+                                eight 2.5G PoE ports, which matches the AP6's backhaul capability. The CS1010-8FP goes
+                                further with 10G base-T ports and supports the AP6 840E's full PoE++ power
