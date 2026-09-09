@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-09T19:51:24.956Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 2812,
+    "identifier": "vx310",
+    "title": "Vx310",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
