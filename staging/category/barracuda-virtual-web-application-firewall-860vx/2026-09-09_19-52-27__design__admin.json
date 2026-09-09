@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-09T19:52:27.086Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 2933,
+    "identifier": "barracuda-virtual-web-application-firewall-860vx",
+    "title": "WAF 860Vx",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
