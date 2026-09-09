@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-09T19:45:20.515Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 3087,
+    "identifier": "barracuda-f600",
+    "title": "F600",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "1column",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
