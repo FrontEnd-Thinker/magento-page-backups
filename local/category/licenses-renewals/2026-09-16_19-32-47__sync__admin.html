@@ -1,0 +1,599 @@
+<!-- BACKUP
+timestamp:   2026-09-16T19:32:47.999Z
+environment: local
+operation:   sync (staging → local)
+item:        #5192 licenses-renewals "Licenses & Renewals"
+user:        admin
+-->
+<!--
+  Firewalls.com — SonicWall Licenses & Renewals (/brands/sonicwall/licenses-renewals.html)
+  Uses compiled _brands_page_extend.less — no inline design-system styles
+  Redesigned 2026-05-20
+-->
+
+<style>
+/* Magento integration: body class overrides for this sub-page */
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs { background: #1A1A1A !important; max-width: none !important; padding: 18px 0 !important; margin: 0 !important; display: block !important; }
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs .items { max-width: 1280px; margin: 0 auto !important; padding: 0 20px !important; text-align: left !important; }
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs a,
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs strong,
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs .item,
+.categorypath-brands-sonicwall-licenses-renewals .breadcrumbs .item:not(:last-child)::after { color: rgba(255,255,255,0.85) !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page-title-wrapper { display: none !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page-main,
+.categorypath-brands-sonicwall-licenses-renewals .columns,
+.categorypath-brands-sonicwall-licenses-renewals .column.main { padding-top: 0 !important; margin-top: 0 !important; overflow: visible !important; }
+.categorypath-brands-sonicwall-licenses-renewals #maincontent { max-width: none !important; padding: 0 !important; margin: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .columns,
+.categorypath-brands-sonicwall-licenses-renewals .column.main,
+.categorypath-brands-sonicwall-licenses-renewals .category-description,
+.categorypath-brands-sonicwall-licenses-renewals .category-description>div,
+.categorypath-brands-sonicwall-licenses-renewals .category-description>div>div { padding: 0 !important; margin: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .category-description [data-content-type="row"][data-appearance="contained"],
+.categorypath-brands-sonicwall-licenses-renewals .category-description [data-content-type="row"][data-appearance="contained"]>[data-element="inner"] { max-width: none !important; width: 100% !important; padding: 0 !important; margin: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .fw-brands,
+.categorypath-brands-sonicwall-licenses-renewals .fw-brands>section:first-child { padding-top: 0 !important; margin-top: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals #contentarea { display: none !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page.messages:empty { display: none !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page-main { font-size: 0 !important; line-height: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page-main>.columns { font-size: 14px; line-height: 1.4; margin-top: -15px !important; }
+.categorypath-brands-sonicwall-licenses-renewals .page-footer .footer.content { margin-top: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .category-description { margin-bottom: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .column.main { padding-bottom: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .ambanners { margin-bottom: 0 !important; }
+.categorypath-brands-sonicwall-licenses-renewals .fw-brands>section:last-child { padding-bottom: 32px !important; }
+
+/* ── Hero license image (transparent bg — no shadow/radius) ── */
+.categorypath-brands-sonicwall-licenses-renewals .fw-hero-award img { border-radius: 0; box-shadow: none; max-width: 340px; filter: drop-shadow(0 12px 32px rgba(0,0,0,0.35)); }
+
+/* ── License Finder Section ── */
+.fw-lf-section { padding: 48px 0 56px; background: #F2F2F2; }
+.fw-lf-section .fw-container { max-width: 880px; }
+.fw-lf-section-head { text-align: center; margin-bottom: 28px; }
+.fw-lf-section-eyebrow { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #9C0000; margin: 0 0 8px; }
+.fw-lf-section-heading { font-size: 28px; font-weight: 800; color: #1A1A1A; margin: 0; }
+
+/* ── License Finder Card ── */
+.fw-lf { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 40px rgba(0,0,0,0.08), 0 1px 3px rgba(0,0,0,0.04); }
+.fw-lf-header { background: linear-gradient(135deg, #1A1A1A 0%, #2D2D2D 100%); padding: 20px 32px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+.fw-lf-title { font-size: 18px; font-weight: 700; color: #fff; margin: 0; }
+.fw-lf-sub { font-size: 13px; color: rgba(255,255,255,0.6); margin: 0; }
+.fw-lf-steps { display: flex; align-items: center; gap: 6px; }
+.fw-lf-step { width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; border: 2px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.35); background: transparent; transition: all 0.25s; }
+.fw-lf-step.active { border-color: #FFE200; color: #FFE200; background: rgba(255,226,0,0.1); }
+.fw-lf-step.done { border-color: #4ADE80; color: #fff; background: #4ADE80; }
+.fw-lf-step-line { width: 16px; height: 2px; background: rgba(255,255,255,0.15); border-radius: 1px; }
+.fw-lf-body { padding: 28px 32px 32px; }
+.fw-lf-back { display: none; background: none; border: none; color: #9C0000; font-size: 13px; font-weight: 600; cursor: pointer; padding: 6px 12px 6px 0; margin: 0 0 16px; font-family: inherit; transition: color 0.15s; }
+.fw-lf-back:hover { color: #7A0000; text-decoration: underline; }
+
+/* ── Series Tabs (Step 1) ── */
+.fw-lf-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.fw-lf-tab { padding: 18px 20px; border-radius: 10px; border: 2px solid #E8E8E8; background: #FAFAFA; font-size: 15px; font-weight: 700; color: #1A1A1A; cursor: pointer; transition: all 0.2s; font-family: inherit; text-align: left; position: relative; overflow: hidden; }
+.fw-lf-tab::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: #9C0000; opacity: 0; transition: opacity 0.2s; }
+.fw-lf-tab::after { content: '\2192'; position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 18px; color: #ccc; transition: all 0.2s; }
+.fw-lf-tab:hover { border-color: #9C0000; background: #fff; box-shadow: 0 2px 12px rgba(156,0,0,0.08); }
+.fw-lf-tab:hover::before { opacity: 1; }
+.fw-lf-tab:hover::after { color: #9C0000; right: 12px; }
+
+/* ── Model Chips (Step 2) ── */
+.fw-lf-panel { display: none; }
+.fw-lf-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 0 0 10px; padding-bottom: 6px; border-bottom: 1px solid #f0f0f0; }
+.fw-lf-label.legacy-label { margin-top: 20px; color: #bbb; border-bottom-color: #f5f5f5; }
+.fw-lf-chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.fw-lf-chip { display: inline-block; padding: 10px 20px; border-radius: 8px; background: #F5F5F5; font-size: 14px; font-weight: 600; color: #333; text-decoration: none; transition: all 0.2s; border: 1px solid #E8E8E8; cursor: pointer; font-family: inherit; line-height: 1.4; }
+.fw-lf-chip:hover { background: #fff; border-color: #9C0000; color: #9C0000; box-shadow: 0 2px 8px rgba(156,0,0,0.1); text-decoration: none; }
+.fw-lf-chip.legacy { opacity: 0.5; font-weight: 500; border-style: dashed; }
+.fw-lf-chip.legacy:hover { opacity: 1; border-style: solid; }
+
+/* ── Subscription Chips (Step 3) ── */
+.fw-lf-subs { display: none; }
+.fw-lf-subs-head { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; padding-bottom: 14px; border-bottom: 2px solid #f0f0f0; }
+.fw-lf-subs-title { font-size: 16px; font-weight: 700; color: #1A1A1A; margin: 0; }
+.fw-lf-subs-all { font-size: 13px; font-weight: 600; color: #9C0000; text-decoration: none; padding: 6px 14px; border-radius: 6px; background: #FFF5F5; transition: all 0.15s; }
+.fw-lf-subs-all:hover { background: #9C0000; color: #fff; text-decoration: none; }
+.fw-lf-sg { margin-bottom: 16px; }
+.fw-lf-sg:last-child { margin-bottom: 0; }
+.fw-lf-sg-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #999; margin: 0 0 8px; }
+.fw-lf-sg-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.fw-lf-sc { display: inline-block; padding: 8px 16px; border-radius: 8px; background: #F0F7FF; font-size: 13px; font-weight: 600; color: #1A1A1A; text-decoration: none; transition: all 0.2s; border: 1px solid #D4E6F9; }
+.fw-lf-sc:hover { background: #D4E6F9; text-decoration: none; color: #1A1A1A; box-shadow: 0 2px 8px rgba(0,100,200,0.1); }
+.fw-lf-sc.suite { background: linear-gradient(135deg, #FFF8E1, #FFFDF5); border-color: #FFD54F; }
+.fw-lf-sc.suite:hover { background: linear-gradient(135deg, #FFE082, #FFF8E1); box-shadow: 0 2px 8px rgba(255,200,0,0.2); }
+
+/* ── Not a Firewall ── */
+.fw-lf-other { margin-top: 24px; padding-top: 24px; border-top: 2px solid #f0f0f0; }
+.fw-lf-other-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.fw-lf-other-link { font-size: 13px; font-weight: 500; color: #9C0000; text-decoration: none; padding: 7px 14px; border-radius: 6px; background: #FFF5F5; border: 1px solid #FFDEDE; transition: all 0.15s; }
+.fw-lf-other-link:hover { background: #9C0000; color: #fff; border-color: #9C0000; text-decoration: none; }
+
+@media(max-width:640px) {
+  .fw-lf-header { padding: 16px 20px; flex-direction: column; align-items: flex-start; }
+  .fw-lf-body { padding: 20px; }
+  .fw-lf-tabs { grid-template-columns: 1fr; }
+  .fw-lf-tab { padding: 14px 16px; font-size: 14px; }
+  .fw-lf-chip { padding: 8px 14px; font-size: 13px; }
+  .fw-lf-section-heading { font-size: 22px; }
+}
+
+/* ── Bundle Comparison ── */
+.fw-bundle-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 24px; }
+.fw-bundle-card { border-radius: 12px; border: 2px solid #E0E0E0; padding: 28px; position: relative; }
+.fw-bundle-card.recommended { border-color: #9C0000; }
+.fw-bundle-card.recommended::before { content: 'MOST POPULAR'; position: absolute; top: -12px; left: 24px; background: #9C0000; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.08em; padding: 3px 12px; border-radius: 4px; }
+.fw-bundle-name { font-size: 22px; font-weight: 700; color: #1A1A1A; margin: 0 0 4px; }
+.fw-bundle-full { font-size: 13px; color: #888; margin: 0 0 16px; }
+.fw-bundle-list { list-style: none; padding: 0; margin: 0; }
+.fw-bundle-list li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; color: #333; display: flex; align-items: flex-start; gap: 8px; }
+.fw-bundle-list li:last-child { border-bottom: none; }
+.fw-bundle-list li::before { content: ''; display: inline-block; width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2300895e'%3E%3Cpath d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z'/%3E%3C/svg%3E") no-repeat center/contain; }
+.fw-bundle-extra { margin-top: 12px; padding-top: 12px; border-top: 2px solid #9C0000; }
+.fw-bundle-extra-label { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: #9C0000; margin: 0 0 8px; }
+
+@media(max-width:768px) {
+  .fw-bundle-grid { grid-template-columns: 1fr; }
+}
+
+/* ── License Finder: Subscription Level (overrides) ── */
+.fw-lf-chip.active { background: #9C0000; color: #fff; border-color: #9C0000; }
+.fw-lf-chip.active:hover { background: #7A0000; color: #fff; }
+button.fw-lf-chip { font-family: inherit; line-height: 1.4; }
+.fw-lf-subs.active { display: block; }
+</style>
+
+<div class="fw-brands">
+
+  <!-- ============ 1. HERO ============ -->
+  <section class="fw-hero">
+    <div class="fw-container fw-hero-grid">
+      <div>
+        <div class="fw-hero-badge"><span class="fw-dot"></span> SONICWALL LICENSES & RENEWALS</div>
+        <h1>Find Your SonicWall License. <em>Renew in Minutes.</em></h1>
+        <p>Select your firewall model below and we will show you every available license, renewal, and subscription. Digital delivery means your license key arrives by email within one business hour of your order.</p>
+        <div class="fw-hero-ctas">
+          <a href="#finder" class="fw-btn-cta">Find My License</a>
+          <a href="/contact-us" class="fw-btn-outline-light">Request a Quote</a>
+        </div>
+      </div>
+      <div class="fw-hero-award">
+        <img src="/media/wysiwyg/sonicwall-license.webp" alt="SonicWall Security Services License">
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 1b. LICENSE FINDER ============ -->
+  <section class="fw-lf-section" id="finder">
+    <div class="fw-container">
+      <div class="fw-lf-section-head">
+        <div class="fw-lf-section-eyebrow">License Finder</div>
+        <h2 class="fw-lf-section-heading">Find the Right Subscription</h2>
+      </div>
+      <div class="fw-lf">
+        <div class="fw-lf-header">
+          <div>
+            <div class="fw-lf-title">Select Your Firewall</div>
+            <div class="fw-lf-sub" id="lf-sub">Pick your series, then your model, then your subscription type.</div>
+          </div>
+          <div class="fw-lf-steps" id="lf-steps">
+            <span class="fw-lf-step active" id="lf-s1">1</span>
+            <span class="fw-lf-step-line"></span>
+            <span class="fw-lf-step" id="lf-s2">2</span>
+            <span class="fw-lf-step-line"></span>
+            <span class="fw-lf-step" id="lf-s3">3</span>
+          </div>
+        </div>
+        <div class="fw-lf-body">
+        <button class="fw-lf-back" id="lf-back" onclick="fwLfBack()">&larr; Back</button>
+        <div id="lf-step1">
+          <div class="fw-lf-tabs">
+            <button class="fw-lf-tab" onclick="fwLfSeries('tz')">TZ Series</button>
+            <button class="fw-lf-tab" onclick="fwLfSeries('nsa')">NSa Series</button>
+            <button class="fw-lf-tab" onclick="fwLfSeries('nssp')">NSsp Series</button>
+            <button class="fw-lf-tab" onclick="fwLfSeries('nsv')">NSv Virtual</button>
+          </div>
+        </div>
+
+        <!-- TZ Panel -->
+        <div class="fw-lf-panel" id="lf-tz">
+          <div class="fw-lf-label">Current Models (Gen 7 & Gen 8)</div>
+          <div class="fw-lf-chips">
+            <button class="fw-lf-chip" onclick="fwLfModel(14516,this)">TZ80</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5104,this)">TZ270</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15217,this)">TZ280</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5116,this)">TZ370</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15218,this)">TZ380</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5128,this)">TZ470</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15230,this)">TZ480</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(4977,this)">TZ570</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15219,this)">TZ580</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5139,this)">TZ670</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15220,this)">TZ680</button>
+          </div>
+          <div class="fw-lf-label legacy-label">Legacy Models</div>
+          <div class="fw-lf-chips">
+            <a href="/licensing/sonicwall-firewalls.html?cat=640" class="fw-lf-chip legacy">SOHO</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=641" class="fw-lf-chip legacy">SOHO 250</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4529" class="fw-lf-chip legacy">TZ105</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4525" class="fw-lf-chip legacy">TZ205</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4518" class="fw-lf-chip legacy">TZ215</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=635" class="fw-lf-chip legacy">TZ300</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=636" class="fw-lf-chip legacy">TZ350</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=637" class="fw-lf-chip legacy">TZ400</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=638" class="fw-lf-chip legacy">TZ500</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=639" class="fw-lf-chip legacy">TZ600</a>
+          </div>
+        </div>
+
+        <!-- NSa Panel -->
+        <div class="fw-lf-panel" id="lf-nsa">
+          <div class="fw-lf-label">Current Models (Gen 7 & Gen 8)</div>
+          <div class="fw-lf-chips">
+            <button class="fw-lf-chip" onclick="fwLfModel(5167,this)">NSa 2700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(14986,this)">NSa 2800</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5325,this)">NSa 3700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(14987,this)">NSa 3800</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5841,this)">NSa 4700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15256,this)">NSa 4800</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(7648,this)">NSa 5700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(15257,this)">NSa 5800</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5850,this)">NSa 6700</button>
+          </div>
+          <div class="fw-lf-label legacy-label">Legacy Models</div>
+          <div class="fw-lf-chips">
+            <a href="/licensing/sonicwall-firewalls.html?cat=4552" class="fw-lf-chip legacy">NSA 220</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4533" class="fw-lf-chip legacy">NSA 2400</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=642" class="fw-lf-chip legacy">NSa 2600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=643" class="fw-lf-chip legacy">NSa 2650</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=645" class="fw-lf-chip legacy">NSa 3600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=646" class="fw-lf-chip legacy">NSa 3650</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=647" class="fw-lf-chip legacy">NSa 4600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=648" class="fw-lf-chip legacy">NSa 4650</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=649" class="fw-lf-chip legacy">NSa 5600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=650" class="fw-lf-chip legacy">NSa 5650</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=651" class="fw-lf-chip legacy">NSa 6600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=652" class="fw-lf-chip legacy">NSa 6650</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=653" class="fw-lf-chip legacy">NSa 9250</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=654" class="fw-lf-chip legacy">NSa 9450</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=655" class="fw-lf-chip legacy">NSa 9650</a>
+          </div>
+        </div>
+
+        <!-- NSsp Panel -->
+        <div class="fw-lf-panel" id="lf-nssp">
+          <div class="fw-lf-label">Current Models</div>
+          <div class="fw-lf-chips">
+            <button class="fw-lf-chip" onclick="fwLfModel(7719,this)">NSsp 10700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(7710,this)">NSsp 11700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(6562,this)">NSsp 13700</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5751,this)">NSsp 15700</button>
+          </div>
+          <div class="fw-lf-label legacy-label">Legacy Models</div>
+          <div class="fw-lf-chips">
+            <a href="/licensing/sonicwall-firewalls.html?cat=656" class="fw-lf-chip legacy">NSsp 12400</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=657" class="fw-lf-chip legacy">NSsp 12800</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4511" class="fw-lf-chip legacy">SM 9200</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4622" class="fw-lf-chip legacy">SM 9400</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4620" class="fw-lf-chip legacy">SM 9600</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=4618" class="fw-lf-chip legacy">SM 9800</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=5345" class="fw-lf-chip legacy">SM E10800</a>
+          </div>
+        </div>
+
+        <!-- NSv Panel -->
+        <div class="fw-lf-panel" id="lf-nsv">
+          <div class="fw-lf-label">Current Virtual Firewalls</div>
+          <div class="fw-lf-chips">
+            <button class="fw-lf-chip" onclick="fwLfModel(5210,this)">NSv 270</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5212,this)">NSv 470</button>
+            <button class="fw-lf-chip" onclick="fwLfModel(5214,this)">NSv 870</button>
+          </div>
+          <div class="fw-lf-label legacy-label">Legacy Virtual Firewalls</div>
+          <div class="fw-lf-chips">
+            <a href="/licensing/sonicwall-firewalls.html?cat=1168" class="fw-lf-chip legacy">NSv 10</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1224" class="fw-lf-chip legacy">NSv 25</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1229" class="fw-lf-chip legacy">NSv 50</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1234" class="fw-lf-chip legacy">NSv 100</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1239" class="fw-lf-chip legacy">NSv 200</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1247" class="fw-lf-chip legacy">NSv 300</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1255" class="fw-lf-chip legacy">NSv 400</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1263" class="fw-lf-chip legacy">NSv 800</a>
+            <a href="/licensing/sonicwall-firewalls.html?cat=1270" class="fw-lf-chip legacy">NSv 1600</a>
+          </div>
+        </div>
+
+        <div class="fw-lf-subs" id="lf-subs"></div>
+
+        <div class="fw-lf-other">
+          <div class="fw-lf-label">Not a Firewall?</div>
+          <div class="fw-lf-other-links">
+            <a href="/brands/sonicwall/ssl-vpn-client.html" class="fw-lf-other-link">SSL VPN Licenses</a>
+            <a href="/brands/sonicwall/global-vpn-client.html" class="fw-lf-other-link">Global VPN Licenses</a>
+            <a href="/licensing/sonicwall-access-points.html" class="fw-lf-other-link">Access Point Support</a>
+            <a href="/licensing/sonicwall-network-switches.html" class="fw-lf-other-link">Switch Support</a>
+            <a href="/licensing/sonicwall-sma-sra.html" class="fw-lf-other-link">SMA & SRA</a>
+            <a href="/licensing/sonicwall-email-security-appliances.html" class="fw-lf-other-link">Email Security</a>
+            <a href="/licensing/sonicwall-endpoint-security.html" class="fw-lf-other-link">Endpoint Security</a>
+          </div>
+        </div>
+        </div><!-- /.fw-lf-body -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 2. TRUST BAND ============ -->
+  <section class="fw-trust-bar" aria-label="Why choose Firewalls.com">
+    <div class="fw-container">
+      <div class="fw-trust-card">
+        <a href="/contact-us" class="fw-trust-item">
+          <div class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+          </div>
+          <div class="fw-trust-text">
+            <span class="fw-trust-title">Digital Delivery</span>
+            <span class="fw-trust-sub">License keys emailed same day.</span>
+          </div>
+        </a>
+        <a href="/contact-us" class="fw-trust-item">
+          <div class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="4"></circle><path d="M2 21v-1a7 7 0 0 1 13.5-2.5"></path><path d="M14 14v-2a2 2 0 0 1 2-2h5a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-3l-3 2v-4z"></path></svg>
+          </div>
+          <div class="fw-trust-text">
+            <span class="fw-trust-title">Expert Licensing Help</span>
+            <span class="fw-trust-sub">Certified reps reply in 1 hour.</span>
+          </div>
+        </a>
+        <a href="/professional-services.html" class="fw-trust-item">
+          <div class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><path d="M16 13H8M16 17H8M10 9H8"></path></svg>
+          </div>
+          <div class="fw-trust-text">
+            <span class="fw-trust-title">POs · Tax-Exempt · Net 30</span>
+            <span class="fw-trust-sub">Welcomed for Corp, Edu, & Gov.</span>
+          </div>
+        </a>
+        <a href="/contact-us" class="fw-trust-item">
+          <div class="fw-trust-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><path d="M9 12l2 2 4-4"></path></svg>
+          </div>
+          <div class="fw-trust-text">
+            <span class="fw-trust-title">Authorized SonicWall Partner</span>
+            <span class="fw-trust-sub">100% genuine license keys.</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. WHAT'S IN EACH BUNDLE ============ -->
+  <section class="fw-section" id="bundles">
+    <div class="fw-container">
+      <span class="fw-eyebrow">License Bundles</span>
+      <h2 class="fw-band-title">EPSS vs. APSS: What is Included</h2>
+      <p style="max-width:720px;margin:0 auto 8px;text-align:center;color:#555;font-size:15px;">Every SonicWall firewall needs an active security service subscription to receive threat intelligence updates, firmware patches, and technical support. SonicWall offers two tiers.</p>
+
+      <div class="fw-bundle-grid">
+        <div class="fw-bundle-card">
+          <div class="fw-bundle-name">EPSS</div>
+          <div class="fw-bundle-full">Essential Protection Service Suite</div>
+          <ul class="fw-bundle-list">
+            <li>Capture ATP Cloud Sandboxing</li>
+            <li>Gateway Anti-Virus</li>
+            <li>Anti-Spyware</li>
+            <li>Intrusion Prevention (IPS)</li>
+            <li>Application Control</li>
+            <li>Content Filtering</li>
+            <li>Anti-Spam</li>
+            <li>24x7 Technical Support</li>
+          </ul>
+        </div>
+
+        <div class="fw-bundle-card recommended">
+          <div class="fw-bundle-name">APSS</div>
+          <div class="fw-bundle-full">Advanced Protection Service Suite</div>
+          <ul class="fw-bundle-list">
+            <li>Capture ATP Cloud Sandboxing</li>
+            <li>Gateway Anti-Virus</li>
+            <li>Anti-Spyware</li>
+            <li>Intrusion Prevention (IPS)</li>
+            <li>Application Control</li>
+            <li>Content Filtering</li>
+            <li>Anti-Spam</li>
+            <li>24x7 Technical Support</li>
+          </ul>
+          <div class="fw-bundle-extra">
+            <div class="fw-bundle-extra-label">Plus Advanced Services</div>
+            <ul class="fw-bundle-list">
+              <li>DNS Security</li>
+              <li>Cloud App Security (CAS)</li>
+              <li>NSM Essential Cloud Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="fw-compare-cta" style="margin-top:32px">
+        <h3>Not sure which bundle fits your environment?</h3>
+        <p>Tell us what you are protecting and our certified sales reps will recommend the right tier and term length within one business hour.</p>
+        <a href="/contact-us" class="fw-btn-cta">Get a Recommendation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 4. HOW IT WORKS ============ -->
+  <section class="fw-section fw-section-alt">
+    <div class="fw-container">
+      <span class="fw-eyebrow">How It Works</span>
+      <h2 class="fw-band-title">Renew Your License in Three Steps</h2>
+
+      <div class="fw-why-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="fw-why-card" style="text-align:center">
+          <div style="font-size:36px;font-weight:800;color:#9C0000;margin-bottom:8px">1</div>
+          <h3>Select Your Model</h3>
+          <p>Use the license finder above to pick your firewall series and model number. You will see every available subscription for your appliance.</p>
+        </div>
+        <div class="fw-why-card" style="text-align:center">
+          <div style="font-size:36px;font-weight:800;color:#9C0000;margin-bottom:8px">2</div>
+          <h3>Choose Your Bundle & Term</h3>
+          <p>Pick EPSS or APSS and a 1, 2, 3, or 5 year term. Longer terms save more per year. Add your selection to cart and check out.</p>
+        </div>
+        <div class="fw-why-card" style="text-align:center">
+          <div style="font-size:36px;font-weight:800;color:#9C0000;margin-bottom:8px">3</div>
+          <h3>Receive Your License Key</h3>
+          <p>After checkout, your license key is emailed directly from SonicWall. Register it in MySonicWall and your firewall pulls the update automatically.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 5. FAQ ============ -->
+  <section class="fw-section fw-faq-band" id="faq" aria-labelledby="fw-lic-faq-heading">
+    <div class="fw-container">
+      <h2 class="fw-band-title" id="fw-lic-faq-heading">SonicWall License & Renewal FAQ</h2>
+      <div class="fw-faq-list" itemscope itemtype="https://schema.org/FAQPage">
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">How do I find out when my SonicWall license expires?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Log in to your MySonicWall account at mysonicwall.com and navigate to My Products. Each registered appliance shows the expiration date for every active subscription. You can also check from the firewall itself by opening the SonicOS management interface and going to the Licenses page under Device settings. If you see an expiration within 90 days, now is the best time to renew because there is no gap in coverage.</p></div>
+        </div>
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">What happens if I let my SonicWall license expire?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">When your security services subscription lapses, the firewall continues to pass traffic but stops receiving signature updates for anti-virus, anti-spyware, IPS, and application control. Content filtering and Capture ATP sandboxing also stop working. Your network is still online but no longer protected against new threats. Firmware updates and technical support access also end. You can renew at any time to restore all services. The renewal term starts from your original expiration date, so you do not lose any time you already paid for.</p></div>
+        </div>
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">What is the difference between EPSS and APSS?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">EPSS (Essential Protection Service Suite) covers the core security stack: Capture ATP sandboxing, Gateway Anti-Virus, Anti-Spyware, IPS, Application Control, Content Filtering, Anti-Spam, and 24x7 support. APSS (Advanced Protection Service Suite) includes everything in EPSS and adds DNS Security, Cloud App Security (CAS), and NSM Essential cloud management. APSS is the better choice if you need centralized cloud management or want DNS layer protection to block threats before they reach your firewall.</p></div>
+        </div>
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Can I switch from EPSS to APSS mid term?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">Yes. You can upgrade from EPSS to APSS at any point during your subscription. Contact our sales team with your serial number and current expiration date. We will quote the difference so you can upgrade without losing any remaining time on your existing EPSS subscription.</p></div>
+        </div>
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">Should I renew my license or trade in for new hardware?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">If you own a Gen 5, Gen 6, or older Gen 7 appliance, the Secure Upgrade Plus (SUP) program may save you money. SUP lets you trade in your current firewall for a new Gen 8 unit bundled with a multi-year security suite at a steep discount. In many cases the total cost lands within $50 to $150 of a straight license renewal, so you get brand new hardware for roughly the same investment. Our sales team can quote both options side by side so you can compare total cost of ownership.</p></div>
+        </div>
+
+        <div class="fw-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="fw-faq-question" aria-expanded="false" onclick="fwToggleFaq(this)"><span itemprop="name">How long does it take to receive my license key?</span></button>
+          <div class="fw-faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer"><p itemprop="text">SonicWall license keys are digital products. After your order is processed, the license key is emailed directly from SonicWall to the address on your MySonicWall account. Most keys are delivered within one business hour during business hours (Monday through Friday, 9am to 6pm EST). Once you have the key, log in to MySonicWall, apply it to your appliance, and the firewall pulls the activation automatically.</p></div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 6. BOTTOM CTA ============ -->
+  <section class="fw-section fw-section-alt" style="text-align:center">
+    <div class="fw-container">
+      <div class="fw-bottom-cta">
+        <h3>Not sure which license you need?</h3>
+        <p>Send us your firewall serial number or model name. Our certified sales reps will identify your current subscription, recommend the best renewal path, and send a quote within one business hour.</p>
+        <a href="/contact-us" class="fw-btn-cta">Request a Quote</a>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+var LN=['24x7 Support','8x5 Support','Advanced Protection Security Suite','Advanced Protection Service Suite','Advanced Reporting and Analytics','Capture Advanced Threat Protection','Capture Advanced Threat Protection Service','Comprehensive Anti-Spam Service','Content Filtering','Content Filtering Service','Conversion License to Standalone Unit','DNS Filtering','DNS Security','DNS Security Service','Essential Protection Service Suite','Gateway Anti-Malware','Gateway Anti-Malware Intrusion Prevention and Application Control','HA Conversion License','HA Conversion license to Standalone unit','HA Upgrade','High Availability','Network Security Manager','Network Security Manager Advanced','Network Security Manager Essential','Remote Implementation','SaaS 7 Days Of Advanced Reporting And Analytics','SaaS Advanced Reporting And Analytics','SaaS Reporting And Analytics','Secure Connect Service Suite','SonicProtect Bundle','SonicWall Analytics Software','Standard Protection','Standard Support','Threat Protection Service Suite','Trial Conversion License'];
+var LD=['24x7 Support','8x5 Support','APSS (Gen 8)','APSS','Adv. Reporting','Capture ATP','Capture ATP Service','Anti-Spam','Content Filtering','Content Filtering','Standalone Conversion','DNS Filtering','DNS Security','DNS Security','EPSS','Gateway Anti-Malware','GAV/IPS/App Control','HA Conversion','HA Conversion','HA Upgrade','High Availability','NSM','NSM Advanced','NSM Essential','Remote Implementation','SaaS 7-Day Reporting','SaaS Adv. Reporting','SaaS Reporting','Secure Connect','SonicProtect','Analytics Software','Standard Protection','Standard Support','TPSS','Trial Conversion'];
+var LG=[3,3,0,0,1,2,2,2,2,2,4,2,2,2,0,2,2,4,4,4,4,1,1,1,4,1,1,1,0,0,1,0,3,0,4];
+var GL=['Security Suites','Management & Analytics','Individual Services','Support','HA & Conversion'];
+var LS={
+14516:[[14517,28],[14518,3],[14529,4],[15049,21]],
+5104:[[5105,14],[5106,3],[5107,33],[5108,0],[5109,1],[5110,16],[5111,9],[5112,6],[5113,7],[5114,20],[7425,21],[7784,23],[7785,22],[7814,30],[12532,5],[12535,15],[13035,11],[15018,27]],
+15217:[[15221,0],[15225,2],[15258,21],[15259,27],[15306,5],[15307,8],[15308,16],[15313,1],[15316,12],[15317,17]],
+5116:[[5117,14],[5118,3],[5119,33],[5120,0],[5121,1],[5122,16],[5123,9],[5124,6],[5125,7],[5126,20],[7428,21],[7786,23],[7787,22],[7815,30],[12533,5],[12536,15],[13034,11],[15019,27]],
+15218:[[15222,0],[15229,5],[15235,9],[15240,16],[15241,31],[15246,13],[15247,17],[15253,27],[15266,32],[15323,2]],
+5128:[[5129,14],[5130,3],[5131,33],[5132,0],[5133,1],[5134,16],[5135,9],[5136,6],[5137,7],[5138,20],[7430,21],[7788,23],[7789,22],[7816,30],[12534,5],[12537,15],[13033,11],[15020,26]],
+15230:[[15231,0],[15233,5],[15236,9],[15239,16],[15242,31],[15245,13],[15248,17],[15251,21],[15254,27],[15267,32],[15324,2]],
+4977:[[4978,14],[4979,0],[4980,1],[4981,16],[4982,9],[4983,5],[4984,7],[4986,10],[4988,3],[5757,23],[7432,21],[7645,15],[7646,20],[7647,18],[7790,22],[7817,30],[13032,11],[15021,25]],
+15219:[[15223,0],[15260,21],[15261,27],[15309,16],[15318,13],[15319,17],[15320,5],[15321,9],[15322,32],[15325,2]],
+5139:[[4968,14],[4969,0],[4970,1],[4971,16],[4972,9],[4973,5],[4974,7],[4975,19],[4976,10],[4987,3],[7434,21],[7818,30],[12538,15],[13031,11],[15022,26]],
+15220:[[15224,0],[15234,5],[15237,9],[15238,16],[15243,31],[15244,13],[15249,17],[15252,21],[15255,27],[15268,32],[15326,2]],
+5167:[[5168,14],[5169,3],[5170,0],[5171,1],[5172,16],[5173,9],[5174,5],[5175,7],[5176,19],[5177,10],[7422,21],[7763,18],[7819,30],[13027,11],[15023,27]],
+14986:[[14988,0],[14989,1],[14990,11],[14992,10],[14993,3],[14995,14],[14996,16],[14997,9],[14998,5],[14999,7],[15000,19],[15001,21],[15002,30],[15003,18],[15024,27]],
+5325:[[5326,14],[5327,3],[5328,0],[5329,1],[5330,16],[5331,9],[5332,5],[5333,7],[5334,19],[5335,10],[7421,21],[7820,30],[13026,11],[15025,27]],
+14987:[[15004,11],[15005,3],[15006,14],[15007,0],[15008,21],[15009,1],[15010,16],[15011,5],[15012,9],[15013,10],[15014,7],[15015,19],[15016,18],[15017,30],[15026,27]],
+5841:[[5842,14],[5843,3],[5844,0],[5845,1],[5846,16],[5847,9],[5848,5],[5849,7],[7420,21],[7643,18],[7821,30],[13025,11],[15027,27]],
+15256:[[15262,21],[15263,27],[15310,16],[15312,0],[15327,2],[15328,5],[15329,9],[15330,32],[15331,13],[15332,17]],
+7648:[[7649,0],[7650,1],[7651,3],[7652,5],[7653,7],[7654,9],[7655,14],[7656,16],[7657,21],[7658,18],[7822,30],[13024,11],[15028,27]],
+15257:[[15264,21],[15265,27],[15311,16],[15333,2],[15334,5],[15335,9],[15336,0],[15337,32],[15338,13],[15339,17]],
+5850:[[5851,14],[5852,3],[5853,0],[5854,1],[5855,16],[5856,9],[5857,5],[5858,7],[7435,21],[7644,18],[7825,30],[13023,11],[15029,27]],
+7719:[[7720,3],[7721,14],[7722,5],[7723,9],[7724,15],[7725,7],[7726,0],[7727,1],[7793,23],[7823,30],[13022,11],[15045,21],[15302,27]],
+7710:[[7711,3],[7712,14],[7713,5],[7714,9],[7715,15],[7716,7],[7717,0],[7718,1],[7794,23],[7824,30],[13021,11],[14520,24],[14537,29],[15046,21],[15303,27]],
+6562:[[6563,14],[6564,3],[6565,0],[6566,32],[6567,16],[6568,9],[6569,5],[6570,7],[7795,23],[7827,30],[13020,11],[14538,29],[15047,21],[15304,27],[7834,24]],
+5751:[[5752,0],[5753,5],[5754,9],[5755,15],[5756,14],[7796,23],[7826,30],[14539,29],[15048,21],[15305,27]],
+5210:[[5211,5],[5223,9],[5226,0],[5229,14],[5232,15],[5319,23],[5320,22],[7669,3],[7733,34],[7828,30],[13028,11],[15032,27],[15043,21]],
+5212:[[5213,5],[5224,9],[5227,0],[5230,14],[5233,15],[5321,23],[5322,22],[7670,3],[7734,34],[7829,30],[13029,11],[15033,27],[15044,21]],
+5214:[[5215,5],[5225,9],[5228,0],[5231,14],[5234,15],[5323,23],[7671,3],[7735,34],[7830,30],[13030,11],[15301,27]]
+};
+var SN={tz:'TZ Series',nsa:'NSa Series',nssp:'NSsp Series',nsv:'NSv Virtual'};
+var lfSt={step:1,series:null,modelCat:null,modelName:null};
+function fwLfStep(n) {
+  for(var i=1;i<=3;i++){
+    var el=document.getElementById('lf-s'+i),c='';
+    if(i<n) c='done'; else if(i===n) c='active';
+    el.className='fw-lf-step'+(c?' '+c:'');
+  }
+}
+function fwLfSeries(id) {
+  lfSt={step:2,series:id,modelCat:null,modelName:null};
+  document.getElementById('lf-step1').style.display='none';
+  document.getElementById('lf-subs').style.display='none';
+  document.querySelectorAll('.fw-lf-panel').forEach(function(p){p.style.display='none';});
+  document.getElementById('lf-'+id).style.display='block';
+  document.getElementById('lf-back').style.display='block';
+  document.getElementById('lf-sub').textContent=SN[id]+' — select your model';
+  fwLfStep(2);
+}
+function fwLfModel(catId,btn) {
+  var subs=LS[catId];
+  if(!subs) return;
+  var name=btn.textContent.trim();
+  lfSt.step=3;lfSt.modelCat=catId;lfSt.modelName=name;
+  document.querySelectorAll('.fw-lf-panel').forEach(function(p){p.style.display='none';});
+  var groups=[[],[],[],[],[]];
+  for(var i=0;i<subs.length;i++){groups[LG[subs[i][1]]].push(subs[i]);}
+  var h='<div class="fw-lf-subs-head"><div class="fw-lf-subs-title">Subscriptions for '+name+'</div><a href="/licensing/sonicwall-firewalls.html?cat='+catId+'" class="fw-lf-subs-all">View all '+name+' licenses &rarr;</a></div>';
+  for(var g=0;g<groups.length;g++){
+    if(!groups[g].length) continue;
+    h+='<div class="fw-lf-sg"><div class="fw-lf-sg-label">'+GL[g]+'</div><div class="fw-lf-sg-chips">';
+    for(var j=0;j<groups[g].length;j++){
+      var cid=groups[g][j][0],nid=groups[g][j][1],cls=g===0?' suite':'';
+      h+='<a href="/licensing/sonicwall-firewalls.html?cat='+cid+'" class="fw-lf-sc'+cls+'" title="'+LN[nid]+'">'+LD[nid]+'</a>';
+    }
+    h+='</div></div>';
+  }
+  var el=document.getElementById('lf-subs');
+  el.innerHTML=h;el.style.display='block';
+  document.getElementById('lf-sub').textContent=name+' — select your subscription type';
+  fwLfStep(3);
+}
+function fwLfBack() {
+  if(lfSt.step===3){
+    document.getElementById('lf-subs').style.display='none';
+    document.getElementById('lf-'+lfSt.series).style.display='block';
+    lfSt.step=2;lfSt.modelCat=null;lfSt.modelName=null;
+    document.getElementById('lf-sub').textContent=SN[lfSt.series]+' — select your model';
+    fwLfStep(2);
+  } else if(lfSt.step===2){
+    document.querySelectorAll('.fw-lf-panel').forEach(function(p){p.style.display='none';});
+    document.getElementById('lf-step1').style.display='';
+    document.getElementById('lf-back').style.display='none';
+    lfSt={step:1,series:null,modelCat:null,modelName:null};
+    document.getElementById('lf-sub').textContent='Pick your series, then your model, then your subscription type.';
+    fwLfStep(1);
+  }
+}
+function fwToggleFaq(btn) {
+  var item=btn.closest('.fw-faq-item');
+  var isOpen=item.classList.contains('open');
+  document.querySelectorAll('.fw-faq-item').forEach(function(i){i.classList.remove('open');i.querySelector('.fw-faq-question').setAttribute('aria-expanded','false');});
+  if(!isOpen){item.classList.add('open');btn.setAttribute('aria-expanded','true');}
+}
+</script>
