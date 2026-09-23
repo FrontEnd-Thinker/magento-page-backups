@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-23T03:12:11.358Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 12872,
+    "identifier": "nsae8500-upgrade",
+    "title": "NSA E8500 Trade-In",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
