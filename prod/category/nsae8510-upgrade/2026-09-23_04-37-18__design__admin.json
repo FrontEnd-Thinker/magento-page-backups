@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-23T04:37:18.543Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 12873,
+    "identifier": "nsae8510-upgrade",
+    "title": "NSA E8510 Trade-In",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "category-no-sidebar",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
