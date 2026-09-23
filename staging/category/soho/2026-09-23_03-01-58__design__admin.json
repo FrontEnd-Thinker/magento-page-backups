@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-23T03:01:58.353Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 12850,
+    "identifier": "soho",
+    "title": "SOHO Trade-In ",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS"
+  }
+}
