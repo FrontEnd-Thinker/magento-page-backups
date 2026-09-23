@@ -1,0 +1,18 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-23T03:12:39.590Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 4646,
+    "identifier": "570",
+    "title": "TZ570",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "custom_apply_to_products": "0",
+    "is_anchor": "1",
+    "display_mode": "PRODUCTS_AND_PAGE"
+  }
+}
