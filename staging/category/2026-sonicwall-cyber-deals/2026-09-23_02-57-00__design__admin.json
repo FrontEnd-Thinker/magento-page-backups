@@ -1,0 +1,19 @@
+{
+  "_backup": {
+    "timestamp": "2026-09-23T02:57:00.272Z",
+    "environment": "staging",
+    "operation": "design",
+    "target": "staging",
+    "itemId": 15482,
+    "identifier": "2026-sonicwall-cyber-deals",
+    "title": "2026 SonicWall Cyber Deals",
+    "user": "admin"
+  },
+  "data": {
+    "custom_use_parent_settings": "0",
+    "page_layout": "1column",
+    "custom_apply_to_products": "0",
+    "is_anchor": "0",
+    "display_mode": "PRODUCTS"
+  }
+}
