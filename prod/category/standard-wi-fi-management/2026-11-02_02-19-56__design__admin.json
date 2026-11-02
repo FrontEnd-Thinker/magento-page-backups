@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-11-02T02:19:56.817Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 7498,
+    "identifier": "standard-wi-fi-management",
+    "title": "Standard Wi-Fi Management",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
