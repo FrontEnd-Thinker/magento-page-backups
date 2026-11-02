@@ -1,0 +1,15 @@
+{
+  "_backup": {
+    "timestamp": "2026-11-02T02:20:00.203Z",
+    "environment": "prod",
+    "operation": "design",
+    "target": "prod",
+    "itemId": 7503,
+    "identifier": "patch-management",
+    "title": "Patch Management",
+    "user": "admin"
+  },
+  "data": {
+    "is_anchor": "1"
+  }
+}
